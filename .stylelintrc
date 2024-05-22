@@ -30,6 +30,12 @@
 				"ignore": ["after-comment"]
 			}
 		],
+		"scss/at-rule-no-unknown": [
+			true,
+			{
+				"ignoreAtRules": ["tailwind", "apply"]
+			}
+		],
 		"selector-attribute-quotes": "always",
 		"selector-no-vendor-prefix": true,
 		"selector-pseudo-element-colon-notation": "double",
