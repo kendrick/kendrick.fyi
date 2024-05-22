@@ -61,22 +61,11 @@ export const experiencesData = [
 
 export const projectsData = [
 	{
-		title: 'Project One',
+		title: 'Compassion Design System',
 		description: 'Description.',
 		tags: ['One', 'Two', 'Three'],
 		imageUrl: corpcommentImg,
-	},
-	{
-		title: 'Project One',
-		description: 'Description.',
-		tags: ['One', 'Two', 'Three'],
-		imageUrl: rmtdevImg,
-	},
-	{
-		title: 'Project One',
-		description: 'Description.',
-		tags: ['One', 'Two', 'Three'],
-		imageUrl: wordanalyticsImg,
+		projectPage: 'compassion-design-system',
 	},
 ] as const;
 
