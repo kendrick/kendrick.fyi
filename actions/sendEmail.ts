@@ -27,7 +27,7 @@
 // 	try {
 // 		data = await resend.emails.send({
 // 			from: 'Contact Form <onboarding@resend.dev>',
-// 			to: 'hello@kendrick.cc',
+// 			to: 'hello@kendrick.fyi',
 // 			subject: 'Message from contact form',
 // 			reply_to: senderEmail,
 // 			react: React.createElement(ContactFormEmail, {
