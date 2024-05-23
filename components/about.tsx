@@ -6,10 +6,13 @@ import { motion } from 'framer-motion';
 import { useSectionInView } from '@/lib/hooks';
 import Image from 'next/image';
 
-import p1 from '../assets/pier1.svg';
-import tr from '../assets/tr.svg';
-import compassion from '../assets/compassion.svg';
-import slalom from '../assets/slalom.svg';
+import LogoP1 from '@/components/logos/pier1';
+import LogoCompassion from '@/components/logos/compassion';
+import LogoSlalom from '@/components/logos/slalom';
+import LogoThomson from '@/components/logos/tr';
+// import tr from '../assets/tr.svg';
+// import compassion from '../assets/compassion.svg';
+// import slalom from '../assets/slalom.svg';
 
 export default function About() {
 	const { ref } = useSectionInView('About');
@@ -37,15 +40,20 @@ export default function About() {
 					products through innovative, accessible, and inclusive approaches.
 				</p>
 			</section>
-			<section className="flex gap-8">
-				<Image
-					src={compassion}
-					alt="Compassion International logo"
-					height={logoHeight * 1.25}
-				/>
-				<Image src={p1} alt="Pier 1 Imports logo" height={logoHeight} />
-				<Image src={slalom} alt="Slalom Consulting logo" height={logoHeight} />
-				<Image src={tr} alt="Thomson Reuters logo" height={logoHeight} />
+			<section className="inline-flex gap-8 justify-center items-center">
+				<LogoCompassion
+					height={logoHeight * 1.33}
+					aria-label="Compassion International logo."
+				></LogoCompassion>
+				<LogoP1 height={logoHeight} aria-label="Pier 1 Imports logo."></LogoP1>
+				<LogoSlalom
+					height={logoHeight}
+					aria-label="Slalom Consulting logo."
+				></LogoSlalom>
+				<LogoThomson
+					height={logoHeight}
+					aria-label="Thomson Reuters logo."
+				></LogoThomson>
 			</section>
 		</motion.section>
 	);
