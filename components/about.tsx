@@ -32,12 +32,13 @@ export default function About() {
 				<p>
 					With a passion for creating user-centered digital experiences, I have
 					a track record of leading design systems, conducting usability
-					testing, and driving cross-functional projects. My experience includes
-					delivering impactful solutions for organizations like Compassion
-					International, Pier 1 Imports, Slalom Consulting, and Thomson Reuters.
-					I thrive on promoting human-centered design principles, mentoring
-					emerging talent, and implementing and continuously improving digital
-					products through innovative, accessible, and inclusive approaches.
+					testing, and driving cross-functional projects. I thrive on promoting
+					human-centered design principles, mentoring emerging talent, and
+					implementing and continuously improving digital products through
+					innovative, accessible, and inclusive approaches. My experience
+					includes delivering impactful solutions for organizations like
+					Compassion International, Pier 1 Imports, Slalom Consulting, and
+					Thomson Reuters.
 				</p>
 			</section>
 			<section className="inline-flex gap-8 justify-center items-center">
