@@ -15,4 +15,10 @@ module.exports = {
 		},
 	},
 	darkMode: 'class',
+	plugins: [
+		'postcss-import',
+		'tailwindcss/nesting',
+		'tailwindcss',
+		'autoprefixer',
+	],
 };
