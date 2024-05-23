@@ -1,18 +1,37 @@
-import Header from '@/components/header';
-import './globals.css';
-import { Inter } from 'next/font/google';
-import ActiveSectionContextProvider from '@/context/active-section-context';
 import Footer from '@/components/footer';
+import Header from '@/components/header';
 import ThemeSwitch from '@/components/theme-switch';
+
+import ActiveSectionContextProvider from '@/context/active-section-context';
 import ThemeContextProvider from '@/context/theme-context';
+
+import { Inter } from 'next/font/google';
+import Script from 'next/script';
+
 import { Toaster } from 'react-hot-toast';
+import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
 	title: 'Kendrick Arnett',
-	description:
-		'Kendrick is a UX leader with deep design and development experience.',
+	description: 'Creative UX pro. Team builder. Digital maker.',
+	icons: {
+		icon: [
+			{
+				rel: 'icon',
+				type: 'image/png',
+				url: '/assets/favicon-light.png',
+				media: '(prefers-color-scheme: light)',
+			},
+			{
+				rel: 'icon',
+				type: 'image/png',
+				url: '/assets/favicon-dark.png',
+				media: '(prefers-color-scheme: dark)',
+			},
+		],
+	},
 };
 
 export default function RootLayout({
@@ -39,6 +58,11 @@ export default function RootLayout({
 					</ActiveSectionContextProvider>
 				</ThemeContextProvider>
 			</body>
+			<Script
+				async
+				defer
+				src="https://scripts.simpleanalyticscdn.com/latest.js"
+			/>
 		</html>
 	);
 }
