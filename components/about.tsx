@@ -1,34 +1,27 @@
 'use client';
 
-import React from 'react';
-import SectionHeading from './section-heading';
-import { motion } from 'framer-motion';
 import { useSectionInView } from '@/lib/hooks';
-import Image from 'next/image';
+import { motion } from 'framer-motion';
 
-import LogoP1 from '@/components/logos/pier1';
 import LogoCompassion from '@/components/logos/compassion';
+import LogoP1 from '@/components/logos/pier1';
 import LogoSlalom from '@/components/logos/slalom';
 import LogoThomson from '@/components/logos/tr';
-// import tr from '../assets/tr.svg';
-// import compassion from '../assets/compassion.svg';
-// import slalom from '../assets/slalom.svg';
 
 export default function About() {
 	const { ref } = useSectionInView('About');
-	const logoHeight = 44;
+	const logoHeight = 36;
 
 	return (
 		<motion.section
 			ref={ref}
-			className="mb-28 text-center leading-8 sm:mb-40 scroll-mt-28"
 			initial={{ opacity: 0, y: 100 }}
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ delay: 0.175 }}
 			id="about"
 		>
-			<section className="max-w-[45rem]">
-				<SectionHeading>About me</SectionHeading>
+			<section>
+				<h2>About me</h2>
 				<p>
 					With a passion for creating user-centered digital experiences, I have
 					a track record of leading design systems, conducting usability
@@ -41,7 +34,7 @@ export default function About() {
 					Thomson Reuters.
 				</p>
 			</section>
-			<section className="inline-flex gap-8 justify-center items-center">
+			<section>
 				<LogoCompassion
 					height={logoHeight * 1.33}
 					aria-label="Compassion International logo."

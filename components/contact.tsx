@@ -1,12 +1,8 @@
 'use client';
 
-import React from 'react';
-import SectionHeading from './section-heading';
-import { motion } from 'framer-motion';
 import { useSectionInView } from '@/lib/hooks';
+import { motion } from 'framer-motion';
 // import { sendEmail } from '@/actions/sendEmail';
-import SubmitBtn from './submit-btn';
-import toast from 'react-hot-toast';
 
 export default function Contact() {
 	const { ref } = useSectionInView('Contact');
@@ -29,7 +25,7 @@ export default function Contact() {
 				once: true,
 			}}
 		>
-			<SectionHeading>Contact me</SectionHeading>
+			<h2>Contact me</h2>
 
 			<p className="text-gray-700 -mt-6 dark:text-white/80">
 				Please contact me directly at{' '}
