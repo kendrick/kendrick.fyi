@@ -5,11 +5,13 @@ import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
-import { FaGithubSquare } from 'react-icons/fa';
-import { HiDownload } from 'react-icons/hi';
 
 import av from '@/assets/av.jpg';
+
+import IconArrowRight from '@/assets/svg/arrow-right.svg';
+import IconDownload from '@/assets/svg/download.svg';
+import IconGitHub from '@/assets/svg/github.svg';
+import IconLinkedIn from '@/assets/svg/linkedin.svg';
 
 export default function Intro() {
 	const { ref } = useSectionInView('Home', 0.5);
@@ -78,11 +80,17 @@ export default function Intro() {
 						setTimeOfLastClick(Date.now());
 					}}
 				>
-					Contact me here <BsArrowRight />
+					Contact me here{' '}
+					<IconArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
 				</Link>
 
-				<a href="/CV.pdf" download>
-					Download CV <HiDownload />
+				<a
+					className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border-black dark:bg-white/10"
+					href="/CV.pdf"
+					download
+				>
+					Download CV{' '}
+					<IconDownload className="opacity-60 group-hover:translate-y-1 transition" />
 				</a>
 
 				<a
@@ -91,7 +99,7 @@ export default function Intro() {
 					rel="noopener"
 					title="Kendrick on LinkedIn"
 				>
-					<BsLinkedin />
+					<IconLinkedIn />
 				</a>
 
 				<a
@@ -100,7 +108,7 @@ export default function Intro() {
 					rel="noopener"
 					title="Kendrick on GitHub"
 				>
-					<FaGithubSquare />
+					<IconGitHub />
 				</a>
 			</motion.div>
 		</section>
