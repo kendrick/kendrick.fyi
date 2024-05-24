@@ -63,11 +63,18 @@ export default function RootLayout({
 				defer
 				src="https://scripts.simpleanalyticscdn.com/latest.js"
 			/>
-			<script>{`(function(c,l,a,r,i,t,y){
+			<Script
+				id="clarity"
+				async
+				defer
+				dangerouslySetInnerHTML={{
+					__html: `(function(c,l,a,r,i,t,y){
 					c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
 					t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
 					y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-				})(window, document, "clarity", "script", "mh257sv6bh");`}</script>
+				})(window, document, "clarity", "script", "mh257sv6bh");`,
+				}}
+			></Script>
 		</html>
 	);
 }
