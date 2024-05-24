@@ -63,6 +63,7 @@ export const projectsData = [
 		description: 'Description.',
 		tags: ['One', 'Two', 'Three'],
 		imageUrl: corpcommentImg,
+		imageAltText: 'Compassion Design System screenshot',
 		projectPage: 'compassion-design-system',
 	},
 ] as const;
