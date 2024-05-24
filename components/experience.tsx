@@ -2,7 +2,6 @@
 
 import { useTheme } from '@/context/theme-context';
 import { experiencesData } from '@/lib/data';
-import { useSectionInView } from '@/lib/hooks';
 import React from 'react';
 import {
 	VerticalTimeline,
@@ -11,11 +10,13 @@ import {
 import 'react-vertical-timeline-component/style.min.css';
 
 export default function Experience() {
-	const { ref } = useSectionInView('Experience');
+	// ADD THIS BACK if data is updated!
+	// const { ref } = useSectionInView('Experience');
 	const { theme } = useTheme();
 
 	return (
-		<section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
+		// <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
+		<section id="experience" className="scroll-mt-28 mb-28 sm:mb-40">
 			<h2>My experience</h2>
 			<VerticalTimeline lineColor="">
 				{experiencesData.map((item, index) => (
