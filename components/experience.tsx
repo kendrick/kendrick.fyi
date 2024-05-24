@@ -1,15 +1,15 @@
 'use client';
 
+import { useTheme } from '@/context/theme-context';
+import { experiencesData } from '@/lib/data';
+import { useSectionInView } from '@/lib/hooks';
 import React from 'react';
-import SectionHeading from './section-heading';
 import {
 	VerticalTimeline,
 	VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { experiencesData } from '@/lib/data';
-import { useSectionInView } from '@/lib/hooks';
-import { useTheme } from '@/context/theme-context';
+import SectionHeading from './section-heading';
 
 export default function Experience() {
 	const { ref } = useSectionInView('Experience');
@@ -37,7 +37,7 @@ export default function Experience() {
 									:	'0.4rem solid rgba(255, 255, 255, 0.5)',
 							}}
 							date={item.date.toString()}
-							icon={item.icon}
+							// icon={item.icon}
 							iconStyle={{
 								background:
 									theme === 'light' ? 'white' : 'rgba(255, 255, 255, 0.15)',
