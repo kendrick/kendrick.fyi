@@ -59,7 +59,7 @@ export default function RootLayout({
 				src="https://scripts.simpleanalyticscdn.com/latest.js"
 			/>
 			<Script
-				id="clarity"
+				id="ms-clarity"
 				async
 				defer
 				dangerouslySetInnerHTML={{
