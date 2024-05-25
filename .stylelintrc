@@ -19,8 +19,7 @@
 			"dollar-variables",
 			"custom-properties",
 			"declarations",
-			"rules",
-			"at-rules"
+			"rules"
 		],
 		"property-no-vendor-prefix": true,
 		"rule-empty-line-before": [
