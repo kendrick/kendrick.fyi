@@ -1,0 +1,30 @@
+@import '../../tokens/css/typography.css';
+
+@layer base {
+	h1 {
+		font-size: var(--k-type-size-plus4);
+		line-height: var(--k-type-line-height-base);
+	}
+
+	h2 {
+		font-size: var(--k-type-size-plus3);
+		line-height: var(--k-type-line-height-plus1);
+	}
+
+	h3 {
+		font-size: var(--k-type-size-plus2);
+		line-height: var(--k-type-line-height-plus1);
+	}
+
+	h4 {
+		font-size: var(--k-type-size-plus1);
+		line-height: var(--k-type-line-height-plus2);
+	}
+
+	h5,
+	h6,
+	p {
+		font-size: var(--k-type-size-base);
+		line-height: var(--k-type-line-height-plus3);
+	}
+}
