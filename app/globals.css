@@ -1,11 +1,14 @@
+@import '../tokens/css/space.css';
+@import '../tokens/css/breakpoints.css';
+@import '../tokens/css/typography.css';
+@import '../tokens/css/color.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 html {
-	--line-color: #e5e7eb;
 }
 
 html.dark {
-	--line-color: rgba(255, 255, 255, 0.2);
 }

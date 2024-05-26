@@ -7,7 +7,12 @@
 		"color-function-notation": null,
 		"color-hex-length": "short",
 		"color-named": "never",
-		"comment-empty-line-before": "always",
+		"comment-empty-line-before": [
+			"always",
+			{
+				"ignore": ["after-comment"]
+			}
+		],
 		"comment-whitespace-inside": "always",
 		"custom-property-empty-line-before": null,
 		"declaration-no-important": true,
