@@ -1,3 +1,4 @@
+@import '../../tokens/css/breakpoints.css';
 @import './space.css';
 @import './typography.css';
 @import './color.css';
@@ -6,8 +7,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-	&.dark {
-		/* tk */
-	}
+body {
+	padding: var(--k-space-minus2-minus1);
 }

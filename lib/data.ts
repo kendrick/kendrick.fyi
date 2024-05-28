@@ -25,14 +25,10 @@ export const links = [
 		name: 'Testimonials',
 		hash: '#testimonials',
 	},
-	// {
-	// 	name: 'Experience',
-	// 	hash: '#experience',
-	// },
-	// {
-	// 	name: 'Contact',
-	// 	hash: '#contact',
-	// },
+	{
+		name: 'Contact',
+		hash: '#contact',
+	},
 ] as const;
 
 const year = new Date().getFullYear();
@@ -73,6 +69,30 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
+	'Design Systems',
+	'UX Research',
+	'Usability Testing',
+	'Design Thinking',
+	'Ideation',
+	'Interaction Design',
+	'Figma',
+	'Wireframing',
+	'Visual Design',
+	'Prototyping',
+	'Agile Methodologies',
+	'Responsive Web Design',
+	'A/B Testing',
+	'Conversion Rate Optimization (CRO)',
+	'Accessibility',
+	'HTML5',
+	'CSS',
+	'SCSS',
+	'JavaScript',
+	'ReactJS',
+	'Public Speaking',
+] as const;
+
+export const testimonialsData = [
 	'Design Systems',
 	'UX Research',
 	'Usability Testing',

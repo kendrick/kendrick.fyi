@@ -1,21 +1,48 @@
 :root {
-	--k-space-minus3: clamp(0.25rem, 0.2375rem + 0.0625vi, 0.3125rem);
-	--k-space-minus2: clamp(0.5rem, 0.475rem + 0.125vi, 0.625rem);
-	--k-space-minus1: clamp(0.75rem, 0.7125rem + 0.1875vi, 0.9375rem);
-	--k-space-base: clamp(1rem, 0.95rem + 0.25vi, 1.25rem);
-	--k-space-plus1: clamp(1.5rem, 1.425rem + 0.375vi, 1.875rem);
-	--k-space-plus2: clamp(2rem, 1.9rem + 0.5vi, 2.5rem);
-	--k-space-plus3: clamp(3rem, 2.85rem + 0.75vi, 3.75rem);
-	--k-space-plus4: clamp(4rem, 3.8rem + 1vi, 5rem);
-	--k-space-plus5: clamp(6rem, 5.7rem + 1.5vi, 7.5rem);
+	--k-space-3xs: clamp(0.25rem, 0.2375rem + 0.0625vi, 0.3125rem);
+	--k-space-2xs: clamp(0.5rem, 0.475rem + 0.125vi, 0.625rem);
+	--k-space-xs: clamp(0.75rem, 0.7125rem + 0.1875vi, 0.9375rem);
+	--k-space-sm: clamp(1rem, 0.95rem + 0.25vi, 1.25rem);
+	--k-space-md: clamp(1.5rem, 1.425rem + 0.375vi, 1.875rem);
+	--k-space-lg: clamp(2rem, 1.9rem + 0.5vi, 2.5rem);
+	--k-space-xl: clamp(3rem, 2.85rem + 0.75vi, 3.75rem);
+	--k-space-2xl: clamp(4rem, 3.8rem + 1vi, 5rem);
+	--k-space-3xl: clamp(6rem, 5.7rem + 1.5vi, 7.5rem);
+	--k-space-4xl: clamp(8rem, 7.6rem + 2vi, 10rem);
 
 	/* One-up pairs */
-	--k-space-minus3-minus2: clamp(0.25rem, 0.175rem + 0.375vi, 0.625rem);
-	--k-space-minus2-minus1: clamp(0.5rem, 0.4125rem + 0.4375vi, 0.9375rem);
-	--k-space-minus1-base: clamp(0.75rem, 0.65rem + 0.5vi, 1.25rem);
-	--k-space-base-plus1: clamp(1rem, 0.825rem + 0.875vi, 1.875rem);
-	--k-space-plus1-plus2: clamp(1.5rem, 1.3rem + 1vi, 2.5rem);
-	--k-space-plus2-plus3: clamp(2rem, 1.65rem + 1.75vi, 3.75rem);
-	--k-space-plus3-plus4: clamp(3rem, 2.6rem + 2vi, 5rem);
-	--k-space-plus4-plus5: clamp(4rem, 3.3rem + 3.5vi, 7.5rem);
+	--k-space-3xs-2xs: clamp(0.25rem, 0.175rem + 0.375vi, 0.625rem);
+	--k-space-2xs-xs: clamp(0.5rem, 0.4125rem + 0.4375vi, 0.9375rem);
+	--k-space-xs-sm: clamp(0.75rem, 0.65rem + 0.5vi, 1.25rem);
+	--k-space-sm-md: clamp(1rem, 0.825rem + 0.875vi, 1.875rem);
+	--k-space-md-lg: clamp(1.5rem, 1.3rem + 1vi, 2.5rem);
+	--k-space-lg-xl: clamp(2rem, 1.65rem + 1.75vi, 3.75rem);
+	--k-space-xl-2xl: clamp(3rem, 2.6rem + 2vi, 5rem);
+	--k-space-2xl-3xl: clamp(4rem, 3.3rem + 3.5vi, 7.5rem);
+	--k-space-3xl-4xl: clamp(6rem, 5.2rem + 4vi, 10rem);
+
+	/* Custom pairs */
+	--k-space-sm-lg: clamp(1rem, 0.7rem + 1.5vi, 2.5rem);
+	--k-space-xs-lg: clamp(0.75rem, 0.4rem + 1.75vi, 2.5rem);
+	--k-space-xs-xl: clamp(0.75rem, 0.15rem + 3vi, 3.75rem);
+
+	/* Grid stuff */
+	--k-grid-max-width: 120rem;
+	--k-grid-gutter: var(--k-space-xs-lg);
+	--k-grid-gutter: var(--k-space-sm-xl);
+	--k-grid-columns: 12;
+}
+
+.k-grid-container {
+	max-width: var(--k-grid-max-width);
+	margin-inline: auto;
+	padding-inline: var(--k-grid-gutter);
+}
+
+.k-grid {
+	display: grid;
+
+	/* grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); */
+	grid-template-columns: repeat(12, 1fr);
+	gap: var(--k-grid-gutter);
 }

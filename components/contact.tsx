@@ -1,11 +1,12 @@
 'use client';
 
+import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
 // import { sendEmail } from '@/actions/sendEmail';
 
 export default function Contact() {
 	// ADD THIS BACK if Contact is included in data!
-	// const { ref } = useSectionInView('Contact');
+	const { ref } = useSectionInView('Contact');
 
 	return (
 		<motion.section
@@ -28,10 +29,7 @@ export default function Contact() {
 
 			<p>
 				Please contact me directly at{' '}
-				<a className="underline" href="mailto:hello@kendrick.fyi">
-					hello@kendrick.fyi
-				</a>
-				!
+				<a href="mailto:hello@kendrick.fyi">hello@kendrick.fyi</a>!
 			</p>
 
 			{/* <form

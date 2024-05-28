@@ -34,6 +34,7 @@
 		"autoprefixer": "^10.4.19",
 		"eslint": "^8.57.0",
 		"eslint-config-next": "^14.2.3",
+		"postcss-custom-media": "^10.0.6",
 		"postcss-import": "^16.1.0",
 		"prettier": "^3.2.5",
 		"stylelint": "^16.5.0",

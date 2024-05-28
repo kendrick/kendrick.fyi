@@ -1,16 +1,7 @@
-/* @import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities'; */
-
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
-
 :root {
-	--k-vw-xs: 568px;
-	--k-vw-sm: 666px;
+	--k-vw-sm: 576px;
 	--k-vw-md: 768px;
-	--k-vw-lg: 1024px;
-	--k-vw-xl: 1300px;
-	--k-vw-xxl: 2500px;
+	--k-vw-lg: 992px;
+	--k-vw-xl: 1200px;
+	--k-vw-xxl: 1400px;
 }

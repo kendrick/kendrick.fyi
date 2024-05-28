@@ -20,6 +20,7 @@
 		"font-family-name-quotes": "always-where-recommended",
 		"function-url-quotes": "always",
 		"media-feature-name-no-vendor-prefix": true,
+		"media-feature-range-notation": "prefix",
 		"no-duplicate-selectors": true,
 		"order/order": [
 			"dollar-variables",
@@ -42,6 +43,7 @@
 			}
 		],
 		"selector-attribute-quotes": "always",
+		"selector-class-pattern": null,
 		"selector-no-vendor-prefix": true,
 		"selector-pseudo-element-colon-notation": "double",
 		"value-keyword-case": null,

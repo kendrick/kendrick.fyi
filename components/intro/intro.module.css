@@ -1,0 +1,25 @@
+.hero {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--k-grid-gutter);
+	align-items: center;
+
+	margin: 0 auto;
+
+	@media (min-width: 768px) {
+		grid-template-columns: minmax(var(--k-space-3xl), 1fr) minmax(55ch, 68ch);
+	}
+}
+
+.hero__image {
+	width: 100%;
+	height: auto;
+}
+
+.copy {
+	gap: var(--k-grid-gutter);
+}
+
+.hero__copy {
+	max-width: 75ch;
+}

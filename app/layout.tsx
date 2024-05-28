@@ -1,5 +1,4 @@
 import Footer from '@/components/footer';
-import Header from '@/components/header';
 import ThemeSwitch from '@/components/theme-switch';
 
 import ActiveSectionContextProvider from '@/context/active-section-context';
@@ -44,7 +43,7 @@ export default function RootLayout({
 			<body>
 				<ThemeContextProvider>
 					<ActiveSectionContextProvider>
-						<Header />
+						{/* <Header /> */}
 						{children}
 						<Footer />
 

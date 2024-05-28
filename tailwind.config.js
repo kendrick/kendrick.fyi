@@ -17,6 +17,7 @@ module.exports = {
 	darkMode: 'class',
 	plugins: [
 		'postcss-import',
+		'postcss-custom-media',
 		'tailwindcss/nesting',
 		'tailwindcss',
 		'autoprefixer',
