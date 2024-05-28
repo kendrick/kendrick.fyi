@@ -1,4 +1,6 @@
+@import './space.css';
 @import './typography.css';
+@import './color.css';
 
 @tailwind base;
 @tailwind components;
@@ -6,6 +8,6 @@
 
 html {
 	&.dark {
-		/* tk s */
+		/* tk */
 	}
 }

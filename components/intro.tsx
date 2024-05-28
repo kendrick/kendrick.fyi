@@ -58,7 +58,7 @@ export default function Intro() {
 				initial={{ opacity: 0, y: 100 }}
 				animate={{ opacity: 1, y: 0 }}
 			>
-				<span className="font-bold">Hi, I'm Kendrick.</span>
+				<span>Hi, I'm Kendrick.</span>
 				<p>
 					I'm a skilled UX leader and front-end expert who excels at building
 					user-friendly digital solutions and fostering collaborative, vibrant
@@ -80,17 +80,11 @@ export default function Intro() {
 						setTimeOfLastClick(Date.now());
 					}}
 				>
-					Contact me here{' '}
-					<IconArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+					Contact me here <IconArrowRight />
 				</Link>
 
-				<a
-					className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border-black dark:bg-white/10"
-					href="/CV.pdf"
-					download
-				>
-					Download CV{' '}
-					<IconDownload className="opacity-60 group-hover:translate-y-1 transition" />
+				<a href="/CV.pdf" download>
+					Download CV <IconDownload />
 				</a>
 
 				<a

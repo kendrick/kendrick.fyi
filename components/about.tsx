@@ -23,15 +23,14 @@ export default function About() {
 			<section>
 				<h2>About me</h2>
 				<p>
-					With a passion for creating user-centered digital experiences, I have
-					a track record of leading design systems, conducting usability
+					With a passion for creating user-centered digital experiences, I
+					flourish in leading innovative design teams, conducting usability
 					testing, and driving cross-functional projects. I thrive on promoting
 					human-centered design principles, mentoring emerging talent, and
-					implementing and continuously improving digital products through
-					innovative, accessible, and inclusive approaches. My experience
-					includes delivering impactful solutions for organizations like
-					Compassion International, Pier 1 Imports, Slalom Consulting, and
-					Thomson Reuters.
+					continuously improving digital products through innovative,
+					accessible, and inclusive approaches. My experience spans delivering
+					impactful solutions for organizations such as Compassion
+					International, Pier 1 Imports, Slalom Consulting, and Thomson Reuters.
 				</p>
 			</section>
 			<section>

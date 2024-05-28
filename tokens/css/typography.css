@@ -1,13 +1,13 @@
 :root {
-	--k-type-size-minus2: clamp(0.69rem, 0.01vi + 0.69rem, 0.7rem);
-	--k-type-size-minus1: clamp(0.83rem, 0.1vi + 0.81rem, 0.94rem);
+	--k-type-size-minus2: clamp(0.64rem, 0.06vi + 0.63rem, 0.7rem);
+	--k-type-size-minus1: clamp(0.8rem, 0.14vi + 0.77rem, 0.94rem);
 	--k-type-size-base: clamp(1rem, 0.25vi + 0.95rem, 1.25rem);
-	--k-type-size-plus1: clamp(1.2rem, 0.47vi + 1.11rem, 1.67rem);
-	--k-type-size-plus2: clamp(1.44rem, 0.78vi + 1.28rem, 2.22rem);
-	--k-type-size-plus3: clamp(1.73rem, 1.23vi + 1.48rem, 2.96rem);
-	--k-type-size-plus4: clamp(2.07rem, 1.87vi + 1.7rem, 3.95rem);
-	--k-type-size-plus5: clamp(2.49rem, 2.77vi + 1.93rem, 5.26rem);
-	--k-type-size-plus6: clamp(2.99rem, 4.03vi + 2.18rem, 7.01rem);
+	--k-type-size-plus1: clamp(1.25rem, 0.42vi + 1.17rem, 1.67rem);
+	--k-type-size-plus2: clamp(1.56rem, 0.66vi + 1.43rem, 2.22rem);
+	--k-type-size-plus3: clamp(1.95rem, 1.01vi + 1.75rem, 2.96rem);
+	--k-type-size-plus4: clamp(2.44rem, 1.51vi + 2.14rem, 3.95rem);
+	--k-type-size-plus5: clamp(3.05rem, 2.21vi + 2.61rem, 5.26rem);
+	--k-type-size-plus6: clamp(3.81rem, 3.2vi + 3.18rem, 7.01rem);
 
 	--k-type-line-height-base: 1.2;
 	--k-type-line-height-plus1: 1.3;
