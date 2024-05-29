@@ -1,0 +1,10 @@
+.contact {
+	display: grid;
+	place-items: center;
+}
+
+.contact {
+	gap: var(--k-grid-gutter);
+	align-content: center;
+	min-height: 100dvh;
+}

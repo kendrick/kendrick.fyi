@@ -1,13 +1,15 @@
 :root {
-	--k-type-size-minus2: clamp(0.64rem, 0.06vi + 0.63rem, 0.7rem);
-	--k-type-size-minus1: clamp(0.8rem, 0.14vi + 0.77rem, 0.94rem);
-	--k-type-size-base: clamp(1rem, 0.25vi + 0.95rem, 1.25rem);
-	--k-type-size-plus1: clamp(1.25rem, 0.42vi + 1.17rem, 1.67rem);
-	--k-type-size-plus2: clamp(1.56rem, 0.66vi + 1.43rem, 2.22rem);
-	--k-type-size-plus3: clamp(1.95rem, 1.01vi + 1.75rem, 2.96rem);
-	--k-type-size-plus4: clamp(2.44rem, 1.51vi + 2.14rem, 3.95rem);
-	--k-type-size-plus5: clamp(3.05rem, 2.21vi + 2.61rem, 5.26rem);
-	--k-type-size-plus6: clamp(3.81rem, 3.2vi + 3.18rem, 7.01rem);
+	/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1920,24,1.333,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6|8,s-l|xs-l|xs-xl|s-xl|m-xl|m-2xl&g=s,l,xl,12 */
+
+	--k-type-size-minus2: clamp(0.6944rem, 0.6645rem + 0.1497vi, 0.8442rem);
+	--k-type-size-minus1: clamp(0.8333rem, 0.7749rem + 0.2919vi, 1.1253rem);
+	--k-type-size-base: clamp(1rem, 0.9rem + 0.5vi, 1.5rem);
+	--k-type-size-plus1: clamp(1.2rem, 1.0401rem + 0.7995vi, 1.9995rem);
+	--k-type-size-plus2: clamp(1.44rem, 1.1949rem + 1.2253vi, 2.6653rem);
+	--k-type-size-plus3: clamp(1.728rem, 1.363rem + 1.8249vi, 3.5529rem);
+	--k-type-size-plus4: clamp(2.0736rem, 1.5411rem + 2.6624vi, 4.736rem);
+	--k-type-size-plus5: clamp(2.4883rem, 1.7234rem + 3.8248vi, 6.3131rem);
+	--k-type-size-plus6: clamp(2.986rem, 1.9001rem + 5.4294vi, 8.4153rem);
 
 	--k-type-line-height-base: 1.2;
 	--k-type-line-height-plus1: 1.3;

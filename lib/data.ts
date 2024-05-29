@@ -1,8 +1,5 @@
 import corpcommentImg from '@/public/corpcomment.png';
 // import React from 'react';
-// import { CgWorkAlt } from 'react-icons/cg';
-// import { FaReact } from 'react-icons/fa';
-// import { LuGraduationCap } from 'react-icons/lu';
 
 export const links = [
 	{
@@ -69,21 +66,21 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-	'Design Systems',
-	'UX Research',
-	'Usability Testing',
 	'Design Thinking',
+	'Usability Testing',
 	'Ideation',
-	'Interaction Design',
-	'Figma',
 	'Wireframing',
 	'Visual Design',
+	'Design Systems',
+	'UX Research',
+	'Accessibility',
+	'Responsive Web Design',
+	'Interaction Design',
+	'Figma',
 	'Prototyping',
 	'Agile Methodologies',
-	'Responsive Web Design',
-	'A/B Testing',
+	'A-B/Multivariate Testing',
 	'Conversion Rate Optimization (CRO)',
-	'Accessibility',
 	'HTML5',
 	'CSS',
 	'SCSS',

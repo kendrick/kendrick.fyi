@@ -1,0 +1,12 @@
+.about {
+	display: grid;
+	gap: var(--k-grid-gutter);
+	place-items: center;
+	align-content: center;
+
+	min-height: 100dvh;
+}
+
+.about {
+	padding: var(--k-space-xs-xl);
+}

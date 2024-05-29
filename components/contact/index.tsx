@@ -3,13 +3,14 @@
 import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
 // import { sendEmail } from '@/actions/sendEmail';
-
+import styles from './styles.module.css';
 export default function Contact() {
 	// ADD THIS BACK if Contact is included in data!
 	const { ref } = useSectionInView('Contact');
 
 	return (
 		<motion.section
+			className={styles.contact}
 			id="contact"
 			// ref={ref}
 			initial={{

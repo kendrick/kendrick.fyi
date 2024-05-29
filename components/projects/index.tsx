@@ -1,15 +1,17 @@
 'use client';
 
+import Project from '@/components/project';
 import { projectsData } from '@/lib/data';
 import { useSectionInView } from '@/lib/hooks';
 import React from 'react';
-import Project from './project';
+
+import styles from './styles.module.css';
 
 export default function Projects() {
 	const { ref } = useSectionInView('Projects', 0.5);
 
 	return (
-		<section ref={ref} id="projects">
+		<section ref={ref} id="projects" className={styles.projects}>
 			<h2>Projects</h2>
 			<div>
 				{projectsData.map((project, index) => (

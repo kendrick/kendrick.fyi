@@ -1,0 +1,10 @@
+.testimonials {
+	display: grid;
+	place-items: center;
+}
+
+.testimonials {
+	gap: var(--k-grid-gutter);
+	align-content: center;
+	min-height: 100dvh;
+}

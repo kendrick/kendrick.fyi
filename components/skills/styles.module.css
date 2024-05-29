@@ -1,0 +1,27 @@
+.skills {
+	display: grid;
+	place-items: center;
+}
+
+.skills {
+	gap: var(--k-grid-gutter);
+	align-content: center;
+	min-height: 100dvh;
+}
+
+.skills__list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: calc(var(--k-grid-gutter) / 2);
+	justify-content: center;
+
+	text-align: center;
+
+	li {
+		padding: calc(var(--k-space-xs) / 2);
+		white-space: nowrap;
+
+		/* word-break: keep-all; */
+		border: 1px solid currentColor;
+	}
+}

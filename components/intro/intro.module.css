@@ -1,14 +1,13 @@
 .hero {
 	display: grid;
+	place-items: end left;
+}
+
+.hero {
 	grid-template-columns: 1fr;
 	gap: var(--k-grid-gutter);
-	align-items: center;
-
-	margin: 0 auto;
-
-	@media (min-width: 768px) {
-		grid-template-columns: minmax(var(--k-space-3xl), 1fr) minmax(55ch, 68ch);
-	}
+	min-height: 100dvh;
+	padding: var(--k-space-sm-xl);
 }
 
 .hero__image {
@@ -22,4 +21,22 @@
 
 .hero__copy {
 	max-width: 75ch;
+}
+
+.intro__icon {
+	display: inline-block;
+}
+
+.icon {
+	width: 1em;
+	height: 1em;
+}
+
+.with-icon {
+	display: inline-flex;
+	align-items: center;
+
+	&__icon {
+		margin-inline-end: 0.25em;
+	}
 }
