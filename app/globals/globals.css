@@ -3,23 +3,12 @@
 @import './typography.css';
 @import './color.css';
 
+@import './reset.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
 	padding: var(--k-space-minus2-minus1);
-}
-
-.visually-hidden:not(:focus, :active, :focus-within) {
-	position: absolute;
-
-	overflow: hidden;
-
-	width: 1px;
-	height: 1px;
-
-	white-space: nowrap;
-
-	clip-path: inset(50%);
 }

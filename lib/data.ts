@@ -19,8 +19,8 @@ export const links = [
 		hash: '#skills',
 	},
 	{
-		name: 'Testimonials',
-		hash: '#testimonials',
+		name: 'Kind Words',
+		hash: '#kind-words',
 	},
 	{
 		name: 'Contact',
@@ -57,8 +57,36 @@ export const experiencesData = [
 export const projectsData = [
 	{
 		title: 'Compassion Design System',
-		description: 'Description.',
-		tags: ['One', 'Two', 'Three'],
+		description:
+			'Compassion International revolutionized its global brand identity with a cutting-edge, token-based multi-brand design system, dramatically enhancing design consistency, slashing development times, and fostering seamless collaboration across 13 independent fundraising offices.',
+		// tags: ['One', 'Two', 'Three'],
+		imageUrl: corpcommentImg,
+		imageAltText: 'Compassion Design System screenshot',
+		projectPage: 'compassion-design-system',
+	},
+	{
+		title: 'Compassion Design System',
+		description:
+			'Compassion International revolutionized its global brand identity with a cutting-edge, token-based multi-brand design system, dramatically enhancing design consistency, slashing development times, and fostering seamless collaboration across 13 independent fundraising offices.',
+		// tags: ['One', 'Two', 'Three'],
+		imageUrl: corpcommentImg,
+		imageAltText: 'Compassion Design System screenshot',
+		projectPage: 'compassion-design-system',
+	},
+	{
+		title: 'Compassion Design System',
+		description:
+			'Compassion International revolutionized its global brand identity with a cutting-edge, token-based multi-brand design system, dramatically enhancing design consistency, slashing development times, and fostering seamless collaboration across 13 independent fundraising offices.',
+		// tags: ['One', 'Two', 'Three'],
+		imageUrl: corpcommentImg,
+		imageAltText: 'Compassion Design System screenshot',
+		projectPage: 'compassion-design-system',
+	},
+	{
+		title: 'Compassion Design System',
+		description:
+			'Compassion International revolutionized its global brand identity with a cutting-edge, token-based multi-brand design system, dramatically enhancing design consistency, slashing development times, and fostering seamless collaboration across 13 independent fundraising offices.',
+		// tags: ['One', 'Two', 'Three'],
 		imageUrl: corpcommentImg,
 		imageAltText: 'Compassion Design System screenshot',
 		projectPage: 'compassion-design-system',
@@ -67,29 +95,31 @@ export const projectsData = [
 
 export const skillsData = [
 	'Design Thinking',
-	'Usability Testing',
-	'Ideation',
-	'Wireframing',
-	'Visual Design',
+	'Google Design Sprints',
 	'Design Systems',
 	'UX Research',
+	'Usability Testing',
 	'Accessibility',
-	'Responsive Web Design',
+	'Ideation',
 	'Interaction Design',
-	'Figma',
 	'Prototyping',
+	'Wireframing',
+	'Responsive Web Design',
+	'Visual Design',
+	'Figma',
 	'Agile Methodologies',
-	'A-B/Multivariate Testing',
-	'Conversion Rate Optimization (CRO)',
 	'HTML5',
 	'CSS',
 	'SCSS',
+	'TypeScript',
 	'JavaScript',
 	'ReactJS',
+	'A-B/Multivariate Testing',
+	'Conversion Rate Optimization (CRO)',
 	'Public Speaking',
 ] as const;
 
-export const testimonialsData = [
+export const kindWordsData = [
 	'Design Systems',
 	'UX Research',
 	'Usability Testing',

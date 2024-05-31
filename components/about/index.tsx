@@ -23,7 +23,7 @@ export default function About() {
 		>
 			<section>
 				<Prose>
-					<h2>About me</h2>
+					<h2>About</h2>
 					<p>
 						With a passion for creating user-centered digital experiences, I
 						flourish in leading innovative design teams, conducting usability
@@ -31,9 +31,11 @@ export default function About() {
 						promoting human-centered design principles, mentoring emerging
 						talent, and continuously improving digital products through
 						innovative, accessible, and inclusive approaches. My experience
-						spans delivering impactful solutions for organizations such as
-						Compassion International, Pier 1 Imports, Slalom Consulting, and
-						Thomson Reuters.
+						spans delivering impactful solutions for organizations such as{' '}
+						<span className="k-type-no-wrap">Compassion International</span>,{' '}
+						<span className="k-type-no-wrap">Pier 1 Imports</span>,{' '}
+						<span className="k-type-no-wrap">Slalom Consulting</span>, and{' '}
+						<span className="k-type-no-wrap">Thomson Reuters</span>.
 					</p>
 				</Prose>
 			</section>

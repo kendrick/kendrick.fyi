@@ -3,10 +3,10 @@
 import About from '@/components/about';
 import Contact from '@/components/contact';
 import Intro from '@/components/intro';
+import KindWords from '@/components/kindWords';
 import Projects from '@/components/projects';
 import SectionDivider from '@/components/section-divider';
 import Skills from '@/components/skills';
-import Testimonials from '@/components/testimonials';
 
 import styles from './page.module.css';
 
@@ -25,7 +25,7 @@ export default function Home() {
 			<About />
 			<Projects />
 			<Skills />
-			<Testimonials />
+			<KindWords />
 			<Contact />
 		</main>
 	);

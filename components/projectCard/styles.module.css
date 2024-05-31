@@ -1,0 +1,12 @@
+.project-card {
+	padding: var(--k-space-xs-sm);
+	border: 1px solid;
+
+	h3 {
+		font-size: var(--k-type-size-base);
+	}
+
+	p {
+		font-size: var(--k-type-size-minus1);
+	}
+}

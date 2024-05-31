@@ -1,11 +1,16 @@
-.testimonials {
+.kind-words {
 	display: grid;
 	place-items: center;
 }
 
-.testimonials {
+.kind-words {
 	gap: var(--k-grid-gutter);
 	align-content: center;
 	min-height: 100dvh;
 	padding: var(--k-space-xs-xl);
+}
+
+.kind-words blockquote {
+	max-width: 66ch;
+	margin: 2em 0;
 }

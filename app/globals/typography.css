@@ -6,6 +6,10 @@
 			sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 	}
 
+	.k-type-no-wrap {
+		white-space: nowrap;
+	}
+
 	h1 {
 		font-family: var(--k-type-sans);
 		font-size: var(--k-type-size-plus4);

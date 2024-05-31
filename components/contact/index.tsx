@@ -1,7 +1,6 @@
 'use client';
 
 import { useSectionInView } from '@/lib/hooks';
-import { motion } from 'framer-motion';
 // import { sendEmail } from '@/actions/sendEmail';
 import styles from './styles.module.css';
 export default function Contact() {
@@ -9,22 +8,22 @@ export default function Contact() {
 	const { ref } = useSectionInView('Contact');
 
 	return (
-		<motion.section
+		<section
 			className={styles.contact}
 			id="contact"
 			// ref={ref}
-			initial={{
-				opacity: 0,
-			}}
-			whileInView={{
-				opacity: 1,
-			}}
-			transition={{
-				duration: 1,
-			}}
-			viewport={{
-				once: true,
-			}}
+			// initial={{
+			// 	opacity: 0,
+			// }}
+			// whileInView={{
+			// 	opacity: 1,
+			// }}
+			// transition={{
+			// 	duration: 1,
+			// }}
+			// viewport={{
+			// 	once: true,
+			// }}
 		>
 			<h2>Contact me</h2>
 
@@ -60,6 +59,6 @@ export default function Contact() {
 				/>
 				<SubmitBtn />
 			</form> */}
-		</motion.section>
+		</section>
 	);
 }

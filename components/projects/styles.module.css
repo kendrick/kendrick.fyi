@@ -1,8 +1,17 @@
 .projects {
 	display: grid;
-	gap: var(--k-grid-gutter);
 	place-items: center;
-	align-content: center;
+}
 
+.projects {
+	gap: var(--k-grid-gutter);
+	align-content: center;
 	min-height: 100dvh;
+	padding: var(--k-space-xs-xl);
+}
+
+.projects-cluster {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+	gap: var(--k-grid-gutter);
 }

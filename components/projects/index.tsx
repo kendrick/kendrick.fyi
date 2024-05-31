@@ -1,10 +1,10 @@
 'use client';
 
-import Project from '@/components/project';
+import ProjectCard from '@/components/projectCard';
 import { projectsData } from '@/lib/data';
 import { useSectionInView } from '@/lib/hooks';
-import React from 'react';
 
+import Cluster from '../layout/Cluster';
 import styles from './styles.module.css';
 
 export default function Projects() {
@@ -13,13 +13,15 @@ export default function Projects() {
 	return (
 		<section ref={ref} id="projects" className={styles.projects}>
 			<h2>Projects</h2>
-			<div>
+			<Cluster className={styles['projects-cluster']}>
 				{projectsData.map((project, index) => (
-					<React.Fragment key={index}>
-						<Project {...project} />
-					</React.Fragment>
+					<ProjectCard
+						{...project}
+						key={index}
+						className={styles['projects__card']}
+					/>
 				))}
-			</div>
+			</Cluster>
 		</section>
 	);
 }
