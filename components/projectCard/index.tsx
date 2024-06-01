@@ -9,8 +9,6 @@ interface Props {
 	className?: string | CSSModuleClasses;
 	title: string;
 	description: string;
-	imageUrl: string;
-	imageAltText: string;
 	projectPage: string;
 }
 
@@ -18,8 +16,6 @@ export default function ProjectCard({
 	className,
 	title,
 	description,
-	imageUrl,
-	imageAltText,
 	projectPage,
 }: Props) {
 	// const ref = useRef<HTMLDivElement>(null);

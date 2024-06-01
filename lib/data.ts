@@ -1,4 +1,3 @@
-import corpcommentImg from '@/public/corpcomment.png';
 // import React from 'react';
 
 export const links = [
@@ -60,35 +59,6 @@ export const projectsData = [
 		description:
 			'Compassion International revolutionized its global brand identity with a cutting-edge, token-based multi-brand design system, dramatically enhancing design consistency, slashing development times, and fostering seamless collaboration across 13 independent fundraising offices.',
 		// tags: ['One', 'Two', 'Three'],
-		imageUrl: corpcommentImg,
-		imageAltText: 'Compassion Design System screenshot',
-		projectPage: 'compassion-design-system',
-	},
-	{
-		title: 'Compassion Design System',
-		description:
-			'Compassion International revolutionized its global brand identity with a cutting-edge, token-based multi-brand design system, dramatically enhancing design consistency, slashing development times, and fostering seamless collaboration across 13 independent fundraising offices.',
-		// tags: ['One', 'Two', 'Three'],
-		imageUrl: corpcommentImg,
-		imageAltText: 'Compassion Design System screenshot',
-		projectPage: 'compassion-design-system',
-	},
-	{
-		title: 'Compassion Design System',
-		description:
-			'Compassion International revolutionized its global brand identity with a cutting-edge, token-based multi-brand design system, dramatically enhancing design consistency, slashing development times, and fostering seamless collaboration across 13 independent fundraising offices.',
-		// tags: ['One', 'Two', 'Three'],
-		imageUrl: corpcommentImg,
-		imageAltText: 'Compassion Design System screenshot',
-		projectPage: 'compassion-design-system',
-	},
-	{
-		title: 'Compassion Design System',
-		description:
-			'Compassion International revolutionized its global brand identity with a cutting-edge, token-based multi-brand design system, dramatically enhancing design consistency, slashing development times, and fostering seamless collaboration across 13 independent fundraising offices.',
-		// tags: ['One', 'Two', 'Three'],
-		imageUrl: corpcommentImg,
-		imageAltText: 'Compassion Design System screenshot',
 		projectPage: 'compassion-design-system',
 	},
 ] as const;

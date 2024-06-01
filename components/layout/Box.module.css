@@ -1,0 +1,10 @@
+.box {
+	padding: var(--k-box-padding, var(--k-space-md));
+	color: var(--k-box-color, inherit);
+	background-color: var(--k-box-background-color, inherit);
+	border: var(--k-box-border, 1px transparent solid);
+}
+
+.box * {
+	color: inherit;
+}

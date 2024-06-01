@@ -1,0 +1,13 @@
+.grid {
+	display: grid;
+	grid-gap: var(--k-grid-space, var(--k-space-md));
+}
+
+@supports (width: min(var(--k-grid-item-width, 30ch), 100%)) {
+	.grid {
+		grid-template-columns: repeat(
+			auto-fit,
+			minmax(min(var(--k-grid-item-width, 30ch), 100%), 1fr)
+		);
+	}
+}

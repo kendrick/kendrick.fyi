@@ -52,7 +52,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" className="!scroll-smooth">
-			<body className={fonts.sans.variable}>
+			<body>
 				<ThemeContextProvider>
 					<ActiveSectionContextProvider>
 						<Header />
