@@ -28,7 +28,7 @@ export default function KindWords() {
 					In my conversations with Kendrick, he listened as I described the
 					vision and was able to ask the right questions, deploy the exact
 					needed team resources, and partner with me throughout to ensure that
-					we were on track
+					we were on track.
 				</blockquote>
 				<figcaption>
 					<a href={recUrl}>

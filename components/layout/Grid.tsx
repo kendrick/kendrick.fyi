@@ -8,16 +8,31 @@ interface Props {
 	className?: string | CSSModuleClasses;
 	itemWidth?: string;
 	space?: string;
+	style?: React.CSSProperties;
+	asFlex?: boolean;
 }
 
-export default function Grid({ children, className, itemWidth, space }: Props) {
-	const style: React.CSSProperties = {
+export default function Grid({
+	children,
+	className,
+	itemWidth,
+	space,
+	style,
+	asFlex,
+}: Props) {
+	const propsToCSSVars: React.CSSProperties = {
 		...(itemWidth && { '--k-grid-item-width': itemWidth }),
 		...(space && { '--k-grid-space': space }),
+		...(asFlex ? { '--k-grid-as-flex': 'flex' } : {}),
+	};
+
+	const inlineStyles = {
+		...propsToCSSVars,
+		...style,
 	};
 
 	return (
-		<div style={style} className={clsx([styles.grid, className])}>
+		<div style={inlineStyles} className={clsx([styles.grid, className])}>
 			{children}
 		</div>
 	);

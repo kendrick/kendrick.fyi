@@ -4,22 +4,51 @@ import sharedStyles from '@/app/projects/project.module.css';
 import Prose from '@/components/layout/Prose';
 import clsx from 'clsx';
 import Image from 'next/image';
+import React from 'react';
 import Lightbox from 'yet-another-react-lightbox';
+import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 import 'yet-another-react-lightbox/styles.css';
 import styles from './styles.module.css';
 
 import NextJsImage from '@/lib/NextJsImage';
 
-import image1 from '@/public/corpcomment.png';
-import image2 from '@/public/rmtdev.png';
-import image3 from '@/public/wordanalytics.png';
+import fragmentation01 from './images/fragmentation/01.png';
+import fragmentation02 from './images/fragmentation/02.png';
+import fragmentation03 from './images/fragmentation/03.png';
+import fragmentation04 from './images/fragmentation/04.png';
+import fragmentation05 from './images/fragmentation/05.png';
+import fragmentation06 from './images/fragmentation/06.png';
+import fragmentation07 from './images/fragmentation/07.png';
+import fragmentation08 from './images/fragmentation/08.png';
 
-import _08 from './images/fragmentation/08.png';
+import building01 from './images/building-the-cds/workflow.jpg';
 
+import Grid from '@/components/layout/Grid';
+import WithSidebar from '@/components/layout/WithSidebar';
 import { useState } from 'react';
 
 export default function DesignSystem() {
+	const zoomRef = React.useRef(null);
+
 	const [open, setOpen] = useState(false);
+	const [fragmentationIndex, setFragmentationIndex] = useState(0);
+	// const [buildingIndex, setBuildingIndex] = useState(0);
+
+	const imagesFragmentation = [
+		fragmentation01,
+		fragmentation02,
+		fragmentation03,
+		fragmentation04,
+		fragmentation05,
+		fragmentation06,
+		fragmentation07,
+		fragmentation08,
+	];
+
+	const imagesBuilding = [building01];
+
+	const imgSizes =
+		'(max-width: 320px) 320px, (max-width: 576px) 576px, (max-width: 768px) 768px, (max-width: 992px) 992px, (max-width: 1200px) 1200px, (max-width: 1400px) 1400px, (min-width: 1401px) 1920px';
 	return (
 		<main className={clsx([sharedStyles.project, styles.project])}>
 			<Prose>
@@ -54,7 +83,43 @@ export default function DesignSystem() {
 					this issue, which called for a unified global voice to solidify its
 					brand identity.
 				</p>
-				<Image src={_08} alt="" width={320} placeholder="blur" />
+				<figure>
+					<Grid space={'var(--k-space-xs)'} itemWidth="96px">
+						{imagesFragmentation.map((image, index) => {
+							return (
+								<button
+									key={index}
+									style={{ position: 'relative' }}
+									onClick={() => {
+										setOpen(true);
+										setFragmentationIndex(index);
+										console.dir(index);
+									}}
+								>
+									<Image
+										src={image}
+										alt=""
+										width={0}
+										height={0}
+										sizes={imgSizes}
+										style={{ width: '100%', height: 'auto' }}
+									/>
+								</button>
+							);
+						})}
+					</Grid>
+					<figcaption>Lookit all this fragmentation…</figcaption>
+				</figure>
+				<Lightbox
+					open={open}
+					plugins={[Zoom]}
+					zoom={{ ref: zoomRef }}
+					animation={{ zoom: 250 }}
+					close={() => setOpen(false)}
+					slides={imagesFragmentation}
+					render={{ slide: NextJsImage }}
+					index={fragmentationIndex}
+				/>
 				<h2>Research and Discovery</h2>
 				<span>Delving into the Details</span>
 				<p>
@@ -68,7 +133,7 @@ export default function DesignSystem() {
 					staff of two for all operations, including fundraising and events.
 				</p>{' '}
 				<div className={styles.hero__image}>
-					================ UI audit, interview spreadsheet ================
+					====== UI audit, interview spreadsheet ======
 				</div>
 				<p>
 					We followed this with a global component and technology audit, which
@@ -89,19 +154,21 @@ export default function DesignSystem() {
 					design to development as the brand evolved. Design tokens emerged as a
 					critical enabler of our solution, ensuring the system was genuinely
 					future-proof and enabling flexibility where designers needed it.
-				</p>{' '}
-				<div className={styles.hero__image}>
-					================ Tokens ================
-				</div>
-				<p>
-					<h3>What are Design Tokens?</h3> Design tokens are the tiniest pieces
-					of a design system that store design-related information. Think of
-					them as variables that define and store the values for design
-					elements, such as colors, typography, spacing, and more. They help
-					bridge design and development, ensuring the same design decisions are
-					implemented consistently across different tools, platforms, and
-					devices.
 				</p>
+				<WithSidebar>
+					<div className={styles.hero__image}>====== Tokens ======</div>
+					<div>
+						<h3>What are Design Tokens?</h3>
+						<p>
+							Design tokens are the tiniest pieces of a design system that store
+							design-related information. Think of them as variables that define
+							and store the values for design elements, such as colors,
+							typography, spacing, and more. They help bridge design and
+							development, ensuring the same design decisions are implemented
+							consistently across different tools, platforms, and devices.
+						</p>
+					</div>
+				</WithSidebar>
 				<h2>Building the Compassion Design System</h2>
 				<span>From Concept to Reality</span>
 				<p>
@@ -112,6 +179,40 @@ export default function DesignSystem() {
 					carefully considered the most minor details, like naming design
 					tokens, to ensure clarity and consistency.
 				</p>
+				{/* <figure>
+					<Grid space={'var(--k-space-xs)'} itemWidth="96px">
+						{imagesBuilding.map((image, index) => {
+							return (
+								<button
+									key={index}
+									style={{ position: 'relative' }}
+									onClick={() => {
+										setOpen(true);
+										setBuildingIndex(index);
+										console.dir(index);
+									}}
+								>
+									<Image
+										src={image}
+										alt=""
+										width={0}
+										height={0}
+										sizes={imgSizes}
+										style={{ width: '100%', height: 'auto' }}
+									/>
+								</button>
+							);
+						})}
+					</Grid>
+					<figcaption>Lookit all this fragmentation…</figcaption>
+				</figure>
+				<Lightbox
+					open={open}
+					close={() => setOpen(false)}
+					slides={imagesBuilding}
+					render={{ slide: NextJsImage }}
+					index={buildingIndex}
+				/> */}
 				<p>
 					We partnered with teams across Compassion to establish a robust
 					governance model and a streamlined design-to-development workflow.
@@ -123,7 +224,7 @@ export default function DesignSystem() {
 					workflow between designers and developers.
 				</p>
 				<div className={styles.hero__image}>
-					================ Governance workflow ================
+					====== Governance workflow ======
 				</div>
 				<h2>Bringing the Vision to Life</h2>
 				<span>Understanding Our Users</span>
@@ -188,15 +289,7 @@ export default function DesignSystem() {
 					with the Compassion Design System.
 				</p>
 			</Prose>
-			<button type="button" onClick={() => setOpen(true)}>
-				Open Lightbox
-			</button>
-			<Lightbox
-				open={open}
-				close={() => setOpen(false)}
-				slides={[image1, image2, image3]}
-				render={{ slide: NextJsImage }}
-			/>
+			<button type="button">Open Lightbox</button>
 		</main>
 	);
 }

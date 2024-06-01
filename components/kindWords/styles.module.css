@@ -11,6 +11,6 @@
 }
 
 .kind-words blockquote {
+	width: 66ch;
 	max-width: 66ch;
-	margin: 2em 0;
 }
