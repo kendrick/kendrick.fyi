@@ -3,6 +3,8 @@ import clsx from 'clsx';
 import React, { CSSProperties, useEffect } from 'react';
 import styles from './WithSidebar.module.css';
 
+// import type * as CSS from 'csstype';
+
 type CSSModuleClasses = { [key: string]: string };
 
 interface Props {
@@ -10,6 +12,7 @@ interface Props {
 	className?: string | CSSModuleClasses;
 	space?: string;
 	sidebarWidth?: string;
+	sidebarOnRight?: boolean;
 	style?: CSSProperties;
 }
 
@@ -18,6 +21,7 @@ export default function WithSidebar({
 	className,
 	space,
 	sidebarWidth,
+	sidebarOnRight,
 	style,
 }: Props) {
 	const childrenArray = React.Children.toArray(children);
@@ -47,7 +51,13 @@ export default function WithSidebar({
 	return (
 		<div
 			style={inlineStyles}
-			className={clsx([styles['with-sidebar'], className])}
+			className={clsx([
+				styles['with-sidebar'],
+				sidebarOnRight ?
+					styles['with-sidebar--right']
+				:	styles['with-sidebar--left'],
+				className,
+			])}
 		>
 			{children}
 		</div>

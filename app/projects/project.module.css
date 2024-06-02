@@ -13,3 +13,11 @@
 		margin-block-start: var(--k-space-md-2xl);
 	}
 }
+
+.aside__heading {
+	font-size: var(--k-type-size-base);
+}
+
+.aside p {
+	font-size: var(--k-type-size-minus1);
+}

@@ -1,6 +1,6 @@
 .grid {
 	display: var(--k-grid-as-flex, grid);
-	gap: var(--k-grid-space, var(--k-space-md));
+	gap: var(--k-grid-space, var(--k-space-sm-md));
 }
 
 @supports (width: min(var(--k-grid-item-width, 30ch), 100%)) {
