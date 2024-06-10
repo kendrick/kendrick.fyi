@@ -10,8 +10,6 @@ import styles from './styles.module.css';
 
 import usePlatform from '@/lib/hooks/usePlatform';
 
-import OverflowContainer from '@/components/OverflowContainer';
-
 import fragmentation01 from './images/fragmentation/01.png';
 import fragmentation02 from './images/fragmentation/02.png';
 import fragmentation03 from './images/fragmentation/03.png';
@@ -32,6 +30,7 @@ import visionToLife02 from './images/vision-to-life/dwc-desktop.png';
 import visionToLife01 from './images/vision-to-life/dwc-mobile.png';
 
 import FYIGrid from '@/components/FYIGrid';
+import Switcher from '@/components/layout/Switcher';
 import WithSidebar from '@/components/layout/WithSidebar';
 
 export default function DesignSystem() {
@@ -154,18 +153,48 @@ export default function DesignSystem() {
 					diversity underscored the need for a flexible and adaptable design
 					system.
 				</p>
-				<OverflowContainer
-					src={audit01}
-					alt="Project Image"
-					containerHeight={812}
-					containerWidth={375}
-				/>
-				<FYIGrid
-					// images={imagesAudit}
-					images={[audit02]}
-					itemWidth="6rem"
-					caption="Partial audit results: 109 Button styles,  homepages, 23 Card styles."
-				></FYIGrid>
+				<Switcher threshold="992px">
+					<div
+						style={{ aspectRatio: '16 / 9' }}
+						className={clsx(
+							styles['app-frame'],
+							platform === 'Mac' ? styles.mac : styles.win,
+							styles.scrolling,
+							styles.centered,
+						)}
+						data-title="Component Audit • 109 Button styles"
+					>
+						<div style={{ padding: 0 }}>
+							<Image src={audit01} alt="" />
+						</div>
+					</div>
+					<div
+						style={{ aspectRatio: '16 / 9' }}
+						className={clsx(
+							styles['app-frame'],
+							platform === 'Mac' ? styles.mac : styles.win,
+							styles.scrolling,
+							styles.centered,
+						)}
+						data-title="Component Audit • 23 Card styles"
+					>
+						<div style={{ padding: 0 }}>
+							<Image src={audit02} alt="" />
+						</div>
+					</div>
+					{/* <OverflowContainer
+						src={audit01}
+						alt="Project Image"
+						containerHeight={812}
+						containerWidth={375}
+					/>
+					<FYIGrid
+						// images={imagesAudit}
+						images={[audit02]}
+						itemWidth="6rem"
+						caption="Partial audit results: 109 Button styles,  homepages, 23 Card styles."
+					></FYIGrid> */}
+				</Switcher>
 				<h2>Strategic Vision</h2>
 				<span>Crafting the Design System Blueprint</span>
 				<p>
