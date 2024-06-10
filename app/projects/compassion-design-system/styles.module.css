@@ -1,5 +1,5 @@
-.project {
-}
+@import 'css-device-frames/dist/device-frames.css';
+@import 'devices.css/dist/devices.min.css';
 
 .hero__image {
 	display: grid;
@@ -10,4 +10,43 @@
 
 	background: #ddd;
 	border-radius: 8px;
+}
+
+.dwc {
+	justify-content: center;
+
+	.device-iphone-14-pro {
+		text-align: center;
+	}
+}
+
+.device.device-iphone-14-pro {
+	display: inline-block;
+	margin: 0 calc(2rem + 3px) 2rem 3px;
+}
+
+.device-iphone-14-pro .device-frame--mod {
+	scrollbar-width: none;
+
+	overflow: auto;
+
+	aspect-ratio: 428 / 868;
+	margin: 16px;
+
+	background: #fff;
+	border-radius: 68px;
+	box-shadow:
+		0 0 20px 5px #101010,
+		0 0 20px 0 #000,
+		0 0 0 16px rgba(42, 42, 42, 1);
+}
+
+.device-iphone-14-pro .device-screen--mod {
+	width: unset;
+	height: unset;
+	margin: 16px auto;
+}
+
+.device-iphone-14-pro .device-power {
+	right: -34px;
 }

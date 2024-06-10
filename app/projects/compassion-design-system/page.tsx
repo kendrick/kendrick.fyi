@@ -8,6 +8,10 @@ import React from 'react';
 import 'yet-another-react-lightbox/styles.css';
 import styles from './styles.module.css';
 
+import usePlatform from '@/lib/hooks/usePlatform';
+
+import OverflowContainer from '@/components/OverflowContainer';
+
 import fragmentation01 from './images/fragmentation/01.png';
 import fragmentation02 from './images/fragmentation/02.png';
 import fragmentation03 from './images/fragmentation/03.png';
@@ -83,7 +87,7 @@ export default function DesignSystem() {
 	];
 
 	const imgWidthInSidebar = 'clamp(20rem, 18rem + 10vw, 30rem)';
-
+	const platform = usePlatform();
 	return (
 		<main className={clsx([sharedProjectStyles.project, styles.project])}>
 			<Prose>
@@ -150,10 +154,17 @@ export default function DesignSystem() {
 					diversity underscored the need for a flexible and adaptable design
 					system.
 				</p>
+				<OverflowContainer
+					src={audit01}
+					alt="Project Image"
+					containerHeight={812}
+					containerWidth={375}
+				/>
 				<FYIGrid
-					images={imagesAudit}
+					// images={imagesAudit}
+					images={[audit02]}
 					itemWidth="6rem"
-					caption="Eight homepages, eight brands."
+					caption="Partial audit results: 109 Button styles,  homepages, 23 Card styles."
 				></FYIGrid>
 				<h2>Strategic Vision</h2>
 				<span>Crafting the Design System Blueprint</span>
@@ -229,14 +240,35 @@ export default function DesignSystem() {
 					allowFullScreen
 				></iframe>
 				<div className={styles.hero__image}>====== Figma UI kit ======</div>
-				<FYIGrid
-					images={imagesVisionToLife}
-					caption="Marketing site for the Compassion Design System."
-				></FYIGrid>
-				{/* <FYIGrid
-					images={imagesVisionToLife}
-					caption="A unified design & development workflow."
-				></FYIGrid> */}
+				<WithSidebar className={styles.dwc} sidebarWidth="400px">
+					<div
+						className={clsx(styles['device'], styles['device-iphone-14-pro'])}
+					>
+						<div className={styles['device-frame--mod']}>
+							<Image
+								className={styles['device-screen--mod']}
+								src={visionToLife01}
+								alt=""
+							/>
+							<div className={styles['device-btns']}></div>
+							{/* <div className={styles['device-power']}></div> */}
+						</div>
+					</div>
+					<div
+						style={{ aspectRatio: '16 / 9' }}
+						className={clsx(
+							styles['app-frame'],
+							platform === 'Mac' ? styles.mac : styles.win,
+							styles.scrolling,
+							styles.centered,
+						)}
+						data-title="Design with Compassion | Marketing Site"
+					>
+						<div style={{ padding: 0 }}>
+							<Image src={visionToLife02} alt="" />
+						</div>
+					</div>
+				</WithSidebar>
 				<h2>Impact and Outcomes</h2>
 				<span>Measuring Success</span>
 				<p>
