@@ -1,0 +1,41 @@
+@import 'devices.css/dist/devices.min.css';
+@import 'css-device-frames/dist/device-frames.css';
+
+.device.device-iphone-14-pro {
+	display: inline-block;
+
+	width: 100%;
+	max-width: 428px;
+	height: auto;
+	margin-left: 3px;
+}
+
+.device-iphone-14-pro .device-frame--mod {
+	scrollbar-width: none;
+
+	overflow: auto;
+
+	aspect-ratio: 428 / 868;
+	margin: 16px 16px 16px 19px;
+
+	border-radius: 68px;
+	box-shadow:
+		0 0 20px 5px #101010,
+		0 0 20px 0 #000,
+		0 0 0 16px rgba(42, 42, 42, 1);
+}
+
+.device-iphone-14-pro .device-screen--mod {
+	width: unset;
+	height: unset;
+	margin-top: var(--k-device-frame-margin-top, 0);
+	margin-bottom: var(--k-device-frame-margin-bottom, 0);
+}
+
+.device-frame--wrap .device-iphone-14-pro .device-power {
+	right: -34px;
+}
+
+.device-viewport {
+	background: var(--k-device-frame-background, unset);
+}
