@@ -3,10 +3,6 @@ import clsx from 'clsx';
 import React, { CSSProperties, useEffect } from 'react';
 import styles from './WithSidebar.module.css';
 
-// import type * as CSS from 'csstype';
-
-type CSSModuleClasses = { [key: string]: string };
-
 interface Props {
 	children: React.ReactNode;
 	className?: string | CSSModuleClasses;

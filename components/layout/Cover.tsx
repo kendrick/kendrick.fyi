@@ -1,8 +1,6 @@
 import clsx from 'clsx';
 import styles from './Cover.module.css';
 
-type CSSModuleClasses = { [key: string]: string };
-
 interface Props {
 	children: React.ReactNode;
 	className?: string | CSSModuleClasses;

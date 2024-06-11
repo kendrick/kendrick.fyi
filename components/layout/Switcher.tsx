@@ -3,8 +3,6 @@ import clsx from 'clsx';
 import { CSSProperties } from 'react';
 import styles from './Switcher.module.css';
 
-type CSSModuleClasses = { [key: string]: string };
-
 interface Props {
 	threshold?: string;
 	children: React.ReactNode;
