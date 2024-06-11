@@ -67,6 +67,7 @@ export default function FYIGrid({
 							height={0}
 							sizes={imgSizes}
 							style={{ width: '100%', height: 'auto' }}
+							placeholder="blur"
 						/>
 					</button>
 				))}
@@ -81,7 +82,6 @@ export default function FYIGrid({
 				carousel={{ finite: true, preload: 1 }}
 				controller={{ closeOnBackdropClick: true, closeOnPullDown: true }}
 				slides={images.map((slide) => {
-					console.dir;
 					return { src: getSrc(slide.src), alt: slide.alt };
 				})}
 				render={{
