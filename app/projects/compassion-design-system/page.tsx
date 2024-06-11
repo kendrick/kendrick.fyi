@@ -26,6 +26,8 @@ import audit02 from './images/research-discovery/cds-audit-cards.png';
 
 import interviews01 from './images/research-discovery/cds-user-interviews-highlights.png';
 
+import tokens from './images/tokens/cds-tokens-studio.png';
+
 import visionToLife02 from './images/vision-to-life/dwc-desktop.png';
 import visionToLife01 from './images/vision-to-life/dwc-mobile.png';
 
@@ -162,7 +164,7 @@ export default function DesignSystem() {
 							styles.scrolling,
 							styles.centered,
 						)}
-						data-title="Component Audit • 109 Button styles"
+						data-title="Global Component Audit • 109 Button styles"
 					>
 						<div style={{ padding: 0 }}>
 							<Image src={audit01} alt="" />
@@ -176,7 +178,7 @@ export default function DesignSystem() {
 							styles.scrolling,
 							styles.centered,
 						)}
-						data-title="Component Audit • 23 Card styles"
+						data-title="Global Component Audit • 23 Card styles"
 					>
 						<div style={{ padding: 0 }}>
 							<Image src={audit02} alt="" />
@@ -207,7 +209,7 @@ export default function DesignSystem() {
 					critical enabler of our solution, ensuring the system was genuinely
 					future-proof and enabling flexibility where designers needed it.
 				</p>
-				<WithSidebar sidebarOnRight sidebarWidth={imgWidthInSidebar}>
+				<WithSidebar sidebarOnRight sidebarWidth="100px">
 					<aside className={sharedProjectStyles.aside}>
 						<h3 className={sharedProjectStyles.aside__heading}>
 							What are Design Tokens?
@@ -221,7 +223,7 @@ export default function DesignSystem() {
 							consistently across different tools, platforms, and devices.
 						</p>
 					</aside>
-					<div className={styles.hero__image}>====== Tokens ======</div>
+					<Image src={tokens} alt="" />
 				</WithSidebar>
 				<h2>Building Buy-In</h2>
 				<span>Steering the Cruise Ship</span>
