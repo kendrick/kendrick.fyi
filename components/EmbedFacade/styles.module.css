@@ -1,0 +1,13 @@
+.facade {
+	display: inline-block;
+	aspect-ratio: var(--k-facade-aspect-ratio, unset);
+	width: var(--k-facade-width, unset);
+	height: var(--k-facade-height, unset);
+}
+
+.embed {
+	aspect-ratio: var(--k-facade-aspect-ratio, unset);
+	width: var(--k-facade-width, unset);
+	height: var(--k-facade-height, unset);
+	border: 0;
+}
