@@ -1,6 +1,7 @@
 'use client';
 
 import sharedProjectStyles from '@/app/projects/project.module.css';
+import EmbedFacade from '@/components/EmbedFacade';
 import Prose from '@/components/layout/Prose';
 import clsx from 'clsx';
 import Image from 'next/image';
@@ -8,16 +9,8 @@ import React from 'react';
 import 'yet-another-react-lightbox/styles.css';
 import styles from './styles.module.css';
 
-import usePlatform from '@/lib/hooks/usePlatform';
-
-import fragmentation01 from './images/fragmentation/01.png';
-import fragmentation02 from './images/fragmentation/02.png';
-import fragmentation03 from './images/fragmentation/03.png';
-import fragmentation04 from './images/fragmentation/04.png';
-import fragmentation05 from './images/fragmentation/05.png';
-import fragmentation06 from './images/fragmentation/06.png';
-import fragmentation07 from './images/fragmentation/07.png';
-import fragmentation08 from './images/fragmentation/08.png';
+import fragmentationImages from './images/fragmentation';
+import onTheCds from './images/on-the-cds';
 
 import building01 from './images/building-the-cds/workflow.jpg';
 
@@ -31,6 +24,7 @@ import tokens from './images/tokens/cds-tokens-studio.png';
 import visionToLife02 from './images/vision-to-life/dwc-desktop.png';
 import visionToLife01 from './images/vision-to-life/dwc-mobile.png';
 
+import DeviceFrame from '@/components/DeviceFrame';
 import FYIGrid from '@/components/FYIGrid';
 import Switcher from '@/components/layout/Switcher';
 import WithSidebar from '@/components/layout/WithSidebar';
@@ -38,43 +32,7 @@ import WithSidebar from '@/components/layout/WithSidebar';
 export default function DesignSystem() {
 	const zoomRef = React.useRef(null);
 
-	const imagesFragmentation = [
-		{
-			src: fragmentation01,
-			alt: '',
-		},
-		{
-			src: fragmentation02,
-			alt: '',
-		},
-		{
-			src: fragmentation03,
-			alt: '',
-		},
-		{
-			src: fragmentation04,
-			alt: '',
-		},
-		{
-			src: fragmentation05,
-			alt: '',
-		},
-		{
-			src: fragmentation06,
-			alt: '',
-		},
-		{
-			src: fragmentation07,
-			alt: '',
-		},
-		{
-			src: fragmentation08,
-			alt: '',
-		},
-	];
-
 	const imagesBuilding = [{ src: building01, alt: '' }];
-
 	const imagesInterviews = [{ src: interviews01, alt: '' }];
 
 	const imagesAudit = [
@@ -88,7 +46,9 @@ export default function DesignSystem() {
 	];
 
 	const imgWidthInSidebar = 'clamp(20rem, 18rem + 10vw, 30rem)';
-	const platform = usePlatform();
+	const n2nFfBackground = '#3268fa';
+	const n2nSfBackground = '#fbf8f4';
+
 	return (
 		<main className={clsx([sharedProjectStyles.project, styles.project])}>
 			<Prose>
@@ -124,7 +84,7 @@ export default function DesignSystem() {
 					identity.
 				</p>
 				<FYIGrid
-					images={imagesFragmentation}
+					images={fragmentationImages}
 					itemWidth="6rem"
 					caption="Eight homepages, eight brands."
 				></FYIGrid>
@@ -156,46 +116,20 @@ export default function DesignSystem() {
 					system.
 				</p>
 				<Switcher threshold="992px">
-					<div
-						style={{ aspectRatio: '16 / 9' }}
-						className={clsx(
-							styles['app-frame'],
-							platform === 'Mac' ? styles.mac : styles.win,
-							styles.scrolling,
-							styles.centered,
-						)}
-						data-title="Global Component Audit • 109 Button styles"
-					>
-						<div style={{ padding: 0 }}>
-							<Image src={audit01} alt="" />
-						</div>
-					</div>
-					<div
-						style={{ aspectRatio: '16 / 9' }}
-						className={clsx(
-							styles['app-frame'],
-							platform === 'Mac' ? styles.mac : styles.win,
-							styles.scrolling,
-							styles.centered,
-						)}
-						data-title="Global Component Audit • 23 Card styles"
-					>
-						<div style={{ padding: 0 }}>
-							<Image src={audit02} alt="" />
-						</div>
-					</div>
-					{/* <OverflowContainer
+					<DeviceFrame
 						src={audit01}
-						alt="Project Image"
-						containerHeight={812}
-						containerWidth={375}
-					/>
-					<FYIGrid
-						// images={imagesAudit}
-						images={[audit02]}
-						itemWidth="6rem"
-						caption="Partial audit results: 109 Button styles,  homepages, 23 Card styles."
-					></FYIGrid> */}
+						alt=""
+						deviceType="desktop"
+						style={{ aspectRatio: '16 / 9' }}
+						title="Global Component Audit • 109 Button styles"
+					></DeviceFrame>
+					<DeviceFrame
+						src={audit02}
+						alt=""
+						deviceType="desktop"
+						style={{ aspectRatio: '16 / 9' }}
+						title="Global Component Audit • 23 Card styles"
+					></DeviceFrame>
 				</Switcher>
 				<h2>Strategic Vision</h2>
 				<span>Crafting the Design System Blueprint</span>
@@ -223,7 +157,7 @@ export default function DesignSystem() {
 							consistently across different tools, platforms, and devices.
 						</p>
 					</aside>
-					<Image src={tokens} alt="" />
+					<Image src={tokens} alt="" placeholder="blur" />
 				</WithSidebar>
 				<h2>Building Buy-In</h2>
 				<span>Steering the Cruise Ship</span>
@@ -262,43 +196,24 @@ export default function DesignSystem() {
 					The team implemented automated visual regression testing to maintain
 					consistency and quality across frameworks, ensuring our design system
 					performed reliably across all platforms.
-				</p>{' '}
-				<iframe
-					style={{ border: '1px solid rgba(0, 0, 0, 0.1)' }}
-					width="100%"
-					height="600px"
-					src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FoahZHU1NfEJMbrhwnqJnIJ%2Fkendrick.fyi%3Fnode-id%3D1-2%26t%3DKAemp2k1MI78UZr8-1"
-					allowFullScreen
-				></iframe>
-				<div className={styles.hero__image}>====== Figma UI kit ======</div>
+				</p>
+				<EmbedFacade height="480px" aspectRatio="16 / 9">
+					<span>Load the Figma file</span>
+					<iframe
+						src="https://www.figma.com/embed?embed_host=share&community_viewer=true&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FQmnNQopuJ2fvI5uBXJtMCI%2FUI-Kit-(cds-light)%3Ft%3DMHRLCVSKCtspjkCT-1"
+						allowFullScreen
+					></iframe>
+				</EmbedFacade>
+
 				<WithSidebar className={styles.dwc} sidebarWidth="400px">
-					<div
-						className={clsx(styles['device'], styles['device-iphone-14-pro'])}
-					>
-						<div className={styles['device-frame--mod']}>
-							<Image
-								className={styles['device-screen--mod']}
-								src={visionToLife01}
-								alt=""
-							/>
-							<div className={styles['device-btns']}></div>
-							{/* <div className={styles['device-power']}></div> */}
-						</div>
-					</div>
-					<div
+					<DeviceFrame src={visionToLife01} alt="" imageVerticalMargin="1rem" />
+					<DeviceFrame
+						src={visionToLife02}
+						alt=""
+						deviceType="desktop"
 						style={{ aspectRatio: '16 / 9' }}
-						className={clsx(
-							styles['app-frame'],
-							platform === 'Mac' ? styles.mac : styles.win,
-							styles.scrolling,
-							styles.centered,
-						)}
-						data-title="Design with Compassion | Marketing Site"
-					>
-						<div style={{ padding: 0 }}>
-							<Image src={visionToLife02} alt="" />
-						</div>
-					</div>
+						title="Design with Compassion | Documentation Site"
+					></DeviceFrame>
 				</WithSidebar>
 				<h2>Impact and Outcomes</h2>
 				<span>Measuring Success</span>
@@ -310,10 +225,158 @@ export default function DesignSystem() {
 					Notably, the Compassion Design System was used in the Field Strategies
 					app, a crucial tool in a $1.4 billion multi-year fundraising effort,
 					as well as many global campaign sites and marketing landing pages.
-				</p>{' '}
-				<div className={styles.hero__image}>
-					================ Apps on the CDS ================
-				</div>
+				</p>
+				<section className={styles['on-the-cds']}>
+					{/* AOG */}
+					<DeviceFrame
+						src={onTheCds.aog.mobile.src}
+						alt={onTheCds.aog.mobile.alt}
+					/>
+					<DeviceFrame
+						deviceType="desktop"
+						title="Conference Partnership Site"
+						style={{ aspectRatio: '16 / 10' }}
+						src={onTheCds.aog.desktop.src}
+						alt={onTheCds.aog.desktop.alt}
+					/>
+					{/* Compassion Campaigns */}
+					<DeviceFrame
+						deviceType="desktop"
+						title="Global Campaigns Hub"
+						style={{ aspectRatio: '16 / 10' }}
+						src={onTheCds.compassionCampaigns.desktop.src}
+						alt={onTheCds.compassionCampaigns.desktop.alt}
+					/>
+					{/* MWC */}
+					<DeviceFrame
+						deviceType="desktop"
+						title="Brand Platform Site"
+						style={{ aspectRatio: '700 / 494', alignSelf: 'baseline' }}
+						src={onTheCds.mwc.magicLink.src}
+						alt={onTheCds.mwc.magicLink.alt}
+					/>
+					<DeviceFrame
+						deviceType="desktop"
+						title="Brand Platform Site"
+						style={{ aspectRatio: '16 / 10' }}
+						src={onTheCds.mwc.desktop.src}
+						alt={onTheCds.mwc.desktop.alt}
+					/>
+					{/* N2N Supporter */}
+					<DeviceFrame
+						src={onTheCds.n2nSupporterHome.mobile.src}
+						alt={onTheCds.n2nSupporterHome.mobile.alt}
+					/>
+					<DeviceFrame
+						deviceType="desktop"
+						title="Crowdfunding App | Home"
+						style={{ aspectRatio: '16 / 10' }}
+						src={onTheCds.n2nSupporterHome.desktop.src}
+						alt={onTheCds.n2nSupporterHome.desktop.alt}
+					/>
+					<DeviceFrame
+						imageVerticalMargin="1rem"
+						background={n2nSfBackground}
+						src={onTheCds.n2nSupporterCauseDetail.mobile.src}
+						alt={onTheCds.n2nSupporterCauseDetail.mobile.alt}
+					/>
+					<DeviceFrame
+						deviceType="desktop"
+						title="Crowdfunding App | Detail Page"
+						style={{ aspectRatio: '16 / 10' }}
+						src={onTheCds.n2nSupporterCauseDetail.desktop.src}
+						alt={onTheCds.n2nSupporterCauseDetail.desktop.alt}
+					/>
+					{/* N2N Field */}
+					<DeviceFrame
+						background={n2nFfBackground}
+						imageVerticalMargin="1rem"
+						src={onTheCds.n2nField._01.src}
+						alt={onTheCds.n2nField._01.alt}
+					/>
+					<DeviceFrame
+						background={n2nFfBackground}
+						imageVerticalMargin="1rem"
+						src={onTheCds.n2nField._02.src}
+						alt={onTheCds.n2nField._02.alt}
+					/>
+					<DeviceFrame
+						imageVerticalMargin="1rem"
+						src={onTheCds.n2nField._03.src}
+						alt={onTheCds.n2nField._03.alt}
+					/>
+					<DeviceFrame
+						background={n2nFfBackground}
+						imageVerticalMargin="1rem"
+						src={onTheCds.n2nField._04.src}
+						alt={onTheCds.n2nField._04.alt}
+					/>
+					<DeviceFrame
+						background={n2nFfBackground}
+						imageVerticalMargin="1rem"
+						src={onTheCds.n2nField._05.src}
+						alt={onTheCds.n2nField._05.alt}
+					/>
+					{/* Play to Heal */}
+					<DeviceFrame
+						src={onTheCds.playToHeal.mobile.src}
+						alt={onTheCds.playToHeal.mobile.alt}
+					/>
+					<DeviceFrame
+						deviceType="desktop"
+						title="Roblox In-Game Fundraising Partnership"
+						style={{ aspectRatio: '16 / 10' }}
+						src={onTheCds.playToHeal.desktop.src}
+						alt={onTheCds.playToHeal.desktop.alt}
+					/>
+					{/* Targeted Response */}
+					<DeviceFrame
+						deviceType="desktop"
+						title="Field Strategies Planning and Reporting | Home"
+						style={{ aspectRatio: '16 / 10' }}
+						src={onTheCds.tr.home.src}
+						alt={onTheCds.tr.home.alt}
+					/>
+					<DeviceFrame
+						deviceType="desktop"
+						title="Field Strategies Planning and Reporting | Global View"
+						style={{ aspectRatio: '16 / 10' }}
+						src={onTheCds.tr.global.src}
+						alt={onTheCds.tr.global.alt}
+					/>
+					<DeviceFrame
+						deviceType="desktop"
+						title="Field Strategies Planning and Reporting | Country View"
+						style={{ aspectRatio: '16 / 10' }}
+						src={onTheCds.tr.country.src}
+						alt={onTheCds.tr.country.alt}
+					/>
+					{/* White-label Campaign Hub */}
+					<DeviceFrame
+						imageVerticalMargin="2rem"
+						src={onTheCds.wch.mobile01.src}
+						alt={onTheCds.wch.mobile01.alt}
+					/>
+					<DeviceFrame
+						deviceType="desktop"
+						title="Reusable, White-Label Campaign Hub | Guidelines Template"
+						style={{ aspectRatio: '16 / 10' }}
+						src={onTheCds.wch.desktop01.src}
+						alt={onTheCds.wch.desktop01.alt}
+					/>
+					<DeviceFrame
+						imageVerticalMargin="2rem"
+						src={onTheCds.wch.mobile02.src}
+						alt={onTheCds.wch.mobile02.alt}
+					/>
+					<DeviceFrame
+						deviceType="desktop"
+						title="Reusable, White-Label Campaign Hub | Assets Template"
+						style={{ aspectRatio: '16 / 10' }}
+						src={onTheCds.wch.desktop02.src}
+						alt={onTheCds.wch.desktop02.alt}
+					/>
+				</section>
 				<p>
 					The qualitative benefits of the Compassion Design System were
 					substantial. The design system improved design consistency, reduced
