@@ -1,4 +1,4 @@
-/* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1920,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6|8|12|16,s-l|xs-l|xs-xl|s-xl|m-xl|m-2xl|s-2xl|s-3xl&g=s,l,xl,12 */
+/* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1920,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6|8|12|16,s-l|xs-l|xs-xl|s-xl|m-xl|m-2xl|s-2xl|s-3xl|3xs-6xl&g=s,l,xl,12 */
 
 :root {
 	--k-space-3xs: clamp(0.25rem, 0.225rem + 0.125vi, 0.375rem);
@@ -36,6 +36,7 @@
 	--k-space-md-2xl: clamp(1.5rem, 0.6rem + 4.5vi, 6rem);
 	--k-space-sm-2xl: clamp(1rem, 0rem + 5vi, 6rem);
 	--k-space-sm-3xl: clamp(1rem, -0.6rem + 8vi, 9rem);
+	--k-space-3xs-4xl: clamp(0.25rem, -2.1rem + 11.75vi, 12rem);
 
 	/* Grid stuff */
 	--k-grid-max-width: 120rem;

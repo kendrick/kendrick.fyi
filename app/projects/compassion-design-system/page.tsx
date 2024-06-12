@@ -19,10 +19,12 @@ import audit02 from './images/research-discovery/cds-audit-cards.png';
 
 import interviews01 from './images/research-discovery/cds-user-interviews-highlights.png';
 
+import FigmaLogo from '@/lib/LogoFigma';
 import tokens from './images/tokens/cds-tokens-studio.png';
 
 import visionToLife02 from './images/vision-to-life/dwc-desktop.png';
 import visionToLife01 from './images/vision-to-life/dwc-mobile.png';
+import visionToLife03 from './images/vision-to-life/facade-thumbnail.png';
 
 import DeviceFrame from '@/components/DeviceFrame';
 import FYIGrid from '@/components/FYIGrid';
@@ -136,41 +138,45 @@ export default function DesignSystem() {
 				</Switcher>
 				<h2>Strategic Vision</h2>
 				<span>Crafting the Design System Blueprint</span>
-				<p>
-					Our strategy was clear: we aimed to create a design system with vast
-					flexibility and adaptability. This system was architected to empower
-					marketers’ creativity across Compassion’s global network while setting
-					a clear vision for unification. Given the ongoing brand overhaul, the
-					system needed to be adaptable, allowing for effortless flow from
-					design to development as the brand evolved. Design tokens emerged as a
-					critical enabler of our solution, ensuring the system was genuinely
-					future-proof and enabling flexibility where designers needed it.
-				</p>
 				<WithSidebar sidebarOnRight>
-					<aside className={sharedProjectStyles.aside}>
-						<h3 className={sharedProjectStyles.aside__heading}>
-							What are Design Tokens?
-						</h3>
-						<p>
-							Design tokens are the tiniest pieces of a design system that store
-							design-related information. Think of them as variables that define
-							and store the values for design elements, such as colors,
-							typography, spacing, and more. They help bridge design and
-							development, ensuring the same design decisions are implemented
-							consistently across different tools, platforms, and devices.
-						</p>
-					</aside>
-					<FYIGrid
-						images={[{ src: tokens, alt: '' }]}
-						caption="Managing tokens with the Tokens Studio plug-in."
-						className={styles['tokens-image']}
-					></FYIGrid>
-					{/* <Image
+					<p>
+						Our strategy was clear: we aimed to create a design system with vast
+						flexibility and adaptability. This system was architected to empower
+						marketers’ creativity across Compassion’s global network while
+						setting a clear vision for unification. Given the ongoing brand
+						overhaul, the system needed to be adaptable, allowing for effortless
+						flow from design to development as the brand evolved. Design tokens
+						emerged as a critical enabler of our solution, ensuring the system
+						was genuinely future-proof and enabling flexibility where designers
+						needed it.
+					</p>
+					<WithSidebar sidebarOnRight>
+						<aside className={clsx(sharedProjectStyles.aside, styles.aside)}>
+							<h3 className={sharedProjectStyles.aside__heading}>
+								What are Design Tokens?
+							</h3>
+							<p>
+								Design tokens are the tiniest pieces of a design system that
+								store design-related information. Think of them as variables
+								that define and store the values for design elements, such as
+								colors, typography, spacing, and more. They help bridge design
+								and development, ensuring the same design decisions are
+								implemented consistently across different tools, platforms, and
+								devices.
+							</p>
+						</aside>
+						<FYIGrid
+							images={[{ src: tokens, alt: '' }]}
+							caption="Managing tokens with the Tokens Studio plug-in."
+							className={styles['tokens-image']}
+						></FYIGrid>
+						{/* <Image
 						src={tokens}
 						alt=""
 						placeholder="blur"
 						className={styles['tokens-image']}
 					/> */}
+					</WithSidebar>
 				</WithSidebar>
 				<h2>Building Buy-In</h2>
 				<span>Steering the Cruise Ship</span>
@@ -182,20 +188,22 @@ export default function DesignSystem() {
 					carefully considered the most minor details, like naming design
 					tokens, to ensure clarity and consistency.
 				</p>
-				<p>
-					We partnered with teams across Compassion to establish a robust
-					governance model and a streamlined design-to-development workflow.
-					This workflow included tools and processes such as Figma for design,
-					Tokens Studio for managing design tokens, GitHub for version control,
-					Style Dictionary for transforming tokens into usable formats, coded
-					components, Storybook for documentation, and an npm package for
-					developers. This comprehensive approach facilitated a seamless
-					workflow between designers and developers.
-				</p>
-				<FYIGrid
-					images={imagesBuilding}
-					caption="A unified design & development workflow."
-				></FYIGrid>
+				<Switcher threshold="80ch">
+					<p>
+						We partnered with teams across Compassion to establish a robust
+						governance model and a streamlined design-to-development workflow.
+						This workflow included tools and processes such as Figma for design,
+						Tokens Studio for managing design tokens, GitHub for version
+						control, Style Dictionary for transforming tokens into usable
+						formats, coded components, Storybook for documentation, and an npm
+						package for developers. This comprehensive approach facilitated a
+						seamless workflow between designers and developers.
+					</p>
+					<FYIGrid
+						images={imagesBuilding}
+						caption="A unified design & development workflow."
+					></FYIGrid>
+				</Switcher>
 				<h2>Bringing the Vision to Life</h2>
 				<span>Understanding Our Users</span>
 				<p>
@@ -210,16 +218,31 @@ export default function DesignSystem() {
 					consistency and quality across frameworks, ensuring our design system
 					performed reliably across all platforms.
 				</p>
-				<EmbedFacade height="480px" aspectRatio="16 / 9">
-					<span>
-						{isTouchCapable ? `Tap` : `Click`} to browse the Compassion Design
-						System UI Kit
-					</span>
-					<iframe
-						src="https://www.figma.com/embed?embed_host=share&community_viewer=true&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FQmnNQopuJ2fvI5uBXJtMCI%2FUI-Kit-(cds-light)%3Ft%3DMHRLCVSKCtspjkCT-1"
-						allowFullScreen
-					></iframe>
-				</EmbedFacade>
+				<div className={styles['figma-embed__wrap']}>
+					<EmbedFacade
+						width="100%"
+						aspectRatio="16 / 10"
+						className={styles['figma-embed']}
+					>
+						<div className={styles['figma-embed__facade']}>
+							<Image
+								src={visionToLife03}
+								alt=""
+								fill={true}
+								className={styles['facade__image']}
+							/>
+							<div className={styles['facade__text']}>
+								{isTouchCapable ? `Tap` : `Click`} to browse the Compassion
+								Design System UI Kit
+								<FigmaLogo className={styles['figma-logo']}></FigmaLogo>
+							</div>
+						</div>
+						<iframe
+							src="https://www.figma.com/embed?embed_host=share&community_viewer=true&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FQmnNQopuJ2fvI5uBXJtMCI%2FUI-Kit-(cds-light)%3Ft%3DMHRLCVSKCtspjkCT-1"
+							allowFullScreen
+						></iframe>
+					</EmbedFacade>
+				</div>
 
 				<WithSidebar className={styles.dwc} sidebarWidth="400px">
 					<DeviceFrame src={visionToLife01} alt="" imageVerticalMargin="1rem" />
@@ -244,28 +267,18 @@ export default function DesignSystem() {
 					as well as many global campaign sites and marketing landing pages.
 				</p>
 				<Cluster className={styles['on-the-cds']}>
-					{/* AOG */}
+					{/* N2N Supporter Home */}
 					<DeviceFrame
-						src={onTheCds.aog.mobile.src}
-						alt={onTheCds.aog.mobile.alt}
+						src={onTheCds.n2nSupporterHome.mobile.src}
+						alt={onTheCds.n2nSupporterHome.mobile.alt}
 					/>
 					<DeviceFrame
 						deviceType="desktop"
 						className={styles['device--desktop']}
-						title="Conference Partnership Site"
+						title="Crowdfunding App | Home"
 						style={{ aspectRatio: '16 / 10' }}
-						src={onTheCds.aog.desktop.src}
-						alt={onTheCds.aog.desktop.alt}
-					/>
-
-					{/* Compassion Campaigns */}
-					<DeviceFrame
-						deviceType="desktop"
-						className={styles['device--desktop']}
-						title="Global Campaigns Hub"
-						style={{ aspectRatio: '16 / 10' }}
-						src={onTheCds.compassionCampaigns.desktop.src}
-						alt={onTheCds.compassionCampaigns.desktop.alt}
+						src={onTheCds.n2nSupporterHome.desktop.src}
+						alt={onTheCds.n2nSupporterHome.desktop.alt}
 					/>
 
 					{/* MWC */}
@@ -286,19 +299,21 @@ export default function DesignSystem() {
 						alt={onTheCds.mwc.desktop.alt}
 					/>
 
-					{/* N2N Supporter */}
+					{/* Play to Heal */}
 					<DeviceFrame
-						src={onTheCds.n2nSupporterHome.mobile.src}
-						alt={onTheCds.n2nSupporterHome.mobile.alt}
+						src={onTheCds.playToHeal.mobile.src}
+						alt={onTheCds.playToHeal.mobile.alt}
 					/>
 					<DeviceFrame
 						deviceType="desktop"
 						className={styles['device--desktop']}
-						title="Crowdfunding App | Home"
+						title="Roblox In-Game Fundraising Partnership"
 						style={{ aspectRatio: '16 / 10' }}
-						src={onTheCds.n2nSupporterHome.desktop.src}
-						alt={onTheCds.n2nSupporterHome.desktop.alt}
+						src={onTheCds.playToHeal.desktop.src}
+						alt={onTheCds.playToHeal.desktop.alt}
 					/>
+
+					{/* N2N Supporter Cause */}
 					<DeviceFrame
 						imageVerticalMargin="1rem"
 						background={n2nSfBackground}
@@ -312,6 +327,20 @@ export default function DesignSystem() {
 						style={{ aspectRatio: '16 / 10' }}
 						src={onTheCds.n2nSupporterCauseDetail.desktop.src}
 						alt={onTheCds.n2nSupporterCauseDetail.desktop.alt}
+					/>
+
+					{/* AOG */}
+					<DeviceFrame
+						src={onTheCds.aog.mobile.src}
+						alt={onTheCds.aog.mobile.alt}
+					/>
+					<DeviceFrame
+						deviceType="desktop"
+						className={styles['device--desktop']}
+						title="Conference Partnership Site"
+						style={{ aspectRatio: '16 / 10' }}
+						src={onTheCds.aog.desktop.src}
+						alt={onTheCds.aog.desktop.alt}
 					/>
 
 					{/* N2N Field */}
@@ -333,20 +362,6 @@ export default function DesignSystem() {
 						imageVerticalMargin="1rem"
 						src={onTheCds.n2nField._04.src}
 						alt={onTheCds.n2nField._04.alt}
-					/>
-
-					{/* Play to Heal */}
-					<DeviceFrame
-						src={onTheCds.playToHeal.mobile.src}
-						alt={onTheCds.playToHeal.mobile.alt}
-					/>
-					<DeviceFrame
-						deviceType="desktop"
-						className={styles['device--desktop']}
-						title="Roblox In-Game Fundraising Partnership"
-						style={{ aspectRatio: '16 / 10' }}
-						src={onTheCds.playToHeal.desktop.src}
-						alt={onTheCds.playToHeal.desktop.alt}
 					/>
 
 					{/* Targeted Response */}
@@ -374,6 +389,17 @@ export default function DesignSystem() {
 						src={onTheCds.tr.country.src}
 						alt={onTheCds.tr.country.alt}
 					/>
+
+					{/* Compassion Campaigns */}
+					<DeviceFrame
+						deviceType="desktop"
+						className={styles['device--desktop']}
+						title="Global Campaigns Hub"
+						style={{ aspectRatio: '16 / 10' }}
+						src={onTheCds.compassionCampaigns.desktop.src}
+						alt={onTheCds.compassionCampaigns.desktop.alt}
+					/>
+
 					{/* White-label Campaign Hub */}
 					<DeviceFrame
 						imageVerticalMargin="2rem"
