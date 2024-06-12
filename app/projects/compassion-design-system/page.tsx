@@ -26,10 +26,13 @@ import visionToLife01 from './images/vision-to-life/dwc-mobile.png';
 
 import DeviceFrame from '@/components/DeviceFrame';
 import FYIGrid from '@/components/FYIGrid';
+import Cluster from '@/components/layout/Cluster';
 import Switcher from '@/components/layout/Switcher';
 import WithSidebar from '@/components/layout/WithSidebar';
+import useIsTouchCapable from '@/lib/hooks/useIsTouchCapable';
 
 export default function DesignSystem() {
+	const isTouchCapable = useIsTouchCapable();
 	const zoomRef = React.useRef(null);
 
 	const imagesBuilding = [{ src: building01, alt: '' }];
@@ -143,7 +146,7 @@ export default function DesignSystem() {
 					critical enabler of our solution, ensuring the system was genuinely
 					future-proof and enabling flexibility where designers needed it.
 				</p>
-				<WithSidebar sidebarOnRight sidebarWidth="100px">
+				<WithSidebar sidebarOnRight>
 					<aside className={sharedProjectStyles.aside}>
 						<h3 className={sharedProjectStyles.aside__heading}>
 							What are Design Tokens?
@@ -157,7 +160,17 @@ export default function DesignSystem() {
 							consistently across different tools, platforms, and devices.
 						</p>
 					</aside>
-					<Image src={tokens} alt="" placeholder="blur" />
+					<FYIGrid
+						images={[{ src: tokens, alt: '' }]}
+						caption="Managing tokens with the Tokens Studio plug-in."
+						className={styles['tokens-image']}
+					></FYIGrid>
+					{/* <Image
+						src={tokens}
+						alt=""
+						placeholder="blur"
+						className={styles['tokens-image']}
+					/> */}
 				</WithSidebar>
 				<h2>Building Buy-In</h2>
 				<span>Steering the Cruise Ship</span>
@@ -198,7 +211,10 @@ export default function DesignSystem() {
 					performed reliably across all platforms.
 				</p>
 				<EmbedFacade height="480px" aspectRatio="16 / 9">
-					<span>Load the Figma file</span>
+					<span>
+						{isTouchCapable ? `Tap` : `Click`} to browse the Compassion Design
+						System UI Kit
+					</span>
 					<iframe
 						src="https://www.figma.com/embed?embed_host=share&community_viewer=true&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FQmnNQopuJ2fvI5uBXJtMCI%2FUI-Kit-(cds-light)%3Ft%3DMHRLCVSKCtspjkCT-1"
 						allowFullScreen
@@ -215,6 +231,7 @@ export default function DesignSystem() {
 						title="Design with Compassion | Documentation Site"
 					></DeviceFrame>
 				</WithSidebar>
+
 				<h2>Impact and Outcomes</h2>
 				<span>Measuring Success</span>
 				<p>
@@ -226,7 +243,7 @@ export default function DesignSystem() {
 					app, a crucial tool in a $1.4 billion multi-year fundraising effort,
 					as well as many global campaign sites and marketing landing pages.
 				</p>
-				<section className={styles['on-the-cds']}>
+				<Cluster className={styles['on-the-cds']}>
 					{/* AOG */}
 					<DeviceFrame
 						src={onTheCds.aog.mobile.src}
@@ -234,22 +251,27 @@ export default function DesignSystem() {
 					/>
 					<DeviceFrame
 						deviceType="desktop"
+						className={styles['device--desktop']}
 						title="Conference Partnership Site"
 						style={{ aspectRatio: '16 / 10' }}
 						src={onTheCds.aog.desktop.src}
 						alt={onTheCds.aog.desktop.alt}
 					/>
+
 					{/* Compassion Campaigns */}
 					<DeviceFrame
 						deviceType="desktop"
+						className={styles['device--desktop']}
 						title="Global Campaigns Hub"
 						style={{ aspectRatio: '16 / 10' }}
 						src={onTheCds.compassionCampaigns.desktop.src}
 						alt={onTheCds.compassionCampaigns.desktop.alt}
 					/>
+
 					{/* MWC */}
 					<DeviceFrame
 						deviceType="desktop"
+						className={styles['device--desktop']}
 						title="Brand Platform Site"
 						style={{ aspectRatio: '700 / 494', alignSelf: 'baseline' }}
 						src={onTheCds.mwc.magicLink.src}
@@ -257,11 +279,13 @@ export default function DesignSystem() {
 					/>
 					<DeviceFrame
 						deviceType="desktop"
+						className={styles['device--desktop']}
 						title="Brand Platform Site"
 						style={{ aspectRatio: '16 / 10' }}
 						src={onTheCds.mwc.desktop.src}
 						alt={onTheCds.mwc.desktop.alt}
 					/>
+
 					{/* N2N Supporter */}
 					<DeviceFrame
 						src={onTheCds.n2nSupporterHome.mobile.src}
@@ -269,6 +293,7 @@ export default function DesignSystem() {
 					/>
 					<DeviceFrame
 						deviceType="desktop"
+						className={styles['device--desktop']}
 						title="Crowdfunding App | Home"
 						style={{ aspectRatio: '16 / 10' }}
 						src={onTheCds.n2nSupporterHome.desktop.src}
@@ -282,11 +307,13 @@ export default function DesignSystem() {
 					/>
 					<DeviceFrame
 						deviceType="desktop"
+						className={styles['device--desktop']}
 						title="Crowdfunding App | Detail Page"
 						style={{ aspectRatio: '16 / 10' }}
 						src={onTheCds.n2nSupporterCauseDetail.desktop.src}
 						alt={onTheCds.n2nSupporterCauseDetail.desktop.alt}
 					/>
+
 					{/* N2N Field */}
 					<DeviceFrame
 						background={n2nFfBackground}
@@ -294,29 +321,20 @@ export default function DesignSystem() {
 						src={onTheCds.n2nField._01.src}
 						alt={onTheCds.n2nField._01.alt}
 					/>
-					<DeviceFrame
-						background={n2nFfBackground}
-						imageVerticalMargin="1rem"
-						src={onTheCds.n2nField._02.src}
-						alt={onTheCds.n2nField._02.alt}
-					/>
+
 					<DeviceFrame
 						imageVerticalMargin="1rem"
 						src={onTheCds.n2nField._03.src}
 						alt={onTheCds.n2nField._03.alt}
 					/>
+
 					<DeviceFrame
 						background={n2nFfBackground}
 						imageVerticalMargin="1rem"
 						src={onTheCds.n2nField._04.src}
 						alt={onTheCds.n2nField._04.alt}
 					/>
-					<DeviceFrame
-						background={n2nFfBackground}
-						imageVerticalMargin="1rem"
-						src={onTheCds.n2nField._05.src}
-						alt={onTheCds.n2nField._05.alt}
-					/>
+
 					{/* Play to Heal */}
 					<DeviceFrame
 						src={onTheCds.playToHeal.mobile.src}
@@ -324,14 +342,17 @@ export default function DesignSystem() {
 					/>
 					<DeviceFrame
 						deviceType="desktop"
+						className={styles['device--desktop']}
 						title="Roblox In-Game Fundraising Partnership"
 						style={{ aspectRatio: '16 / 10' }}
 						src={onTheCds.playToHeal.desktop.src}
 						alt={onTheCds.playToHeal.desktop.alt}
 					/>
+
 					{/* Targeted Response */}
 					<DeviceFrame
 						deviceType="desktop"
+						className={styles['device--desktop']}
 						title="Field Strategies Planning and Reporting | Home"
 						style={{ aspectRatio: '16 / 10' }}
 						src={onTheCds.tr.home.src}
@@ -339,6 +360,7 @@ export default function DesignSystem() {
 					/>
 					<DeviceFrame
 						deviceType="desktop"
+						className={styles['device--desktop']}
 						title="Field Strategies Planning and Reporting | Global View"
 						style={{ aspectRatio: '16 / 10' }}
 						src={onTheCds.tr.global.src}
@@ -346,6 +368,7 @@ export default function DesignSystem() {
 					/>
 					<DeviceFrame
 						deviceType="desktop"
+						className={styles['device--desktop']}
 						title="Field Strategies Planning and Reporting | Country View"
 						style={{ aspectRatio: '16 / 10' }}
 						src={onTheCds.tr.country.src}
@@ -359,6 +382,7 @@ export default function DesignSystem() {
 					/>
 					<DeviceFrame
 						deviceType="desktop"
+						className={styles['device--desktop']}
 						title="Reusable, White-Label Campaign Hub | Guidelines Template"
 						style={{ aspectRatio: '16 / 10' }}
 						src={onTheCds.wch.desktop01.src}
@@ -371,12 +395,13 @@ export default function DesignSystem() {
 					/>
 					<DeviceFrame
 						deviceType="desktop"
+						className={styles['device--desktop']}
 						title="Reusable, White-Label Campaign Hub | Assets Template"
 						style={{ aspectRatio: '16 / 10' }}
 						src={onTheCds.wch.desktop02.src}
 						alt={onTheCds.wch.desktop02.alt}
 					/>
-				</section>
+				</Cluster>
 				<p>
 					The qualitative benefits of the Compassion Design System were
 					substantial. The design system improved design consistency, reduced

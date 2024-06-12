@@ -13,6 +13,8 @@ interface DeviceFrameProps {
 	title?: string;
 	background?: string | number;
 	imageVerticalMargin?: string;
+	minWidth?: string;
+	maxWidth?: string;
 	style?: React.CSSProperties;
 }
 
@@ -24,6 +26,8 @@ export default function DeviceFrame({
 	title,
 	background,
 	imageVerticalMargin,
+	minWidth,
+	maxWidth,
 	style,
 }: DeviceFrameProps) {
 	const platform = usePlatform();
@@ -35,25 +39,23 @@ export default function DeviceFrame({
 		marginBottom,
 		marginTop,
 		background,
+		minWidth,
+		maxWidth,
 	});
 
 	return deviceType === 'mobile' ?
 			<div
-				className={clsx(
-					className,
-					styles['device'],
-					styles['device-iphone-14-pro'],
-				)}
+				className={clsx(className, styles['device'], styles['device--mobile'])}
 			>
 				<div
 					className={clsx(
-						styles['device-frame--mod'],
-						styles['device-viewport'],
+						styles['device--mobile__frame'],
+						styles['device--mobile__viewport'],
 					)}
 					style={inlineStyles}
 				>
 					<Image
-						className={styles['device-screen--mod']}
+						className={styles['device--mobile__screen']}
 						src={src}
 						alt={alt}
 						placeholder="blur"
@@ -64,6 +66,8 @@ export default function DeviceFrame({
 		:	<div
 				style={style}
 				className={clsx(
+					className,
+					styles['device--desktop'],
 					styles['app-frame'],
 					platform === 'Mac' ? styles.mac : styles.win,
 					styles.scrolling,

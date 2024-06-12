@@ -1,19 +1,22 @@
 @import 'css-device-frames/dist/device-frames.css';
 
-.device.device-iphone-14-pro {
+.device.device--mobile {
 	position: relative;
 	z-index: 1;
 	transform: scale(1);
 
+	container-name: device;
+	container-type: inline-size;
 	display: inline-block;
 
 	width: 100%;
-	max-width: 428px;
+	min-width: var(--k-device-frame-min-width, unset);
+	max-width: var(--k-device-frame-max-width, 100%);
 	height: auto;
-	margin-left: 3px;
+	margin-left: 3px; /* To account for the side buttons */
 }
 
-.device-iphone-14-pro .device-frame--mod {
+.device--mobile__frame {
 	scrollbar-width: none;
 
 	overflow: auto;
@@ -21,25 +24,39 @@
 	aspect-ratio: 428 / 868;
 	margin: 16px 16px 16px 19px;
 
-	border-radius: 68px;
+	font-size: 0.6rem;
+
+	border-radius: 4.25em;
 	box-shadow:
 		0 0 20px 5px #101010,
 		0 0 20px 0 #000,
 		0 0 0 16px rgba(42, 42, 42, 1);
 }
 
-.device-iphone-14-pro .device-screen--mod {
-	width: unset;
-	height: unset;
+@container device (width >= 300px) {
+	.device--mobile__frame {
+		font-size: 0.7rem;
+	}
+}
+
+@container device (width >= 400px) {
+	.device--mobile__frame {
+		font-size: 1rem;
+	}
+}
+
+.device--mobile__screen {
+	width: 100%;
+	height: auto;
 	margin-top: var(--k-device-frame-margin-top, 0);
 	margin-bottom: var(--k-device-frame-margin-bottom, 0);
 }
 
-.device-frame--wrap .device-iphone-14-pro .device-power {
+.device--mobile .device-power {
 	right: -34px;
 }
 
-.device-viewport {
+.device--mobile__viewport {
 	background: var(--k-device-frame-background, unset);
 }
 
