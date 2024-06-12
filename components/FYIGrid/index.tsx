@@ -8,6 +8,8 @@ import Captions from 'yet-another-react-lightbox/plugins/captions';
 import 'yet-another-react-lightbox/plugins/captions.css';
 import Zoom from 'yet-another-react-lightbox/plugins/zoom';
 
+import { imageSizes } from '@/lib/utils';
+
 import Grid from '../layout/Grid';
 import styles from './styles.module.css';
 
@@ -23,7 +25,7 @@ interface FYIGridProps {
 
 export default function FYIGrid({
 	images,
-	imgSizes = '(max-width: 320px) 320px, (max-width: 576px) 576px, (max-width: 768px) 768px, (max-width: 992px) 992px, (max-width: 1200px) 1200px, (max-width: 1400px) 1400px, (min-width: 1401px) 1920px',
+	imgSizes = imageSizes,
 	itemWidth = '96px',
 	caption,
 	className,
@@ -54,6 +56,7 @@ export default function FYIGrid({
 				{images.map((image, index) => (
 					<button
 						key={index}
+						className={styles.button}
 						style={{ position: 'relative' }}
 						onClick={() => {
 							setOpen(true);
