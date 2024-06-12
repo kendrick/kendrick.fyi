@@ -1,7 +1,10 @@
-@import 'devices.css/dist/devices.min.css';
 @import 'css-device-frames/dist/device-frames.css';
 
 .device.device-iphone-14-pro {
+	position: relative;
+	z-index: 1;
+	transform: scale(1);
+
 	display: inline-block;
 
 	width: 100%;
@@ -38,4 +41,44 @@
 
 .device-viewport {
 	background: var(--k-device-frame-background, unset);
+}
+
+.device-btns {
+	position: absolute;
+	top: 115px;
+	left: -2px;
+
+	width: 3px;
+	height: 32px;
+
+	background: #1b1721;
+	border-radius: 2px;
+
+	&::before {
+		content: '';
+
+		position: absolute;
+		top: 140px;
+		left: 0;
+
+		width: 3px;
+		height: 62px;
+
+		background: #1b1721;
+		border-radius: 2px;
+	}
+
+	&::after {
+		content: '';
+
+		position: absolute;
+		top: 60px;
+		left: 0;
+
+		width: 3px;
+		height: 62px;
+
+		background: #1b1721;
+		border-radius: 2px;
+	}
 }
