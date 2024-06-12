@@ -6,7 +6,7 @@ import styles from './styles.module.css';
 import customPropertiesFromVars from '@/lib/customPropertiesFromVars';
 
 interface DeviceFrameProps {
-	src: string | StaticImageData;
+	src: StaticImageData;
 	alt: string;
 	className?: string | CSSModuleClasses;
 	deviceType?: 'mobile' | 'desktop';
@@ -60,7 +60,7 @@ export default function DeviceFrame({
 						alt={alt}
 						placeholder="blur"
 					/>
-					<div className={styles['device-btns']}></div>
+					{/* <div className={styles['device-btns']}></div> */}
 				</div>
 			</div>
 		:	<div

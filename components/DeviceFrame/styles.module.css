@@ -1,5 +1,20 @@
 @import 'css-device-frames/dist/device-frames.css';
 
+.app-frame {
+	margin: 0;
+	box-shadow:
+		0 1.1px 1.4px -8px rgba(0, 0, 0, 0.017),
+		0 3px 4px -8px rgba(0, 0, 0, 0.025),
+		0 7.2px 9.6px -8px rgba(0, 0, 0, 0.033),
+		0 24px 32px -8px rgba(0, 0, 0, 0.05);
+}
+
+.app-frame.centered[data-title]::after {
+	display: grid;
+	place-items: center;
+	height: var(--bar-height);
+}
+
 .device.device--mobile {
 	position: relative;
 	z-index: 1;
@@ -28,9 +43,11 @@
 
 	border-radius: 4.25em;
 	box-shadow:
-		0 0 20px 5px #101010,
-		0 0 20px 0 #000,
-		0 0 0 16px rgba(42, 42, 42, 1);
+		0 0 0 1em rgba(42, 42, 42, 1),
+		0 1.1px 1.4px -8px rgba(0, 0, 0, 0.017),
+		0 3px 4px -8px rgba(0, 0, 0, 0.025),
+		0 7.2px 9.6px -8px rgba(0, 0, 0, 0.033),
+		0 24px 32px -8px rgba(0, 0, 0, 0.05);
 }
 
 @container device (width >= 300px) {
@@ -62,11 +79,11 @@
 
 .device-btns {
 	position: absolute;
-	top: 115px;
-	left: -2px;
+	top: 7.1875em;
+	left: 0.3125em;
 
 	width: 3px;
-	height: 32px;
+	height: 2em;
 
 	background: #1b1721;
 	border-radius: 2px;
@@ -75,11 +92,11 @@
 		content: '';
 
 		position: absolute;
-		top: 140px;
+		top: 8.75em;
 		left: 0;
 
 		width: 3px;
-		height: 62px;
+		height: 3.875em;
 
 		background: #1b1721;
 		border-radius: 2px;
@@ -89,11 +106,11 @@
 		content: '';
 
 		position: absolute;
-		top: 60px;
+		top: 3.75em;
 		left: 0;
 
 		width: 3px;
-		height: 62px;
+		height: 3.875em;
 
 		background: #1b1721;
 		border-radius: 2px;
