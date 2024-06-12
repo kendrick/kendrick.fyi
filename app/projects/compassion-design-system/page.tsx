@@ -9,6 +9,8 @@ import React from 'react';
 import 'yet-another-react-lightbox/styles.css';
 import styles from './styles.module.css';
 
+import { imageSizes } from '@/lib/utils';
+
 import fragmentationImages from './images/fragmentation';
 import onTheCds from './images/on-the-cds';
 
@@ -20,7 +22,6 @@ import audit02 from './images/research-discovery/cds-audit-cards.png';
 import interviews01 from './images/research-discovery/cds-user-interviews-highlights.png';
 
 import FigmaLogo from '@/lib/LogoFigma';
-import tokens from './images/tokens/cds-tokens-studio.png';
 
 import visionToLife02 from './images/vision-to-life/dwc-desktop.png';
 import visionToLife01 from './images/vision-to-life/dwc-mobile.png';
@@ -29,6 +30,7 @@ import visionToLife03 from './images/vision-to-life/facade-thumbnail.png';
 import DeviceFrame from '@/components/DeviceFrame';
 import FYIGrid from '@/components/FYIGrid';
 import Cluster from '@/components/layout/Cluster';
+import Stack from '@/components/layout/Stack';
 import Switcher from '@/components/layout/Switcher';
 import WithSidebar from '@/components/layout/WithSidebar';
 import useIsTouchCapable from '@/lib/hooks/useIsTouchCapable';
@@ -58,6 +60,7 @@ export default function DesignSystem() {
 		<main className={clsx([sharedProjectStyles.project, styles.project])}>
 			<Prose>
 				<Image
+					sizes={imageSizes}
 					alt=""
 					src="https://picsum.photos/800/200"
 					height={200}
@@ -150,7 +153,7 @@ export default function DesignSystem() {
 						was genuinely future-proof and enabling flexibility where designers
 						needed it.
 					</p>
-					<WithSidebar sidebarOnRight>
+					<Stack>
 						<aside className={clsx(sharedProjectStyles.aside, styles.aside)}>
 							<h3 className={sharedProjectStyles.aside__heading}>
 								What are Design Tokens?
@@ -165,18 +168,7 @@ export default function DesignSystem() {
 								devices.
 							</p>
 						</aside>
-						<FYIGrid
-							images={[{ src: tokens, alt: '' }]}
-							caption="Managing tokens with the Tokens Studio plug-in."
-							className={styles['tokens-image']}
-						></FYIGrid>
-						{/* <Image
-						src={tokens}
-						alt=""
-						placeholder="blur"
-						className={styles['tokens-image']}
-					/> */}
-					</WithSidebar>
+					</Stack>
 				</WithSidebar>
 				<h2>Building Buy-In</h2>
 				<span>Steering the Cruise Ship</span>
@@ -228,6 +220,7 @@ export default function DesignSystem() {
 							<Image
 								src={visionToLife03}
 								alt=""
+								sizes={imageSizes}
 								fill={true}
 								className={styles['facade__image']}
 							/>
