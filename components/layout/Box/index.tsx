@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import styles from './Box.module.css';
+import styles from './styles.module.css';
 
 interface Props {
 	children: React.ReactNode;

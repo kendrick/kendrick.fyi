@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 
 import React, { CSSProperties, useEffect } from 'react';
-import styles from './WithSidebar.module.css';
+import styles from './styles.module.css';
 
 interface Props {
 	children: React.ReactNode;

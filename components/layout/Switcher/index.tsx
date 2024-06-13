@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 
 import { CSSProperties } from 'react';
-import styles from './Switcher.module.css';
+import styles from './styles.module.css';
 
 interface Props {
 	threshold?: string;

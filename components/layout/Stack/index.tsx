@@ -1,7 +1,7 @@
 import customPropertiesFromVars from '@/lib/customPropertiesFromVars';
 import clsx from 'clsx';
 import { CSSProperties } from 'react';
-import styles from './Stack.module.css';
+import styles from './styles.module.css';
 
 interface Props {
 	children: React.ReactNode;
