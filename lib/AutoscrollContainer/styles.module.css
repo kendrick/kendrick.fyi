@@ -1,0 +1,6 @@
+.autoscroll {
+	position: relative;
+	overflow: auto;
+	width: 100%; /* make it a var */
+	height: 400px; /* make it a var */
+}

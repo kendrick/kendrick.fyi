@@ -10,6 +10,7 @@ import '@/app/globals/globals.css';
 import Header from '@/components/header/header';
 import { Toaster } from 'react-hot-toast';
 
+import { DarkModeProvider } from '@/lib/DarkModeContext';
 import { Inter } from 'next/font/google';
 import localFont from 'next/font/local';
 
@@ -53,16 +54,18 @@ export default function RootLayout({
 	return (
 		<html lang="en" className="!scroll-smooth">
 			<body>
-				<ThemeContextProvider>
-					<ActiveSectionContextProvider>
-						<Header />
-						{children}
-						<Footer />
+				<DarkModeProvider>
+					<ThemeContextProvider>
+						<ActiveSectionContextProvider>
+							<Header />
+							{children}
+							<Footer />
 
-						<Toaster position="top-right" />
-						<ThemeSwitch />
-					</ActiveSectionContextProvider>
-				</ThemeContextProvider>
+							<Toaster position="top-right" />
+							<ThemeSwitch />
+						</ActiveSectionContextProvider>
+					</ThemeContextProvider>
+				</DarkModeProvider>
 			</body>
 			<Script
 				async

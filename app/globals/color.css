@@ -2,9 +2,7 @@
 	--foo: 'bar';
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		color: #eeeeef;
-		background: #1b1924;
-	}
+:root.k-dark {
+	color: #eeeeef;
+	background: #1b1924;
 }

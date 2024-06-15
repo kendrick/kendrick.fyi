@@ -1,0 +1,10 @@
+{
+	"background-color": "{theme.color.actions.primary.default}",
+	"font": {
+		"family": "{theme.font.family.body}",
+		"lineHeight": "{theme.font.lineheight.sm}",
+		"size": "{theme.font.size.sm}",
+		"weight": "{theme.font.weight.body.bold}"
+	},
+	"text-color": "{theme.color.actions.primary.inverted}"
+}
