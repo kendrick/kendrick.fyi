@@ -1,45 +1,55 @@
 @import '../../tokens/css/typography.css';
 
-@layer base {
-	:root {
-		--k-system-fonts: system-ui, 'Segoe UI', Roboto, Helvetica, Arial,
-			sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-	}
+:root {
+	--k-system-fonts: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+		'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
 
-	.k-type-no-wrap {
-		white-space: nowrap;
-	}
+.k-type-no-wrap {
+	white-space: nowrap;
+}
 
-	h1 {
-		font-family: var(--k-type-sans);
-		font-size: var(--k-type-size-plus4);
-		font-weight: 500;
-		line-height: var(--k-type-line-height-base);
-	}
+h1 {
+	font-family: var(--k-type-sans);
+	font-size: var(--k-type-size-plus4);
+	font-weight: 500;
+	line-height: var(--k-type-line-height-base);
+}
 
-	h2 {
-		font-size: var(--k-type-size-plus3);
-		line-height: var(--k-type-line-height-plus1);
-	}
+h2 {
+	font-size: var(--k-type-size-plus3);
+	line-height: var(--k-type-line-height-plus1);
+}
 
-	h3 {
-		font-size: var(--k-type-size-plus2);
-		line-height: var(--k-type-line-height-plus1);
-	}
+h3 {
+	font-size: var(--k-type-size-plus2);
+	line-height: var(--k-type-line-height-plus1);
+}
 
-	h4 {
-		font-size: var(--k-type-size-plus1);
-		line-height: var(--k-type-line-height-plus2);
-	}
+h4 {
+	font-size: var(--k-type-size-plus1);
+	line-height: var(--k-type-line-height-plus2);
+}
 
-	h5,
-	h6,
-	p {
-		font-size: var(--k-type-size-base);
-		line-height: var(--k-type-line-height-plus3);
-	}
+h5,
+h6,
+p {
+	font-size: var(--k-type-size-base);
+	line-height: var(--k-type-line-height-plus3);
+}
 
-	p {
-		font-weight: 300;
-	}
+p {
+	font-weight: 300;
+}
+
+h2 + span {
+	margin-block-start: 0;
+}
+
+h2 + span + p {
+	margin-block-start: var(--k-space-xs);
+}
+
+h2:not(:first-of-type) {
+	margin-block-start: var(--k-space-md-2xl);
 }

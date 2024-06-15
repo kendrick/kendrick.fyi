@@ -5,10 +5,6 @@
 
 @import './reset.css';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 body {
 	padding: var(--k-space-minus2-minus1);
 }

@@ -1,17 +1,5 @@
 .project {
 	padding: var(--k-space-sm-2xl);
-
-	h2 + span {
-		margin-block-start: 0;
-	}
-
-	h2 + span + p {
-		margin-block-start: var(--k-space-xs);
-	}
-
-	h2:not(:first-of-type) {
-		margin-block-start: var(--k-space-md-2xl);
-	}
 }
 
 .aside__heading {
