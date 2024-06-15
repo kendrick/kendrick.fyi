@@ -60,7 +60,6 @@ export default function DeviceFrame({
 						alt={alt}
 						placeholder="blur"
 					/>
-					{/* <div className={styles['device-btns']}></div> */}
 				</div>
 			</div>
 		:	<div
@@ -69,6 +68,7 @@ export default function DeviceFrame({
 					className,
 					styles['device--desktop'],
 					styles['app-frame'],
+					// styles['borderless'],
 					platform === 'Mac' ? styles.mac : styles.win,
 					styles.scrolling,
 					styles.centered,

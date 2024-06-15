@@ -1,0 +1,45 @@
+/* stylelint-disable */
+.reel {
+	scrollbar-color: auto transparent;
+	overflow: auto hidden;
+	display: flex;
+	block-size: var(--k-reel-height, auto);
+}
+
+.reel::-webkit-scrollbar {
+	block-size: 1rem;
+}
+
+.reel::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+/*.reel::-webkit-scrollbar-thumb {
+	background-color: black;
+	background-image: linear-gradient(
+		black 0,
+		black 0.25rem,
+		white 0.25rem,
+		white 0.75rem,
+		black 0.75rem
+	);
+} */
+
+.reel > * {
+	flex: 0 0 var(--k-reel-item-width, auto);
+}
+
+.reel > img {
+	flex-basis: auto;
+	width: auto;
+	block-size: 100%;
+}
+
+.reel > * + * {
+	margin-inline-start: var(--k-reel-space, var(--k-space-md, 1rem));
+}
+
+.reel--overflowing {
+	padding-block-end: var(--k-reel-space, var(--k-space-md, 1rem));
+}
+/* stylelint-enable */

@@ -4,7 +4,7 @@ import { skillsData } from '@/lib/data';
 import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
 
-import Cluster from '../layout/Cluster';
+import Cluster from '../../lib/layout/Cluster';
 import styles from './styles.module.css';
 
 const fadeInAnimationVariants = {

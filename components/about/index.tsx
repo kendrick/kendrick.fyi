@@ -4,7 +4,7 @@ import Logos from '@/components/logos/logos';
 import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
 
-import Prose from '@/components/layout/Prose';
+import Prose from '@/lib/layout/Prose';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 

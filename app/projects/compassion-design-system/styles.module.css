@@ -74,9 +74,105 @@
 	transition: filter 0.2s linear;
 }
 
-.on-the-cds {
+.on-the-cds__grid {
+	/* --k-device-frame-max-width: 192px; */
+	--k-row-height: 16dvh;
+
+	display: grid;
+	grid-template-areas:
+		'desktop1'
+		'mobile1'
+		'desktop2'
+		'mobile2';
+	gap: var(--k-space-md);
+
+	/* grid-template-columns: repeat(12, 1fr); */
+	/* grid-template-rows: repeat(10, var(--k-row-height)); */
+
+	.device--desktop {
+		max-height: calc(3 * var(--k-row-height));
+	}
+}
+
+.grid--desktop1 {
+	grid-area: desktop1;
+}
+
+.grid--desktop2 {
+	grid-area: desktop2;
+}
+
+.grid--mobile1 {
+	grid-area: mobile1;
+}
+
+.grid--mobile2 {
+	grid-area: mobile2;
+}
+
+@media (width >= 768px) {
+	.on-the-cds__grid {
+		--k-mobile-frame-width: 33dvw;
+
+		grid-template-areas:
+			'desktop1 desktop1 mobile1'
+			'mobile2 desktop2 desktop2';
+
+		.device--desktop {
+			max-height: 60dvh;
+		}
+
+		.grid--desktop1,
+		.grid--desktop2 {
+			/* 33dvw (mobile screenshot width) minus half the gap, multiplied by the
+			   inverse aspect ratio of the mobile screenshot, plus the margin of the 
+			   mobile screenshot. */
+			max-height: calc(
+				(var(--k-mobile-frame-width) - var(--k-space-md) / 2) * 868 / 428 + 1em
+			);
+		}
+
+		.grid--mobile1,
+		.grid--mobile2 {
+			width: var(--k-mobile-frame-width);
+		}
+	}
+}
+
+@media (width >= 1200px) {
+	.on-the-cds__grid {
+		--k-mobile-frame-width: 24dvw;
+
+		grid-template-areas:
+			'desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 . . . .'
+			'desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 . . . .'
+			'desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 . mobile1 mobile1 .'
+			'desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 . mobile1 mobile1 .'
+			'desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 . mobile1 mobile1 .'
+			'desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 . mobile1 mobile1 .'
+			'desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 . mobile1 mobile1 .'
+			'desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 . mobile1 mobile1 .'
+			'desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 . mobile1 mobile1 .'
+			'. . . . . . . . mobile1 mobile1 .'
+			'. mobile2 mobile2 . . . . . mobile1 mobile1 .'
+			'. mobile2 mobile2 . desktop2 desktop2 desktop2 desktop2 desktop2 desktop2 desktop2'
+			'. mobile2 mobile2 . desktop2 desktop2 desktop2 desktop2 desktop2 desktop2 desktop2'
+			'. mobile2 mobile2 . desktop2 desktop2 desktop2 desktop2 desktop2 desktop2 desktop2'
+			'. mobile2 mobile2 . desktop2 desktop2 desktop2 desktop2 desktop2 desktop2 desktop2'
+			'. mobile2 mobile2 . desktop2 desktop2 desktop2 desktop2 desktop2 desktop2 desktop2'
+			'. mobile2 mobile2 . desktop2 desktop2 desktop2 desktop2 desktop2 desktop2 desktop2'
+			'. mobile2 mobile2 . desktop2 desktop2 desktop2 desktop2 desktop2 desktop2 desktop2'
+			'. mobile2 mobile2 . desktop2 desktop2 desktop2 desktop2 desktop2 desktop2 desktop2'
+			'. . . . desktop2 desktop2 desktop2 desktop2 desktop2 desktop2 desktop2';
+		gap: var(--k-space-xl);
+	}
+}
+
+.on-the-cds__reel {
 	/* --k-device-frame-max-width: clamp(15rem, 14rem + 5vi, 20rem); */
-	--k-device-frame-max-width: clamp(12.5rem, 11rem + 7.5vi, 20rem);
+	/* --k-device-frame-max-width: clamp(12.5rem, 11rem + 7.5vi, 20rem); */
+	/* --k-device-frame-max-width: clamp(8rem, 5.029rem + 12.19vi, 16rem); */
+	--k-device-frame-max-width: 192px;
 
 	.device--desktop {
 		max-height: calc(var(--k-device-frame-max-width) * 18.5 / 10);

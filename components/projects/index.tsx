@@ -4,7 +4,7 @@ import ProjectCard from '@/components/projectCard';
 import { projectsData } from '@/lib/data';
 import { useSectionInView } from '@/lib/hooks';
 
-import Cluster from '../layout/Cluster';
+import Cluster from '../../lib/layout/Cluster';
 import styles from './styles.module.css';
 
 export default function Projects() {

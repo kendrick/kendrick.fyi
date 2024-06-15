@@ -3,7 +3,7 @@ import LogoP1 from './logos/pier1';
 import LogoSlalom from './logos/slalom';
 import LogoThomson from './logos/tr';
 
-import Cluster from '../layout/Cluster';
+import Cluster from '../../lib/layout/Cluster';
 import styles from './logos.module.css';
 
 export default function Logos() {
