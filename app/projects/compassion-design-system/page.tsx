@@ -23,6 +23,8 @@ import FigmaLogo from '@/lib/LogoFigma';
 
 import useIsTouchCapable from '@/lib/hooks/useIsTouchCapable';
 
+import { useDarkModeContext } from '@/lib/DarkModeContext';
+
 export default function DesignSystem() {
 	const isTouchCapable = useIsTouchCapable();
 	const zoomRef = React.useRef(null);
@@ -30,6 +32,13 @@ export default function DesignSystem() {
 	const imgWidthInSidebar = 'clamp(20rem, 18rem + 10vw, 30rem)';
 	const n2nFfBackground = '#3268fa';
 	const n2nSfBackground = '#fbf8f4';
+
+	const {
+		isDarkMode,
+		ternaryDarkMode,
+		setTernaryDarkMode,
+		toggleTernaryDarkMode,
+	} = useDarkModeContext();
 
 	return (
 		<main className={clsx([sharedProjectStyles.project, styles.project])}>
@@ -103,6 +112,7 @@ export default function DesignSystem() {
 						src={images.audit01}
 						alt=""
 						deviceType="desktop"
+						isDarkMode={isDarkMode}
 						style={{ aspectRatio: '16 / 9' }}
 						title="Global Component Audit • 109 Button styles"
 					></DeviceFrame>
@@ -110,6 +120,7 @@ export default function DesignSystem() {
 						src={images.audit02}
 						alt=""
 						deviceType="desktop"
+						isDarkMode={isDarkMode}
 						style={{ aspectRatio: '16 / 9' }}
 						title="Global Component Audit • 23 Card styles"
 					></DeviceFrame>
@@ -221,6 +232,7 @@ export default function DesignSystem() {
 						src={images.visionToLife.visionToLife02}
 						alt=""
 						deviceType="desktop"
+						isDarkMode={isDarkMode}
 						style={{ aspectRatio: '16 / 9' }}
 						title="Design with Compassion | Documentation Site"
 					></DeviceFrame>
@@ -239,6 +251,7 @@ export default function DesignSystem() {
 				<div className={styles['on-the-cds__grid']}>
 					<DeviceFrame
 						deviceType="desktop"
+						isDarkMode={isDarkMode}
 						className={clsx(
 							styles['device--desktop'],
 							styles['grid--desktop1'],
@@ -249,6 +262,7 @@ export default function DesignSystem() {
 					/>
 					<DeviceFrame
 						deviceType="desktop"
+						isDarkMode={isDarkMode}
 						className={clsx(
 							styles['device--desktop'],
 							styles['grid--desktop2'],
@@ -273,6 +287,7 @@ export default function DesignSystem() {
 				<Reel className={styles['on-the-cds__reel']}>
 					<DeviceFrame
 						deviceType="desktop"
+						isDarkMode={isDarkMode}
 						className={clsx(
 							styles['device--brand-platform--intro'],
 							styles['device--desktop'],
@@ -292,6 +307,7 @@ export default function DesignSystem() {
 					/>
 					<DeviceFrame
 						deviceType="desktop"
+						isDarkMode={isDarkMode}
 						className={styles['device--desktop']}
 						title="Roblox In-Game Fundraising Partnership"
 						style={{ aspectRatio: '16 / 10' }}
@@ -301,6 +317,7 @@ export default function DesignSystem() {
 
 					<DeviceFrame
 						deviceType="desktop"
+						isDarkMode={isDarkMode}
 						className={styles['device--desktop']}
 						title="Crowdfunding App | Detail Page"
 						style={{ aspectRatio: '16 / 10' }}
@@ -314,6 +331,7 @@ export default function DesignSystem() {
 					/>
 					<DeviceFrame
 						deviceType="desktop"
+						isDarkMode={isDarkMode}
 						className={styles['device--desktop']}
 						title="Conference Partnership Site"
 						style={{ aspectRatio: '16 / 10' }}
@@ -341,6 +359,7 @@ export default function DesignSystem() {
 					{/* Targeted Response */}
 					<DeviceFrame
 						deviceType="desktop"
+						isDarkMode={isDarkMode}
 						className={styles['device--desktop']}
 						title="Field Strategies Planning and Reporting | Home"
 						style={{ aspectRatio: '16 / 10' }}
@@ -349,6 +368,7 @@ export default function DesignSystem() {
 					/>
 					<DeviceFrame
 						deviceType="desktop"
+						isDarkMode={isDarkMode}
 						className={styles['device--desktop']}
 						title="Field Strategies Planning and Reporting | Global View"
 						style={{ aspectRatio: '16 / 10' }}
@@ -357,6 +377,7 @@ export default function DesignSystem() {
 					/>
 					<DeviceFrame
 						deviceType="desktop"
+						isDarkMode={isDarkMode}
 						className={styles['device--desktop']}
 						title="Field Strategies Planning and Reporting | Country View"
 						style={{ aspectRatio: '16 / 10' }}
@@ -366,6 +387,7 @@ export default function DesignSystem() {
 					{/* Compassion Campaigns */}
 					<DeviceFrame
 						deviceType="desktop"
+						isDarkMode={isDarkMode}
 						className={styles['device--desktop']}
 						title="Global Campaigns Hub"
 						style={{ aspectRatio: '16 / 10' }}
@@ -380,6 +402,7 @@ export default function DesignSystem() {
 					/>
 					<DeviceFrame
 						deviceType="desktop"
+						isDarkMode={isDarkMode}
 						className={styles['device--desktop']}
 						title="Reusable, White-Label Campaign Hub | Guidelines Template"
 						style={{ aspectRatio: '16 / 10' }}
@@ -393,6 +416,7 @@ export default function DesignSystem() {
 					/>
 					<DeviceFrame
 						deviceType="desktop"
+						isDarkMode={isDarkMode}
 						className={styles['device--desktop']}
 						title="Reusable, White-Label Campaign Hub | Assets Template"
 						style={{ aspectRatio: '16 / 10' }}

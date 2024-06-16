@@ -10,6 +10,7 @@ interface DeviceFrameProps {
 	alt: string;
 	className?: string | CSSModuleClasses;
 	deviceType?: 'mobile' | 'desktop';
+	isDarkMode?: boolean;
 	title?: string;
 	background?: string | number;
 	imageVerticalMargin?: string;
@@ -23,6 +24,7 @@ export default function DeviceFrame({
 	alt,
 	className,
 	deviceType = 'mobile',
+	isDarkMode = false,
 	title,
 	background,
 	imageVerticalMargin,
@@ -68,7 +70,7 @@ export default function DeviceFrame({
 					className,
 					styles['device--desktop'],
 					styles['app-frame'],
-					// styles['borderless'],
+					isDarkMode ? styles.dark : null,
 					platform === 'Mac' ? styles.mac : styles.win,
 					styles.scrolling,
 					styles.centered,
