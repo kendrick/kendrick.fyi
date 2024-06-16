@@ -146,7 +146,7 @@
 		grid-template-areas:
 			'desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 . . . .'
 			'desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 . . . .'
-			'desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 . mobile1 mobile1 .'
+			'desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 . . . .'
 			'desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 . mobile1 mobile1 .'
 			'desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 . mobile1 mobile1 .'
 			'desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 . mobile1 mobile1 .'
@@ -155,14 +155,16 @@
 			'desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 . mobile1 mobile1 .'
 			'. . . . . . . . mobile1 mobile1 .'
 			'. mobile2 mobile2 . . . . . mobile1 mobile1 .'
+			'. mobile2 mobile2 . . . . . mobile1 mobile1 .'
+			'. mobile2 mobile2 . . . . . . . .'
 			'. mobile2 mobile2 . desktop2 desktop2 desktop2 desktop2 desktop2 desktop2 desktop2'
 			'. mobile2 mobile2 . desktop2 desktop2 desktop2 desktop2 desktop2 desktop2 desktop2'
 			'. mobile2 mobile2 . desktop2 desktop2 desktop2 desktop2 desktop2 desktop2 desktop2'
 			'. mobile2 mobile2 . desktop2 desktop2 desktop2 desktop2 desktop2 desktop2 desktop2'
 			'. mobile2 mobile2 . desktop2 desktop2 desktop2 desktop2 desktop2 desktop2 desktop2'
 			'. mobile2 mobile2 . desktop2 desktop2 desktop2 desktop2 desktop2 desktop2 desktop2'
-			'. mobile2 mobile2 . desktop2 desktop2 desktop2 desktop2 desktop2 desktop2 desktop2'
-			'. mobile2 mobile2 . desktop2 desktop2 desktop2 desktop2 desktop2 desktop2 desktop2'
+			'. . . . desktop2 desktop2 desktop2 desktop2 desktop2 desktop2 desktop2'
+			'. . . . desktop2 desktop2 desktop2 desktop2 desktop2 desktop2 desktop2'
 			'. . . . desktop2 desktop2 desktop2 desktop2 desktop2 desktop2 desktop2';
 		gap: var(--k-space-xl);
 	}
