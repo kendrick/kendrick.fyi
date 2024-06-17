@@ -75,7 +75,6 @@
 }
 
 .on-the-cds__grid {
-	/* --k-device-frame-max-width: 192px; */
 	--k-row-height: 16dvh;
 
 	display: grid;
@@ -85,9 +84,6 @@
 		'desktop2'
 		'mobile2';
 	gap: var(--k-space-md);
-
-	/* grid-template-columns: repeat(12, 1fr); */
-	/* grid-template-rows: repeat(10, var(--k-row-height)); */
 
 	.device--desktop {
 		max-height: calc(3 * var(--k-row-height));
@@ -141,7 +137,7 @@
 
 @media (width >= 1200px) {
 	.on-the-cds__grid {
-		--k-mobile-frame-width: 24dvw;
+		--k-mobile-frame-width: 19vw;
 
 		grid-template-areas:
 			'desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 desktop1 . . . .'
@@ -175,6 +171,8 @@
 	/* --k-device-frame-max-width: clamp(12.5rem, 11rem + 7.5vi, 20rem); */
 	/* --k-device-frame-max-width: clamp(8rem, 5.029rem + 12.19vi, 16rem); */
 	--k-device-frame-max-width: 192px;
+
+	padding-top: var(--k-space-sm-2xl);
 
 	.device--desktop {
 		max-height: calc(var(--k-device-frame-max-width) * 18.5 / 10);
