@@ -72,16 +72,15 @@ export default function DesignSystem() {
 				<Stack>
 					<p>
 						Compassion’s decentralized corporate structure makes coordination
-						among offices challenging. While it allows each office to nimbly
-						adapt to its local conditions, it also leaves each office
-						individually responsible for interpreting and implementing
-						Compassion’s brand. Over time, this isolation resulted in a
-						fragmented brand and visual identity that left Compassion as a whole
-						less capable of leveraging its internal design and development
-						expertise because teams constantly reinvented the wheel.
-						Compassion’s ongoing multi-year brand overhaul compounded this
-						issue, which called for a unified global voice to solidify its brand
-						identity.
+						among offices challenging. While it allows each office to adapt to
+						its local conditions nimbly, it also leaves each office individually
+						responsible for interpreting and implementing Compassion’s brand.
+						Over time, this isolation resulted in a fragmented brand and visual
+						identity that left Compassion as a whole less capable of leveraging
+						its internal design and development expertise because teams
+						constantly reinvented the wheel. Compassion’s ongoing multi-year
+						brand overhaul compounded this issue, which called for a unified
+						global voice to solidify its brand identity.
 					</p>
 					<FYIGrid
 						images={images.fragmentationImages}
@@ -160,27 +159,25 @@ export default function DesignSystem() {
 						was genuinely future-proof and enabling flexibility where designers
 						needed it.
 					</p>
-					<WithSidebar sidebarOnRight>
-						<Stack>
-							<aside className={clsx(sharedProjectStyles.aside, styles.aside)}>
-								<h3 className={sharedProjectStyles.aside__heading}>
-									What are Design Tokens?
-								</h3>
-								<p>
-									Design tokens are the tiniest pieces of a design system that
-									store design-related information. Think of them as variables
-									that define and store the values for design elements, such as
-									colors, typography, spacing, and more. They help bridge design
-									and development, ensuring the same design decisions are
-									implemented consistently across different tools, platforms,
-									and devices.
-								</p>
-							</aside>
-						</Stack>
+					<Switcher>
 						<PullQuote>
 							Design tokens emerged as a critical enabler of our solution.
 						</PullQuote>
-					</WithSidebar>
+						<aside className={clsx(sharedProjectStyles.aside, styles.aside)}>
+							<h3 className={sharedProjectStyles.aside__heading}>
+								What are Design Tokens?
+							</h3>
+							<p>
+								Design tokens are the tiniest pieces of a design system that
+								store design-related information. Think of them as variables
+								that define and store the values for design elements, such as
+								colors, typography, spacing, and more. They help bridge design
+								and development, ensuring the same design decisions are
+								implemented consistently across different tools, platforms, and
+								devices.
+							</p>
+						</aside>
+					</Switcher>
 				</Stack>
 			</section>
 
@@ -284,13 +281,13 @@ export default function DesignSystem() {
 							across the organization are in various stages of adoption,
 							including Compassion Canada, Compassion Netherlands, Compassion’s
 							Global Marketing team, and its innovation team, Compassion
-							Ventures Group. Notably, the Compassion Design System was used in
+							Ventures Group. Notably, the Compassion Design System accelerated
 							the Field Strategies app, a crucial tool in a $1.4 billion
-							multi-year fundraising effort, as well as many global campaign
-							sites and marketing landing pages.
+							multi-year fundraising effort, and many global campaign sites and
+							marketing landing pages.
 						</p>
 						<p>
-							The qualitative benefits of the Compassion Design System were
+							The Compassion Design System’s qualitative benefits were
 							substantial. The system improved design consistency, reduced
 							development cycles, and enhanced collaboration between design and
 							development teams. While formal metrics were unavailable, the
@@ -481,12 +478,13 @@ export default function DesignSystem() {
 						<p>
 							The project highlighted several vital lessons. One critical
 							insight was the necessity of solid alignment and endorsement from
-							leadership to achieve widespread adoption. Despite the robust
-							grassroots support from many teams, top-down commitment and
-							advocacy would have been crucial in ensuring the design system’s
-							success and integration across the entire organization. This
-							knowledge equipped the team to navigate similar situations in the
-							future with greater confidence and effectiveness.
+							leadership to achieve widespread adoption. Despite having robust
+							grassroots support from many teams, after leadership turnover, the
+							design system lacked the top-down advocacy and commitment that
+							would have been crucial in ensuring its long-term success and
+							integration across the entire organization. This knowledge
+							equipped the team to navigate similar situations in the future
+							with greater confidence and effectiveness.
 						</p>
 						<PullQuote>
 							Top-down commitment and advocacy would have been crucial.
