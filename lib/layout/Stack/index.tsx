@@ -6,15 +6,34 @@ import styles from './styles.module.css';
 interface Props {
 	children: React.ReactNode;
 	className?: string | CSSModuleClasses;
-	space?: string;
 	style?: CSSProperties;
+	maxWidth?: string;
+	space?: string;
+	recursive?: boolean;
 }
 
-export default function Stack({ children, className, space, style }: Props) {
-	const inlineStyles = customPropertiesFromVars('k-stack', style, { space });
+export default function Stack({
+	children,
+	className,
+	style,
+	maxWidth,
+	space,
+	recursive = false,
+}: Props) {
+	const inlineStyle = customPropertiesFromVars('k-stack', style, {
+		maxWidth,
+		space,
+	});
 
 	return (
-		<div style={inlineStyles} className={clsx([styles.stack, className])}>
+		<div
+			style={inlineStyle}
+			className={clsx([
+				styles.stack,
+				recursive ? styles['stack--recursive'] : '',
+				className,
+			])}
+		>
 			{children}
 		</div>
 	);
