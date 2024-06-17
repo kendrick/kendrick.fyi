@@ -7,7 +7,7 @@ import ThemeContextProvider from '@/context/theme-context';
 import Script from 'next/script';
 
 import '@/app/globals/globals.css';
-import Header from '@/components/header/header';
+import Header from '@/components/header';
 import '@/public/fonts/fonts.css';
 import { Toaster } from 'react-hot-toast';
 

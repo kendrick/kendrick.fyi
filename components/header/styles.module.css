@@ -1,0 +1,13 @@
+.header {
+	padding: var(--k-space-xs-lg);
+}
+
+.nav__list {
+	display: flex;
+	font-size: var(--k-type-size-minus1);
+	line-height: 1;
+}
+
+.nav__list__item {
+	display: inline;
+}
