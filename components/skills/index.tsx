@@ -26,7 +26,7 @@ export default function Skills() {
 
 	return (
 		<section id="skills" ref={ref} className={styles.skills}>
-			<h2>My Skills</h2>
+			<h2>Skills</h2>
 			<Cluster className={styles.skills__list}>
 				{skillsData.map((skill, index) => (
 					<motion.li

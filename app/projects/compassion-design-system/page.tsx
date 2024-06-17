@@ -234,7 +234,6 @@ export default function DesignSystem() {
 						deviceType="desktop"
 						isDarkMode={isDarkMode}
 						style={{ aspectRatio: '16 / 9' }}
-						title="Design with Compassion | Documentation Site"
 					></DeviceFrame>
 				</WithSidebar>
 				<h2>Impact and Outcomes</h2>
@@ -256,7 +255,6 @@ export default function DesignSystem() {
 							styles['device--desktop'],
 							styles['grid--desktop1'],
 						)}
-						title="Brand Platform Site"
 						src={images.onTheCds.mwc.desktop.src}
 						alt={images.onTheCds.mwc.desktop.alt}
 					/>
@@ -267,7 +265,6 @@ export default function DesignSystem() {
 							styles['device--desktop'],
 							styles['grid--desktop2'],
 						)}
-						title="Crowdfunding App | Home"
 						src={images.onTheCds.n2nSupporterHome.desktop.src}
 						alt={images.onTheCds.n2nSupporterHome.desktop.alt}
 					/>
@@ -292,7 +289,6 @@ export default function DesignSystem() {
 							styles['device--brand-platform--intro'],
 							styles['device--desktop'],
 						)}
-						title="Brand Platform Site"
 						style={{ aspectRatio: '700 / 494', alignSelf: 'baseline' }}
 						src={images.onTheCds.mwc.magicLink.src}
 						alt={images.onTheCds.mwc.magicLink.alt}
@@ -309,7 +305,6 @@ export default function DesignSystem() {
 						deviceType="desktop"
 						isDarkMode={isDarkMode}
 						className={styles['device--desktop']}
-						title="Roblox In-Game Fundraising Partnership"
 						style={{ aspectRatio: '16 / 10' }}
 						src={images.onTheCds.playToHeal.desktop.src}
 						alt={images.onTheCds.playToHeal.desktop.alt}
@@ -319,7 +314,6 @@ export default function DesignSystem() {
 						deviceType="desktop"
 						isDarkMode={isDarkMode}
 						className={styles['device--desktop']}
-						title="Crowdfunding App | Detail Page"
 						style={{ aspectRatio: '16 / 10' }}
 						src={images.onTheCds.n2nSupporterCauseDetail.desktop.src}
 						alt={images.onTheCds.n2nSupporterCauseDetail.desktop.alt}
@@ -333,7 +327,6 @@ export default function DesignSystem() {
 						deviceType="desktop"
 						isDarkMode={isDarkMode}
 						className={styles['device--desktop']}
-						title="Conference Partnership Site"
 						style={{ aspectRatio: '16 / 10' }}
 						src={images.onTheCds.aog.desktop.src}
 						alt={images.onTheCds.aog.desktop.alt}
@@ -361,7 +354,6 @@ export default function DesignSystem() {
 						deviceType="desktop"
 						isDarkMode={isDarkMode}
 						className={styles['device--desktop']}
-						title="Field Strategies Planning and Reporting | Home"
 						style={{ aspectRatio: '16 / 10' }}
 						src={images.onTheCds.tr.home.src}
 						alt={images.onTheCds.tr.home.alt}
@@ -370,7 +362,6 @@ export default function DesignSystem() {
 						deviceType="desktop"
 						isDarkMode={isDarkMode}
 						className={styles['device--desktop']}
-						title="Field Strategies Planning and Reporting | Global View"
 						style={{ aspectRatio: '16 / 10' }}
 						src={images.onTheCds.tr.global.src}
 						alt={images.onTheCds.tr.global.alt}
@@ -379,7 +370,6 @@ export default function DesignSystem() {
 						deviceType="desktop"
 						isDarkMode={isDarkMode}
 						className={styles['device--desktop']}
-						title="Field Strategies Planning and Reporting | Country View"
 						style={{ aspectRatio: '16 / 10' }}
 						src={images.onTheCds.tr.country.src}
 						alt={images.onTheCds.tr.country.alt}
@@ -389,7 +379,6 @@ export default function DesignSystem() {
 						deviceType="desktop"
 						isDarkMode={isDarkMode}
 						className={styles['device--desktop']}
-						title="Global Campaigns Hub"
 						style={{ aspectRatio: '16 / 10' }}
 						src={images.onTheCds.compassionCampaigns.desktop.src}
 						alt={images.onTheCds.compassionCampaigns.desktop.alt}
@@ -404,7 +393,6 @@ export default function DesignSystem() {
 						deviceType="desktop"
 						isDarkMode={isDarkMode}
 						className={styles['device--desktop']}
-						title="Reusable, White-Label Campaign Hub | Guidelines Template"
 						style={{ aspectRatio: '16 / 10' }}
 						src={images.onTheCds.wch.desktop01.src}
 						alt={images.onTheCds.wch.desktop01.alt}
@@ -418,7 +406,6 @@ export default function DesignSystem() {
 						deviceType="desktop"
 						isDarkMode={isDarkMode}
 						className={styles['device--desktop']}
-						title="Reusable, White-Label Campaign Hub | Assets Template"
 						style={{ aspectRatio: '16 / 10' }}
 						src={images.onTheCds.wch.desktop02.src}
 						alt={images.onTheCds.wch.desktop02.alt}

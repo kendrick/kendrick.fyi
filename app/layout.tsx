@@ -8,22 +8,10 @@ import Script from 'next/script';
 
 import '@/app/globals/globals.css';
 import Header from '@/components/header/header';
+import '@/public/fonts/fonts.css';
 import { Toaster } from 'react-hot-toast';
 
 import { DarkModeProvider } from '@/lib/DarkModeContext';
-import { Inter } from 'next/font/google';
-import localFont from 'next/font/local';
-
-const sans1 = localFont({
-	src: '../assets/fonts/Satoshi-Variable.woff2',
-	display: 'swap',
-	variable: '--k-type-sans',
-	fallback: ['var(--k-system-fonts)'],
-});
-const sans2 = Inter({ subsets: ['latin'] });
-const fonts = {
-	sans: sans2,
-};
 
 export const metadata = {
 	title: 'Kendrick Arnett',
@@ -52,7 +40,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en" className="!scroll-smooth">
+		<html lang="en">
 			<body>
 				<DarkModeProvider>
 					<ThemeContextProvider>

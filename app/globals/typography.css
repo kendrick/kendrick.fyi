@@ -1,16 +1,32 @@
 @import '../../tokens/css/typography.css';
 
 :root {
-	--k-system-fonts: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
-		'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	--k-type-emoji: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+		'Noto Color Emoji';
+	--k-type-body: 'FYI Body', Inter, Roboto, 'Helvetica Neue', 'Arial Nova',
+		'Nimbus Sans', Arial, var(--k-type-emoji), sans-serif;
+	--k-type-heading: var(--k-type-body);
+	--k-type-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo,
+		Consolas, 'DejaVu Sans Mono', var(--k-type-emoji), monospace;
+	--k-type-serif: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052,
+		var(--k-type-emoji), serif;
+	--k-type-display: var(--k-type-body);
 }
 
 .k-type-no-wrap {
 	white-space: nowrap;
 }
 
+body {
+	font-family: var(--k-type-body);
+	font-feature-settings:
+		'ss07' 1,
+		'ss08' 1,
+		'cv10' 1;
+}
+
 h1 {
-	font-family: var(--k-type-sans);
+	font-family: var(--k-type-display);
 	font-size: var(--k-type-size-plus4);
 	font-weight: 500;
 	line-height: var(--k-type-line-height-base);

@@ -7,5 +7,9 @@ interface Props {
 }
 
 export default function Cluster({ children, className }: Props) {
-	return <ul className={clsx([styles.cluster, className])}>{children}</ul>;
+	return (
+		<ul className={clsx([styles.cluster, 'plain-list', className])}>
+			{children}
+		</ul>
+	);
 }

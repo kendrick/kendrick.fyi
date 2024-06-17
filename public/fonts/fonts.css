@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'FYI Body';
+  src: 
+    url('InterVariable.woff2') 
+    format('woff2 supports variations'),
+    url('InterVariable.woff2') 
+    format('woff2-variations');
+  font-display: swap;
+  font-optical-sizing: auto;
+  font-weight: 100 900;
+  font-style: normal;
+  font-variation-settings:"slnt" 0;
+}
+
+@font-face {
+  font-family: 'FYI Body';
+  src: 
+    url('InterVariable-Italic.woff2') 
+    format('woff2 supports variations'),
+    url('InterVariable-Italic.woff2') 
+    format('woff2-variations');
+  font-display: swap;
+  font-optical-sizing: auto;
+  font-weight: 100 900;
+  font-style: italic;
+  font-variation-settings:"slnt" -10 0;
+}
