@@ -23,6 +23,7 @@ body {
 		'ss07' 1,
 		'ss08' 1,
 		'cv10' 1;
+	text-decoration-skip-ink: auto;
 }
 
 h1 {
@@ -62,8 +63,14 @@ h2 + span {
 	margin-block-start: 0;
 }
 
-h2 + span + p {
-	margin-block-start: var(--k-space-xs);
+h2,
+h3 {
+	+ p,
+	+ div,
+	+ span + p,
+	+ span + div {
+		margin-block-start: var(--k-space-xs);
+	}
 }
 
 h2:not(:first-of-type) {
