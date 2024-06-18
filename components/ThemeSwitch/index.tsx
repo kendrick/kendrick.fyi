@@ -2,9 +2,9 @@
 
 import { useDarkModeContext } from '@/lib/DarkModeContext';
 
-import IconMoon from '@/assets/svg/moon.svg';
-import IconSystem from '@/assets/svg/send.svg';
-import IconSun from '@/assets/svg/sun.svg';
+import IconSystem from '@/assets/svg/color-auto.svg';
+import IconDark from '@/assets/svg/color-dark.svg';
+import IconLight from '@/assets/svg/color-light.svg';
 
 import styles from './styles.module.css';
 
@@ -14,9 +14,9 @@ export default function ThemeSwitch() {
 	return (
 		<button onClick={toggleTernaryDarkMode} className={styles.switch}>
 			{ternaryDarkMode === 'light' ?
-				<IconSun />
+				<IconLight />
 			: ternaryDarkMode === 'dark' ?
-				<IconMoon />
+				<IconDark />
 			:	<IconSystem />}
 		</button>
 	);
