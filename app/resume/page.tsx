@@ -3,11 +3,13 @@
 import { useEffect, useRef, useState } from 'react';
 import { useDebounceCallback, useResizeObserver } from 'usehooks-ts';
 
-import styles from './styles.module.css';
-
+import IconDownload from '@/assets/svg/download-document.svg';
+import Stack from '@/lib/layout/Stack';
+import Link from 'next/link';
 import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
+import styles from './styles.module.css';
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 	'pdfjs-dist/build/pdf.worker.min.mjs',
@@ -38,18 +40,21 @@ function getElementOuterWidth(element: HTMLElement): number {
 }
 
 const Contact = () => {
+	type Size = {
+		width?: number;
+		height?: number;
+	};
+
 	const [numPages, setNumPages] = useState<number>();
 	const [pageNumber, setPageNumber] = useState<number>(1);
 
 	const ref = useRef<HTMLElement>(null);
-	const [width, setWidth] = useState<number>(0);
+	const [{ width, height }, setSize] = useState<Size>({
+		width: undefined,
+		height: undefined,
+	});
 
-	const onResize = useDebounceCallback((entry: ResizeObserverEntry) => {
-		if (entry && ref.current) {
-			const outerWidth = getElementOuterWidth(ref.current);
-			setWidth(outerWidth);
-		}
-	}, 200);
+	const onResize = useDebounceCallback(setSize, 200);
 
 	useResizeObserver({
 		ref,
@@ -59,7 +64,7 @@ const Contact = () => {
 	useEffect(() => {
 		if (ref.current) {
 			const outerWidth = getElementOuterWidth(ref.current);
-			setWidth(outerWidth);
+			setSize({ width: outerWidth });
 		}
 	}, []);
 
@@ -69,33 +74,42 @@ const Contact = () => {
 
 	return (
 		<section ref={ref} style={{ margin: 'var(--k-space-xs-xl)' }}>
-			<Document
-				file="/kendrick-arnett-resume.pdf"
-				onLoadSuccess={onDocumentLoadSuccess}
-				className={styles.pdf}
-			>
-				<Page
-					pageNumber={1}
-					canvasBackground="transparent"
-					className={styles['pdf__page']}
-					width={width}
-				/>
-				<Page
-					pageNumber={2}
-					canvasBackground="transparent"
-					className={styles['pdf__page']}
-					width={width}
-				/>
-				<Page
-					pageNumber={3}
-					canvasBackground="transparent"
-					className={styles['pdf__page']}
-					width={width}
-				/>
-			</Document>
-			<p>
-				Page {pageNumber} of {numPages}
-			</p>
+			<Stack className={styles.stack}>
+				<Link
+					href="/kendrick-arnett-resume.pdf"
+					target="_blank"
+					rel="noopener"
+					className={styles.download}
+				>
+					Download my résumé <IconDownload className={styles.icon} />
+					<span className="visually-hidden">(Opens in new window)</span>
+				</Link>
+
+				<Document
+					file="/kendrick-arnett-resume.pdf"
+					onLoadSuccess={onDocumentLoadSuccess}
+					className={styles.pdf}
+				>
+					<Page
+						pageNumber={1}
+						canvasBackground="transparent"
+						className={styles['pdf__page']}
+						width={width}
+					/>
+					<Page
+						pageNumber={2}
+						canvasBackground="transparent"
+						className={styles['pdf__page']}
+						width={width}
+					/>
+					<Page
+						pageNumber={3}
+						canvasBackground="transparent"
+						className={styles['pdf__page']}
+						width={width}
+					/>
+				</Document>
+			</Stack>
 		</section>
 	);
 };

@@ -1,17 +1,42 @@
+.stack {
+	gap: var(--k-space-sm-xl);
+}
+
+.download {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	font-size: var(--k-type-size-plus1);
+	font-weight: 300;
+}
+
+.icon {
+	margin-inline-start: 0.33em;
+}
+
 .pdf {
 	display: grid;
-	gap: var(--k-space-xs-xl, 1rem);
+	gap: var(--k-space-xs-md, 1rem);
 	place-items: center;
 	margin: auto;
 }
 
 .pdf__page {
+	--k-pdf-max-width: calc(1440px - var(--k-space-xs-xl));
+
 	display: inline;
 	aspect-ratio: 1 / 1.294;
-	max-width: calc(1440px - var(--k-space-xs-xl));
+	max-width: var(--k-pdf-max-width);
 	object-fit: cover;
 
 	> * {
+		max-width: var(--k-pdf-max-width);
+		max-height: calc(var(--k-pdf-max-width) * 1.259);
+
+		object-fit: contain;
+		border: 1px solid #efefef88;
 		border-radius: 8px;
+		box-shadow: 0 0 8px 0 #10101004;
 	}
 }
