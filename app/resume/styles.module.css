@@ -8,4 +8,10 @@
 .pdf__page {
 	display: inline;
 	aspect-ratio: 1 / 1.294;
+	max-width: calc(1440px - var(--k-space-xs-xl));
+	object-fit: cover;
+
+	> * {
+		border-radius: 8px;
+	}
 }
