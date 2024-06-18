@@ -16,6 +16,8 @@ const nextConfig = {
 		// serverActions: true,
 	},
 	webpack(config) {
+		config.resolve.alias.canvas = false;
+
 		/* See https://react-svgr.com/docs/next/ */
 		// Grab the existing rule that handles SVG imports
 		const fileLoaderRule = config.module.rules.find((rule) =>

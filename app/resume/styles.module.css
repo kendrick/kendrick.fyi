@@ -1,0 +1,11 @@
+.pdf {
+	display: grid;
+	gap: var(--k-space-xs-xl, 1rem);
+	place-items: center;
+	margin: auto;
+}
+
+.pdf__page {
+	display: inline;
+	aspect-ratio: 1 / 1.294;
+}

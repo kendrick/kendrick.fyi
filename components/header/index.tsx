@@ -23,13 +23,7 @@ export default function Header() {
 						<Link href="/projects">Projects</Link>
 						<Link href="/kind-words">Kind Words</Link>
 						<Link href="/contact">Contact</Link>
-						<Link
-							href="/kendrick-arnett-resume.pdf"
-							target="_blank"
-							rel="noopener"
-						>
-							Resume
-						</Link>
+						<Link href="/resume">Resume</Link>
 					</Cluster>
 				</nav>
 			</Cluster>
