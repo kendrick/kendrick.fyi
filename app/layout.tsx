@@ -1,5 +1,4 @@
 import Footer from '@/components/footer';
-import ThemeSwitch from '@/components/theme-switch';
 
 import ActiveSectionContextProvider from '@/context/active-section-context';
 import ThemeContextProvider from '@/context/theme-context';
@@ -21,13 +20,13 @@ export const metadata = {
 			{
 				rel: 'icon',
 				type: 'image/png',
-				url: '/assets/favicon-light.png',
+				url: '/favicon/favicon-light.png',
 				media: '(prefers-color-scheme: light)',
 			},
 			{
 				rel: 'icon',
 				type: 'image/png',
-				url: '/assets/favicon-dark.png',
+				url: '/favicon/favicon-dark.png',
 				media: '(prefers-color-scheme: dark)',
 			},
 		],
@@ -50,7 +49,6 @@ export default function RootLayout({
 							<Footer />
 
 							<Toaster position="top-right" />
-							<ThemeSwitch />
 						</ActiveSectionContextProvider>
 					</ThemeContextProvider>
 				</DarkModeProvider>

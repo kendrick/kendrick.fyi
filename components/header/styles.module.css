@@ -1,9 +1,15 @@
 .header {
-	padding: var(--k-space-xs-lg);
+	text-align: center;
 }
 
-.initial {
-	font-weight: 900;
+/* Need the extra selector to out-specify the `plain-list` helper 
+   that overrides padding. */
+.header .header__inner-wrap {
+	--k-header-max-width: calc(1440px - 2 * var(--k-space-xs-xl));
+
+	max-width: var(--k-header-max-width);
+	margin: auto;
+	padding: var(--k-space-xs-xl);
 }
 
 .header .nav__wrap {
@@ -18,4 +24,9 @@
 
 .nav__list__item {
 	display: inline;
+}
+
+.lettermark {
+	width: auto;
+	height: var(--k-type-size-plus2);
 }

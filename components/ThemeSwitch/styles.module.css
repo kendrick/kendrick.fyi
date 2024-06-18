@@ -1,0 +1,13 @@
+.switch {
+	cursor: pointer;
+
+	display: grid;
+	place-items: center;
+
+	font-size: 2em;
+	color: inherit;
+
+	background: transparent;
+
+	fill: currentColor;
+}

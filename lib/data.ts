@@ -1,4 +1,6 @@
-// import React from 'react';
+import IconGitHub from '@/assets/svg/github.svg';
+import IconLinkedIn from '@/assets/svg/linkedin.svg';
+import IconThreads from '@/assets/svg/threads.svg';
 
 export const pageLinks = [
 	{
@@ -26,6 +28,26 @@ export const pageLinks = [
 		href: '/resume',
 	},
 ];
+
+export const socialLinks = [
+	{
+		name: 'GitHub',
+		href: 'https://github.com/kendrick',
+		icon: IconGitHub,
+	},
+	{
+		name: 'LinkedIn',
+		href: 'https://linkedin.com/in/kendrickarnett',
+		icon: IconLinkedIn,
+	},
+	{
+		name: 'Threads',
+		href: 'https://www.threads.net/@kendrick.fyi',
+		icon: IconThreads,
+	},
+];
+
+export const email = `kendrick@kendrick.fyi`;
 
 export const year = new Date().getFullYear();
 

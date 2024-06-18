@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 278 171">
+	<path fill="var(--k-mark-dogear-bottom-left, currentColor)" d="M0 154h28.5l-14.8 17H0v-17Z" />
+	<path fill="var(--k-mark-dogear-top-right, currentColor)" d="M256.52 17.5H242L256.52 0v17.5Z" />
+	<path fill="var(--k-mark-body, currentColor)"
+		d="M256.5 0v.02L242 17.5 105 171H13.7L162.5 0h94Zm-150 45.86V0H.5v18h14v117.5h14l78-89.64Zm28 125.14-7.63-6.02 53.71-60.18L253.5 154h24v17h-143Z" />
+</svg>

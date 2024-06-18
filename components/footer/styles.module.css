@@ -1,2 +1,22 @@
 .footer {
+	text-align: center;
+}
+
+.footer__inner-wrap {
+	--k-footer-max-width: calc(1440px - 2 * var(--k-space-xs-xl));
+
+	max-width: var(--k-footer-max-width);
+	margin: auto;
+	padding: var(--k-space-xs-xl);
+}
+
+.cluster__wrap {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--k-grid-gutter);
+	justify-content: space-between;
+}
+
+.copyright {
+	text-align: left;
 }

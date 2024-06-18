@@ -6,7 +6,10 @@ import { useActiveSectionContext } from '@/context/active-section-context';
 
 import Cluster from '@/lib/layout/Cluster';
 
+import Lettermark from '@/components/Lettermark';
+import ThemeSwitch from '@/components/ThemeSwitch';
 import { pageLinks } from '@/lib/data';
+import clsx from 'clsx';
 import styles from './styles.module.css';
 
 export default function Header() {
@@ -15,8 +18,11 @@ export default function Header() {
 
 	return (
 		<header className={styles.header}>
-			<Cluster className={styles.nav__wrap}>
-				<span className={styles.initial}>K</span>
+			<Cluster className={clsx(styles['header__inner-wrap'], styles.nav__wrap)}>
+				<Link href="/">
+					<Lettermark className={styles.lettermark} />
+				</Link>
+
 				<nav className={styles['nav']}>
 					<Cluster className={styles['nav__list']}>
 						{pageLinks.map((link, index) => (
@@ -24,6 +30,7 @@ export default function Header() {
 								{link.name}
 							</Link>
 						))}
+						<ThemeSwitch />
 					</Cluster>
 				</nav>
 			</Cluster>
