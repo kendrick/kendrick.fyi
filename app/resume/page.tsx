@@ -1,3 +1,5 @@
+'use client';
+
 import '@ungap/with-resolvers';
 
 import { useEffect, useRef, useState } from 'react';
