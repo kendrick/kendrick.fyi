@@ -1,9 +1,9 @@
+@import './reset.css';
+
 @import '../../tokens/css/breakpoints.css';
 @import './space.css';
 @import './typography.css';
 @import './color.css';
-
-@import './reset.css';
 
 body {
 	padding: var(--k-space-minus2-minus1);
