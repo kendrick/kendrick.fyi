@@ -1,7 +1,10 @@
 'use client';
 
 import { useSectionInView } from '@/lib/hooks';
+
+// import Testimonial from '@/components/Testimonial';
 import styles from './styles.module.css';
+
 export default function KindWords() {
 	const { ref } = useSectionInView('Kind Words');
 
@@ -10,8 +13,9 @@ export default function KindWords() {
 	return (
 		<section id="kind-words" ref={ref} className={styles['kind-words']}>
 			<h2>Kind Words</h2>
-			{/* https://www.linkedin.com/in/kendrickarnett/details/recommendations */}
+
 			<p>Amy</p>
+
 			<figure>
 				<blockquote cite={recUrl}>
 					Working with Kendrick and his team was a dream from start to finish.
@@ -66,7 +70,7 @@ export default function KindWords() {
 						</li> */}
 			<figure>
 				<blockquote cite={recUrl}>
-					His design perspectives [are] "strongly informed but loosely held." I
+					His design perspectives [are] “strongly informed but loosely held.” I
 					appreciate Kendrick’s ability to state his perspective that is based
 					on user research, yet consider opposing views and discuss the best
 					option for the end user.
@@ -149,7 +153,7 @@ export default function KindWords() {
 			<p>Laura</p>
 			<figure>
 				<blockquote cite={recUrl}>
-					As my manager there wasn't a moment he wasn't my biggest cheerleader,
+					As my manager there wasn’t a moment he wasn’t my biggest cheerleader,
 					trusting me with projects that were stretch experiences and giving me
 					the tools I needed to thrive.
 				</blockquote>
@@ -178,9 +182,9 @@ export default function KindWords() {
 
 			<figure>
 				<blockquote cite={recUrl}>
-					If you're looking for a leader who creates teams that are close-knit,
+					If you’re looking for a leader who creates teams that are close-knit,
 					supportive and can get anything done that needs done because they do
-					it together… you're looking for Kendrick.
+					it together… you’re looking for Kendrick.
 				</blockquote>
 				<figcaption>
 					<a href={recUrl}>
@@ -194,9 +198,12 @@ export default function KindWords() {
 			<figure>
 				<blockquote cite={recUrl}>
 					His skillset is unique in that he is both customer centric and
-					technical. <span aria-hidden="true">[…]</span> He is focused on
-					designing the most appropriate user experience possible given the
-					target customer.
+					technical.{' '}
+					<span className="k-type-deemph" aria-hidden="true">
+						[…]
+					</span>{' '}
+					He is focused on designing the most appropriate user experience
+					possible given the target customer.
 				</blockquote>
 				<figcaption>
 					<a href={recUrl}>
@@ -208,9 +215,12 @@ export default function KindWords() {
 			<figure>
 				<blockquote cite={recUrl}>
 					His skillset is unique in that he is both customer centric and
-					technical. <span aria-hidden="true">[…]</span> He is focused on
-					designing the most appropriate user experience possible given the
-					target customer.
+					technical.{' '}
+					<span className="k-type-deemph" aria-hidden="true">
+						[…]
+					</span>{' '}
+					He is focused on designing the most appropriate user experience
+					possible given the target customer.
 				</blockquote>
 				<figcaption>
 					<a href={recUrl}>
@@ -222,7 +232,7 @@ export default function KindWords() {
 			{/* <li>
 							<blockquote cite={recUrl}>
 								Kendrick’s technical skills are also strong as he is able to
-								translate his design into an experience <span aria-hidden="true">[…]</span> across many
+								translate his design into an experience <span className="k-type-deemph" aria-hidden="true">[…]</span> across many
 								different platforms and code languages.
 							</blockquote>
 						</li> */}
