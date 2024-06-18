@@ -2,6 +2,14 @@
 	padding: var(--k-space-xs-lg);
 }
 
+.initial {
+	font-weight: 900;
+}
+
+.header .nav__wrap {
+	justify-content: space-between;
+}
+
 .nav__list {
 	display: flex;
 	font-size: var(--k-type-size-minus1);

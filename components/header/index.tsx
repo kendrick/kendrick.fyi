@@ -1,9 +1,11 @@
 'use client';
 
+import Link from 'next/link';
+
 import { useActiveSectionContext } from '@/context/active-section-context';
 
 import Cluster from '@/lib/layout/Cluster';
-import Link from 'next/link';
+
 import styles from './styles.module.css';
 
 export default function Header() {
@@ -12,15 +14,25 @@ export default function Header() {
 
 	return (
 		<header className={styles.header}>
-			<nav className={styles['nav']}>
-				<Cluster className={styles['nav__list']}>
-					<Link href="/">Home</Link>
-					<Link href="/about">About</Link>
-					<Link href="/projects">Projects</Link>
-					<Link href="/kind-words">Kind Words</Link>
-					<Link href="/contact">Contact</Link>
-				</Cluster>
-			</nav>
+			<Cluster className={styles.nav__wrap}>
+				<span className={styles.initial}>K</span>
+				<nav className={styles['nav']}>
+					<Cluster className={styles['nav__list']}>
+						<Link href="/">Home</Link>
+						<Link href="/about">About</Link>
+						<Link href="/projects">Projects</Link>
+						<Link href="/kind-words">Kind Words</Link>
+						<Link href="/contact">Contact</Link>
+						<Link
+							href="/kendrick-arnett-resume.pdf"
+							target="_blank"
+							rel="noopener"
+						>
+							Resume
+						</Link>
+					</Cluster>
+				</nav>
+			</Cluster>
 		</header>
 	);
 }

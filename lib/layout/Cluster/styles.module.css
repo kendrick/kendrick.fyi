@@ -1,7 +1,7 @@
 .cluster {
 	display: flex;
 	flex-wrap: wrap;
-	gap: var(--k-grid-gutter);
+	gap: var(--k-cluster-space, var(--k-grid-gutter));
 	align-items: center;
 	justify-content: flex-start;
 }
