@@ -5,7 +5,6 @@ import Contact from '@/components/contact';
 import Intro from '@/components/intro';
 import KindWords from '@/components/kindWords';
 import Projects from '@/components/projects';
-import SectionDivider from '@/components/section-divider';
 import Skills from '@/components/skills';
 
 import styles from './page.module.css';
@@ -21,7 +20,6 @@ export default function Home() {
 	return (
 		<main className={styles.main}>
 			<Intro />
-			<SectionDivider />
 			<About />
 			<Projects />
 			<Skills />
