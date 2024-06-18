@@ -1,57 +1,33 @@
 // import React from 'react';
 
-export const links = [
+export const pageLinks = [
 	{
 		name: 'Home',
-		hash: '#home',
+		href: '/',
 	},
 	{
 		name: 'About',
-		hash: '#about',
+		href: '/about',
 	},
 	{
 		name: 'Projects',
-		hash: '#projects',
-	},
-	{
-		name: 'Skills',
-		hash: '#skills',
+		href: '/projects',
 	},
 	{
 		name: 'Kind Words',
-		hash: '#kind-words',
+		href: '/kind-words',
 	},
 	{
 		name: 'Contact',
-		hash: '#contact',
+		href: '/contact',
 	},
-] as const;
+	{
+		name: 'Résumé',
+		href: '/resume',
+	},
+];
 
-const year = new Date().getFullYear();
-
-export const experiencesData = [
-	{
-		title: 'Role One',
-		location: 'Location',
-		description: 'Lorem ipsum.',
-		// icon: React.createElement(LuGraduationCap),
-		date: year,
-	},
-	{
-		title: 'Role Two',
-		location: 'Location',
-		description: 'Lorem ipsum.',
-		// icon: React.createElement(CgWorkAlt),
-		date: year,
-	},
-	{
-		title: 'Role Three',
-		location: 'Location',
-		description: 'Lorem ipsum.',
-		// icon: React.createElement(FaReact),
-		date: year,
-	},
-] as const;
+export const year = new Date().getFullYear();
 
 export const projectsData = [
 	{
@@ -88,26 +64,29 @@ export const skillsData = [
 	'Public Speaking',
 ] as const;
 
-export const kindWordsData = [
-	'Design Systems',
-	'UX Research',
-	'Usability Testing',
-	'Design Thinking',
-	'Ideation',
-	'Interaction Design',
-	'Figma',
-	'Wireframing',
-	'Visual Design',
-	'Prototyping',
-	'Agile Methodologies',
-	'Responsive Web Design',
-	'A/B Testing',
-	'Conversion Rate Optimization (CRO)',
-	'Accessibility',
-	'HTML5',
-	'CSS',
-	'SCSS',
-	'JavaScript',
-	'ReactJS',
-	'Public Speaking',
+export const links = [
+	{
+		name: 'Home',
+		hash: '#home',
+	},
+	{
+		name: 'About',
+		hash: '#about',
+	},
+	{
+		name: 'Projects',
+		hash: '#projects',
+	},
+	{
+		name: 'Skills',
+		hash: '#skills',
+	},
+	{
+		name: 'Kind Words',
+		hash: '#kind-words',
+	},
+	{
+		name: 'Contact',
+		hash: '#contact',
+	},
 ] as const;
