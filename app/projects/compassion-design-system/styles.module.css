@@ -173,6 +173,8 @@
 	--k-device-frame-max-width: 192px;
 
 	padding-top: var(--k-space-sm-2xl);
+	padding-right: var(--k-space-xs-lg);
+	padding-left: var(--k-space-xs-lg);
 
 	.device--desktop {
 		max-height: calc(var(--k-device-frame-max-width) * 18.5 / 10);
