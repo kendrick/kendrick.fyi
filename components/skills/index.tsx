@@ -12,11 +12,7 @@ export default function Skills() {
 	return (
 		<section id="skills" ref={ref} className={styles.skills}>
 			<h2>Skills</h2>
-			<Cluster className={styles.skills__list}>
-				{skillsData.map((skill, index) => (
-					<li key={index}>{skill}</li>
-				))}
-			</Cluster>
+			<Cluster className={styles.skills__list}>{skillsData}</Cluster>
 		</section>
 	);
 }

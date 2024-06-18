@@ -1,6 +1,6 @@
 import customPropertiesFromVars from '@/lib/customPropertiesFromVars';
 import clsx from 'clsx';
-import { CSSProperties } from 'react';
+import React, { CSSProperties } from 'react';
 import styles from './styles.module.css';
 
 interface Props {
@@ -15,12 +15,16 @@ export default function Cluster({ children, className, style, space }: Props) {
 		space,
 	});
 
+	const kids = React.Children.toArray(children);
+
 	return (
 		<ul
 			style={inlineStyle}
 			className={clsx([styles.cluster, 'plain-list', className])}
 		>
-			{children}
+			{kids?.map((child, index) => {
+				return <li key={index}>{child}</li>;
+			})}
 		</ul>
 	);
 }
