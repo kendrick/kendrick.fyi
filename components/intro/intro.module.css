@@ -1,12 +1,14 @@
 .hero {
 	display: grid;
-	place-items: end left;
+	place-items: center;
 }
 
 .hero {
 	grid-template-columns: 1fr;
 	gap: var(--k-grid-gutter);
-	min-height: 100dvh;
+	min-height: calc(
+		100dvh - (2 * var(--k-space-xs-lg) + var(--k-type-size-minus1))
+	);
 	padding: var(--k-space-sm-xl);
 }
 
@@ -20,7 +22,11 @@
 }
 
 .hero__copy {
-	max-width: 75ch;
+	max-width: 66ch;
+}
+
+.intro__social-list {
+	justify-content: flex-end;
 }
 
 .intro__icon {
@@ -28,8 +34,8 @@
 }
 
 .icon {
-	width: 1em;
-	height: 1em;
+	width: var(--k-type-size-plus2);
+	height: var(--k-type-size-plus2);
 }
 
 .with-icon {
