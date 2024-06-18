@@ -28,7 +28,7 @@ function getElementOuterWidth(element: HTMLElement): number {
 	const width = rect.width;
 
 	// Get computed styles
-	const style = window.getComputedStyle(element);
+	const style = window?.getComputedStyle(element);
 
 	// Parse and add margin values
 	const marginLeft = parseFloat(style.marginLeft);
