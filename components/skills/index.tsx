@@ -2,24 +2,9 @@
 
 import { skillsData } from '@/lib/data';
 import { useSectionInView } from '@/lib/hooks';
-import { motion } from 'framer-motion';
 
 import Cluster from '../../lib/layout/Cluster';
 import styles from './styles.module.css';
-
-const fadeInAnimationVariants = {
-	initial: {
-		opacity: 0,
-		y: 100,
-	},
-	animate: (index: number) => ({
-		opacity: 1,
-		y: 0,
-		transition: {
-			delay: 0.05 * index,
-		},
-	}),
-};
 
 export default function Skills() {
 	const { ref } = useSectionInView('Skills');
@@ -29,18 +14,7 @@ export default function Skills() {
 			<h2>Skills</h2>
 			<Cluster className={styles.skills__list}>
 				{skillsData.map((skill, index) => (
-					<motion.li
-						key={index}
-						// variants={fadeInAnimationVariants}
-						// initial="initial"
-						// whileInView="animate"
-						viewport={{
-							once: true,
-						}}
-						custom={index}
-					>
-						{skill}
-					</motion.li>
+					<li key={index}>{skill}</li>
 				))}
 			</Cluster>
 		</section>

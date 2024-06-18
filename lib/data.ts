@@ -58,7 +58,6 @@ export const projectsData = [
 		title: 'Compassion Design System',
 		description:
 			'Compassion International revolutionized its global brand identity with a cutting-edge, token-based multi-brand design system, dramatically enhancing design consistency, slashing development times, and fostering seamless collaboration across 13 independent fundraising offices.',
-		// tags: ['One', 'Two', 'Three'],
 		projectPage: 'compassion-design-system',
 	},
 ] as const;
@@ -84,7 +83,7 @@ export const skillsData = [
 	'TypeScript',
 	'JavaScript',
 	'ReactJS',
-	'A-B/Multivariate Testing',
+	'A/B & Multivariate Testing',
 	'Conversion Rate Optimization (CRO)',
 	'Public Speaking',
 ] as const;

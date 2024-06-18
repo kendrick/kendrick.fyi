@@ -2,7 +2,6 @@
 
 import Logos from '@/components/logos/logos';
 import { useSectionInView } from '@/lib/hooks';
-import { motion } from 'framer-motion';
 
 import Prose from '@/lib/layout/Stack';
 import clsx from 'clsx';
@@ -13,15 +12,8 @@ export default function About() {
 	const logoHeight = 36;
 
 	return (
-		<motion.section
-			ref={ref}
-			initial={{ opacity: 0, y: 100 }}
-			animate={{ opacity: 1, y: 0 }}
-			transition={{ delay: 0.175 }}
-			id="about"
-			className={clsx(styles.about)}
-		>
-			<section>
+		<section ref={ref} id="about" className={clsx(styles.about)}>
+			<section className={'global__section'}>
 				<Prose>
 					<h2>About</h2>
 					<p>
@@ -40,6 +32,6 @@ export default function About() {
 				</Prose>
 			</section>
 			<Logos />
-		</motion.section>
+		</section>
 	);
 }
