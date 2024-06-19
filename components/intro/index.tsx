@@ -27,9 +27,9 @@ export default function Intro() {
 					<h1 className={styles.heading}>
 						<span>Hi, I’m Kendrick.</span>
 						<p className={styles['hero__copy']}>
-							I’m a skilled UX leader and front-end expert who excels at
-							building innovative, user-obsessed digital solutions and fostering
-							collaborative, vibrant teams.
+							I’m a passionate UX leader and front-end expert who thrives on
+							building innovative, user-obsessed digital solutions and nurturing
+							vibrant, high-performing teams.
 						</p>
 					</h1>
 					<Cluster
