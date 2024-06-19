@@ -10,7 +10,10 @@ import Header from '@/components/header';
 import '@/public/fonts/fonts.css';
 import { Toaster } from 'react-hot-toast';
 
+import ThemeSwitch from '@/components/ThemeSwitch';
 import { DarkModeProvider } from '@/lib/DarkModeContext';
+
+import styles from './layout.module.css';
 
 export const metadata = {
 	title: 'Kendrick Arnett',
@@ -80,7 +83,7 @@ export default function RootLayout({
 							<Header />
 							{children}
 							<Footer />
-
+							<ThemeSwitch className={styles['theme-switch']} />
 							<Toaster position="top-right" />
 						</ActiveSectionContextProvider>
 					</ThemeContextProvider>

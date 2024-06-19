@@ -7,7 +7,6 @@ import { useActiveSectionContext } from '@/context/active-section-context';
 import Cluster from '@/lib/layout/Cluster';
 
 import Lettermark from '@/components/Lettermark';
-import ThemeSwitch from '@/components/ThemeSwitch';
 import { pageLinks } from '@/lib/data';
 import clsx from 'clsx';
 import styles from './styles.module.css';
@@ -30,7 +29,6 @@ export default function Header() {
 								{link.name}
 							</Link>
 						))}
-						<ThemeSwitch />
 					</Cluster>
 				</nav>
 			</Cluster>

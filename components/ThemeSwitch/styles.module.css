@@ -4,10 +4,14 @@
 	display: grid;
 	place-items: center;
 
+	padding: var(--k-space-3xs);
+
 	font-size: 2em;
 	color: inherit;
 
 	background: transparent;
+	border: 1px solid gray;
+	border-radius: 999px;
 
 	fill: currentColor;
 }
