@@ -1,5 +1,8 @@
 .header {
+	position: sticky;
+	top: 0;
 	text-align: center;
+	background: white;
 }
 
 /* Need the extra selector to out-specify the `plain-list` helper 
@@ -10,6 +13,11 @@
 	max-width: var(--k-header-max-width);
 	margin: auto;
 	padding: var(--k-space-xs-xl);
+
+	> li:first-of-type {
+		display: flex;
+		align-items: center;
+	}
 }
 
 .header .nav__wrap {
