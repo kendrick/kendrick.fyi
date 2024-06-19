@@ -75,7 +75,7 @@
 }
 
 .on-the-cds__grid {
-	--k-row-height: 16dvh;
+	--k-row-height: 16vh;
 
 	display: grid;
 	grid-template-areas:
@@ -115,7 +115,7 @@
 			'mobile2 desktop2 desktop2';
 
 		.device--desktop {
-			max-height: 60dvh;
+			max-height: 60vh;
 		}
 
 		.grid--desktop1,

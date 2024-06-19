@@ -6,7 +6,7 @@
 .skills {
 	gap: var(--k-grid-gutter);
 	align-content: center;
-	min-height: 100dvh;
+	min-height: 100vh;
 	padding: var(--k-space-xs-xl);
 }
 

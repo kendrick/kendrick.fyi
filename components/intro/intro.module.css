@@ -7,7 +7,7 @@
 	grid-template-columns: 1fr;
 	gap: var(--k-grid-gutter);
 	min-height: calc(
-		100dvh - (2 * var(--k-space-xs-lg) + var(--k-type-size-minus1))
+		100vh - (2 * var(--k-space-xs-lg) + var(--k-type-size-minus1))
 	);
 	padding: var(--k-space-sm-xl);
 }
