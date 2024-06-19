@@ -1,7 +1,10 @@
 .header {
 	position: sticky;
+	z-index: var(--k-z-index-max);
 	top: 0;
+
 	text-align: center;
+
 	background: white;
 }
 
