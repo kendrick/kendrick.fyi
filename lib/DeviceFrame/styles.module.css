@@ -24,7 +24,7 @@
 	container-type: inline-size;
 	display: inline-block;
 
-	width: 100%;
+	/* width: 100%; */
 	min-width: var(--k-device-frame-min-width, unset);
 	max-width: var(--k-device-frame-max-width, 100%);
 	height: auto;

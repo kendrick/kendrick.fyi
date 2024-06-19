@@ -376,6 +376,7 @@ export default function DesignSystem() {
 						/>
 						{/* AOG */}
 						<DeviceFrame
+							className={styles['device--mobile']}
 							src={images.onTheCds.aog.mobile.src}
 							alt={images.onTheCds.aog.mobile.alt}
 						/>
@@ -389,17 +390,20 @@ export default function DesignSystem() {
 						/>
 						{/* N2N Field */}
 						<DeviceFrame
+							className={styles['device--mobile']}
 							background={n2nFfBackground}
 							imageVerticalMargin="1rem"
 							src={images.onTheCds.n2nField._01.src}
 							alt={images.onTheCds.n2nField._01.alt}
 						/>
 						<DeviceFrame
+							className={styles['device--mobile']}
 							imageVerticalMargin="1rem"
 							src={images.onTheCds.n2nField._03.src}
 							alt={images.onTheCds.n2nField._03.alt}
 						/>
 						<DeviceFrame
+							className={styles['device--mobile']}
 							background={n2nFfBackground}
 							imageVerticalMargin="1rem"
 							src={images.onTheCds.n2nField._04.src}
@@ -442,6 +446,7 @@ export default function DesignSystem() {
 						{/* White-label Campaign Hub */}
 						<DeviceFrame
 							imageVerticalMargin="2rem"
+							className={styles['device--mobile']}
 							src={images.onTheCds.wch.mobile01.src}
 							alt={images.onTheCds.wch.mobile01.alt}
 						/>
@@ -455,6 +460,7 @@ export default function DesignSystem() {
 						/>
 						<DeviceFrame
 							imageVerticalMargin="2rem"
+							className={styles['device--mobile']}
 							src={images.onTheCds.wch.mobile02.src}
 							alt={images.onTheCds.wch.mobile02.alt}
 						/>
