@@ -5,6 +5,11 @@
 @import './typography.css';
 @import './color.css';
 
+:root {
+	--k-global-padding: var(--k-space-xs-xl);
+	--k-global-max-width: calc(1440px - 2 * var(--k-global-padding));
+}
+
 body {
 	padding: var(--k-space-minus2-minus1);
 }

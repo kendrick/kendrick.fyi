@@ -3,11 +3,11 @@
 }
 
 .footer__inner-wrap {
-	--k-footer-max-width: calc(1440px - 2 * var(--k-space-xs-xl));
+	--k-footer-max-width: var(--k-global-max-width);
 
 	max-width: var(--k-footer-max-width);
 	margin: auto;
-	padding: var(--k-space-xs-xl);
+	padding: var(--k-global-padding);
 }
 
 .cluster__wrap {

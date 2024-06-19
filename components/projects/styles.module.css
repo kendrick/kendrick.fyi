@@ -7,7 +7,7 @@
 	gap: var(--k-grid-gutter);
 	align-content: center;
 	min-height: 100vh;
-	padding: var(--k-space-xs-xl);
+	padding: var(--k-global-padding);
 }
 
 .projects-cluster {

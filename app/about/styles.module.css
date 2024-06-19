@@ -8,5 +8,5 @@
 }
 
 .about {
-	padding: var(--k-space-xs-xl);
+	padding: var(--k-global-padding);
 }

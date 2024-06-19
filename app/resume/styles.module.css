@@ -23,7 +23,7 @@
 }
 
 .pdf__page {
-	--k-pdf-max-width: calc(1440px - var(--k-space-xs-xl));
+	--k-pdf-max-width: var(--k-global-max-width);
 
 	display: inline;
 	aspect-ratio: 1 / 1.294;
