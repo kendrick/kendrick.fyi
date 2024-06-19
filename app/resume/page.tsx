@@ -13,10 +13,7 @@ import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 import styles from './styles.module.css';
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-	`//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`,
-	import.meta.url,
-).toString();
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 function getElementOuterWidth(element: HTMLElement): number {
 	// Ensure the element is an HTMLElement
