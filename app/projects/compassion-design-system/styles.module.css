@@ -4,6 +4,24 @@
 	padding: var(--k-global-padding);
 }
 
+.hero {
+	position: relative;
+	overflow: hidden;
+	border-radius: 16px;
+
+	> h1 {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+
+		display: inline;
+
+		padding: var(--k-space-xs-sm);
+
+		background: #fcfcfc;
+	}
+}
+
 .hero__image {
 	display: grid;
 	place-items: center;

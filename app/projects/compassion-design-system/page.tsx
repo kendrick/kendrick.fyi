@@ -17,7 +17,7 @@ import WithSidebar from '@/lib/layout/WithSidebar';
 
 import { imageSizes } from '@/lib/utils';
 import images from './images';
-import HeroImage from './images/hero.png';
+import HeroImage from './images/hero-450h.png';
 
 import FigmaLogo from '@/lib/LogoFigma';
 
@@ -43,14 +43,10 @@ export default function DesignSystem() {
 
 	return (
 		<main className={clsx(sharedProjectStyles.project, styles.project)}>
-			<Image
-				sizes={imageSizes}
-				alt=""
-				src={HeroImage}
-				// height={200}
-				// width={800}
-			/>
-			<h1>The Compassion Design System</h1>
+			<section className={styles.hero}>
+				<Image sizes={imageSizes} alt="" src={HeroImage} />
+				<h1>The Compassion Design System</h1>
+			</section>
 
 			<section className={sharedProjectStyles['project__section']}>
 				<h2>Introduction</h2>

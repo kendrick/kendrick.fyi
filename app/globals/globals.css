@@ -7,6 +7,7 @@
 
 :root {
 	--k-global-padding: var(--k-space-xs-xl);
+	--k-global-padding-minus1: var(--k-space-xs-lg);
 	--k-global-max-width: calc(1440px - 2 * var(--k-global-padding));
 	--k-z-index-max: 2147483647;
 }
