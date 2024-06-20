@@ -1,14 +1,6 @@
 .projects {
-	min-height: calc(
-		100vh - (2 * var(--k-space-xs-lg) + var(--k-type-size-minus1))
-	);
-	padding: var(--k-space-sm-xl);
-}
-
-.projects {
 	gap: var(--k-grid-gutter);
 	align-content: center;
-	padding: var(--k-global-padding);
 }
 
 .projects-cluster {

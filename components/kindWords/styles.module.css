@@ -1,13 +1,7 @@
 .kind-words {
 	display: grid;
-	place-items: center;
-}
-
-.kind-words {
 	gap: var(--k-grid-gutter);
 	align-content: center;
-	min-height: 100vh;
-	padding: var(--k-global-padding);
 }
 
 .kind-words blockquote {

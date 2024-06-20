@@ -5,4 +5,15 @@
 
 	max-width: 80ch;
 	margin: auto;
+	padding: var(--k-global-padding);
+
+	h2 {
+		margin: 0;
+	}
+}
+
+.main__subhero {
+	display: flex;
+	flex-direction: column;
+	gap: var(--k-space-3xl-4xl);
 }

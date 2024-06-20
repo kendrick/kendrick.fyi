@@ -1,21 +1,13 @@
 .skills {
 	display: grid;
-	place-items: center;
-}
-
-.skills {
 	gap: var(--k-grid-gutter);
 	align-content: center;
-	min-height: 100vh;
-	padding: var(--k-global-padding);
 }
 
 .skills__list {
 	display: flex;
 	flex-wrap: wrap;
 	gap: calc(var(--k-grid-gutter) / 2);
-	justify-content: center;
-
 	text-align: center;
 
 	li {

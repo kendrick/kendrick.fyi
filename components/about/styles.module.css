@@ -3,13 +3,4 @@
 	gap: var(--k-grid-gutter);
 	place-items: center;
 	align-content: center;
-
-	min-height: calc(
-		100vh - (2 * var(--k-space-xs-lg) + var(--k-type-size-minus1))
-	);
-	padding: var(--k-space-sm-xl);
-}
-
-.about {
-	padding: var(--k-global-padding);
 }

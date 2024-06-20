@@ -20,11 +20,13 @@ export default function Home() {
 	return (
 		<main className={styles.main}>
 			<Intro />
-			<About />
-			<Projects />
-			<Skills />
-			<KindWords />
-			<Contact />
+			<div className={styles.main__subhero}>
+				<About />
+				<Projects />
+				<Skills />
+				<KindWords />
+				<Contact />
+			</div>
 		</main>
 	);
 }
