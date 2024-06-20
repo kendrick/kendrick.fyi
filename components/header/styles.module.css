@@ -1,10 +1,8 @@
 .header {
-	position: sticky;
+	/* position: sticky; */
 	z-index: var(--k-z-index-max);
 	top: 0;
-
 	text-align: center;
-
 	background: var(--k-global-background);
 }
 
@@ -15,7 +13,9 @@
 
 	max-width: var(--k-header-max-width);
 	margin: auto;
-	padding: var(--k-global-padding);
+	padding-top: var(--k-global-padding-minus1);
+	padding-right: var(--k-global-padding);
+	padding-left: var(--k-global-padding);
 
 	> li:first-of-type {
 		display: flex;
@@ -29,7 +29,8 @@
 
 .nav__list {
 	display: flex;
-	font-size: var(--k-type-size-minus1);
+	font-family: var(--k-type-display);
+	font-size: var(--k-type-size-minus2);
 	line-height: 1;
 }
 

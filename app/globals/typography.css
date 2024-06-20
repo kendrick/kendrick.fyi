@@ -13,6 +13,9 @@
 		Consolas, 'DejaVu Sans Mono', var(--k-type-emoji), monospace;
 	--k-type-serif: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052,
 		var(--k-type-emoji), serif;
+
+	font-size: var(--k-type-size-base);
+	line-height: var(--k-type-line-height-plus3);
 }
 
 .k-type-no-wrap {
@@ -60,8 +63,8 @@ h5,
 h6,
 p,
 ul {
-	font-size: var(--k-type-size-base);
-	line-height: var(--k-type-line-height-plus3);
+	/* font-size: var(--k-type-size-base);
+	line-height: var(--k-type-line-height-plus3); */
 }
 
 p,

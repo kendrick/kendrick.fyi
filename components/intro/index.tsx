@@ -26,12 +26,12 @@ export default function Intro() {
 				<Stack>
 					<h1 className={styles.heading}>
 						<span>Hi, I’m Kendrick.</span>
-						<p className={styles['hero__copy']}>
-							I’m a passionate UX leader and front-end expert who thrives on
-							building innovative, user-obsessed digital solutions and nurturing
-							vibrant, high-performing teams.
-						</p>
 					</h1>
+					<p className={styles['hero__copy']}>
+						I’m a passionate UX leader and front-end expert who thrives on
+						building innovative, user-obsessed digital solutions and nurturing
+						vibrant, high-performing teams.
+					</p>
 					<Cluster
 						space="var(--k-space-xs-sm)"
 						className={styles['intro__social-list']}

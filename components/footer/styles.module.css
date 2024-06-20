@@ -15,6 +15,9 @@
 	flex-wrap: wrap;
 	gap: var(--k-grid-gutter);
 	justify-content: space-between;
+
+	font-family: var(--k-type-display);
+	font-size: var(--k-type-size-minus1);
 }
 
 .copyright {
