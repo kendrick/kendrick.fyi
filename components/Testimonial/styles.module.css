@@ -1,0 +1,17 @@
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(
+		auto-fit,
+		minmax(calc(320px - 2 * var(--k-global-padding)), 1fr)
+	);
+	gap: var(--k-grid-gutter);
+	place-items: start;
+
+	font-size: var(--k-type-size-base);
+}
+
+.av {
+	width: 2em;
+	height: 2em;
+	border-radius: 999px;
+}

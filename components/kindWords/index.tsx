@@ -6,6 +6,12 @@ import { useSectionInView } from '@/lib/hooks';
 import Testimonial from '../Testimonial';
 import styles from './styles.module.css';
 
+import ImgAmy from '@/assets/images/amy.jpg';
+import ImgJeff from '@/assets/images/jeff.jpg';
+import ImgLaura from '@/assets/images/laura.jpg';
+import ImgSteven from '@/assets/images/steven.jpg';
+import ImgSydney from '@/assets/images/sydney.jpg';
+
 export default function KindWords() {
 	const { ref } = useSectionInView('Kind Words');
 
@@ -24,11 +30,14 @@ export default function KindWords() {
 					we were on track.
 				</>,
 			],
-			attribution: (
-				<>
-					Amy H.<span className="visually-hidden"> on LinkedIn</span>
-				</>
-			),
+			attribution: {
+				text: (
+					<>
+						Amy H.<span className="visually-hidden"> on LinkedIn</span>
+					</>
+				),
+				image: ImgAmy,
+			},
 		},
 		sydney: {
 			quotes: [
@@ -44,11 +53,14 @@ export default function KindWords() {
 					stakeholders and users, he is a delight to work with.
 				</>,
 			],
-			attribution: (
-				<>
-					Sydney M.<span className="visually-hidden"> on LinkedIn</span>
-				</>
-			),
+			attribution: {
+				text: (
+					<>
+						Sydney M.<span className="visually-hidden"> on LinkedIn</span>
+					</>
+				),
+				image: ImgSydney,
+			},
 		},
 		steven: {
 			quotes: [
@@ -62,11 +74,14 @@ export default function KindWords() {
 					how much of a gift you’ll have in him.
 				</>,
 			],
-			attribution: (
-				<>
-					Steven A.<span className="visually-hidden"> on LinkedIn</span>
-				</>
-			),
+			attribution: {
+				text: (
+					<>
+						Steven A.<span className="visually-hidden"> on LinkedIn</span>
+					</>
+				),
+				image: ImgSteven,
+			},
 		},
 		laura: {
 			quotes: [
@@ -81,11 +96,14 @@ export default function KindWords() {
 					it together… you’re looking for Kendrick.
 				</>,
 			],
-			attribution: (
-				<>
-					Laura L.<span className="visually-hidden"> on LinkedIn</span>
-				</>
-			),
+			attribution: {
+				text: (
+					<>
+						Laura L.<span className="visually-hidden"> on LinkedIn</span>
+					</>
+				),
+				image: ImgLaura,
+			},
 		},
 		jeff: {
 			quotes: [
@@ -104,11 +122,14 @@ export default function KindWords() {
 					needs is tenacious.
 				</>,
 			],
-			attribution: (
-				<>
-					Jeff H.<span className="visually-hidden"> on LinkedIn</span>
-				</>
-			),
+			attribution: {
+				text: (
+					<>
+						Jeff H.<span className="visually-hidden"> on LinkedIn</span>
+					</>
+				),
+				image: ImgJeff,
+			},
 		},
 	};
 
@@ -116,17 +137,17 @@ export default function KindWords() {
 		<section id="kind-words" ref={ref} className={styles['kind-words']}>
 			<h2>Kind Words</h2>
 			<ul className="plain-list">
-				{Object.entries(recAuthors).map(([key, { quotes, attribution }]) =>
-					quotes.map((quote, index) => (
-						<li key={index}>
+				{Object.entries(recAuthors).map(([key, { quotes, attribution }]) => {
+					return (
+						<li key={key}>
 							<Testimonial
 								recUrl={recUrl}
-								quote={quote}
+								quote={quotes}
 								attribution={attribution}
 							></Testimonial>
 						</li>
-					)),
-				)}
+					);
+				})}
 			</ul>
 		</section>
 	);
