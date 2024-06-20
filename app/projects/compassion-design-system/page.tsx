@@ -17,6 +17,7 @@ import WithSidebar from '@/lib/layout/WithSidebar';
 
 import { imageSizes } from '@/lib/utils';
 import images from './images';
+import HeroImage from './images/hero.png';
 
 import FigmaLogo from '@/lib/LogoFigma';
 
@@ -45,11 +46,11 @@ export default function DesignSystem() {
 			<Image
 				sizes={imageSizes}
 				alt=""
-				src="https://picsum.photos/800/200"
-				height={200}
-				width={800}
+				src={HeroImage}
+				// height={200}
+				// width={800}
 			/>
-			<h1>Compassion Design System</h1>
+			<h1>The Compassion Design System</h1>
 
 			<section className={sharedProjectStyles['project__section']}>
 				<h2>Introduction</h2>
@@ -68,7 +69,9 @@ export default function DesignSystem() {
 
 			<section className={sharedProjectStyles['project__section']}>
 				<h2>Problem Statement</h2>
-				<span>Unraveling the Challenges</span>
+				<span className={clsx('k-type-subhead')}>
+					Unraveling the Challenges
+				</span>
 				<Stack>
 					<p>
 						Compassion’s decentralized corporate structure makes coordination
@@ -92,7 +95,7 @@ export default function DesignSystem() {
 
 			<section className={sharedProjectStyles['project__section']}>
 				<h2>Research and Discovery</h2>
-				<span>Delving into the Details</span>
+				<span className={clsx('k-type-subhead')}>Delving into the Details</span>
 				<Stack>
 					<WithSidebar sidebarOnRight sidebarWidth={imgWidthInSidebar}>
 						<p>
@@ -117,13 +120,24 @@ export default function DesignSystem() {
 							which further underscored the extent of the existing
 							fragmentation. Some partners used React, others were on WordPress,
 							and one was on .NET. Many had plans to migrate to NextJS or to
-							introduce a mobile app. This diversity underscored the need for a
-							flexible and adaptable design system.
+							introduce a mobile app. The component audit revealed extensive
+							fragmentation brought about by the siloed nature of the
+							organization. Notably, Compassion was using 109 types of Buttons
+							and 23 different Card components.
 						</p>
-						<Switcher>
-							<PullQuote>109 Button component styles</PullQuote>
-							<PullQuote>23 Card component styles</PullQuote>
-							{/* <DeviceFrame
+						<WithSidebar sidebarOnRight sidebarWidth="32.5rem">
+							<p>
+								This diversity underscored the need for a flexible and adaptable
+								design system.
+							</p>
+							<PullQuote hidden={false} className={styles['research__quote']}>
+								109 Button types <br />
+								<span className="k-type-deemph"> and </span>
+								<br />
+								23 Card component types.
+							</PullQuote>
+						</WithSidebar>
+						{/* <DeviceFrame
 								src={images.audit01}
 								alt=""
 								deviceType="desktop"
@@ -131,7 +145,7 @@ export default function DesignSystem() {
 								style={{ aspectRatio: '16 / 9' }}
 								title="Global Component Audit • 109 Button styles"
 							></DeviceFrame> */}
-							{/* <DeviceFrame
+						{/* <DeviceFrame
 								src={images.audit02}
 								alt=""
 								deviceType="desktop"
@@ -139,14 +153,15 @@ export default function DesignSystem() {
 								style={{ aspectRatio: '16 / 9' }}
 								title="Global Component Audit • 23 Card styles"
 							></DeviceFrame> */}
-						</Switcher>
 					</Stack>
 				</Stack>
 			</section>
 
 			<section className={sharedProjectStyles['project__section']}>
 				<h2>Strategic Vision</h2>
-				<span>Crafting the Design System Blueprint</span>
+				<span className={clsx('k-type-subhead')}>
+					Crafting the Design System Blueprint
+				</span>
 				<Stack>
 					<p>
 						Our strategy was clear: we aimed to create a design system with vast
@@ -183,7 +198,7 @@ export default function DesignSystem() {
 
 			<section className={sharedProjectStyles['project__section']}>
 				<h2>Building Buy-In</h2>
-				<span>Steering the Cruise Ship</span>
+				<span className={clsx('k-type-subhead')}>Steering the Cruise Ship</span>
 				<Stack>
 					<p>
 						The design and development of the Compassion Design System was
@@ -214,7 +229,7 @@ export default function DesignSystem() {
 
 			<section className={sharedProjectStyles['project__section']}>
 				<h2>Bringing the Vision to Life</h2>
-				<span>Understanding Our Users</span>
+				<span className={clsx('k-type-subhead')}>Understanding Our Users</span>
 				<Stack>
 					<p>
 						In the implementation phase, we built a comprehensive library of
@@ -274,17 +289,28 @@ export default function DesignSystem() {
 			<section>
 				<div className={sharedProjectStyles['project__section']}>
 					<h2>Impact and Outcomes</h2>
-					<span>Measuring Success</span>
+					<span className={clsx('k-type-subhead')}>Measuring Success</span>
 					<Stack>
 						<p>
 							The design system had significant positive outcomes, and teams
 							across the organization are in various stages of adoption,
-							including Compassion Canada, Compassion Netherlands, Compassion’s
-							Global Marketing team, and its innovation team, Compassion
-							Ventures Group. Notably, the Compassion Design System accelerated
-							the Field Strategies app, a crucial tool in a $1.4 billion
-							multi-year fundraising effort, and many global campaign sites and
-							marketing landing pages.
+							including:
+						</p>
+
+						<ul>
+							<li>Partners in IT</li>
+							<li>Compassion’s Global Marketing team</li>
+							<li>Compassion Canada</li>
+							<li>
+								Compassion Ventures Group (Compassion's innovation department)
+							</li>
+						</ul>
+
+						<p>
+							Notably, the Compassion Design System accelerated the Field
+							Strategies app, a crucial tool in a $1.4 billion multi-year
+							fundraising effort, and many global campaign sites and marketing
+							landing pages.
 						</p>
 						<p>
 							The Compassion Design System’s qualitative benefits were
@@ -478,34 +504,37 @@ export default function DesignSystem() {
 
 			<section className={sharedProjectStyles['project__section']}>
 				<h2>Key Insights</h2>
-				<span>Lessons Learned and Future Directions</span>
+				<span className={clsx('k-type-subhead')}>
+					Lessons Learned and Future Directions
+				</span>
 				<Stack>
-					<WithSidebar sidebarOnRight>
-						<p>
-							The project highlighted several vital lessons. One critical
-							insight was the necessity of solid alignment and endorsement from
-							leadership to achieve widespread adoption. Despite having robust
-							grassroots support from many teams, after leadership turnover, the
-							design system lacked the top-down advocacy and commitment that
-							would have been crucial in ensuring its long-term success and
-							integration across the entire organization. This knowledge
-							equipped the team to navigate similar situations in the future
-							with greater confidence and effectiveness.
-						</p>
+					<p>
+						The project highlighted several vital lessons. One critical insight
+						was the necessity of solid alignment and endorsement from leadership
+						to achieve widespread adoption. Despite having robust grassroots
+						support from many teams, after leadership turnover, the design
+						system lacked the top-down commitment and advocacy that would have
+						been crucial in ensuring its long-term success and integration
+						across the entire organization. This knowledge equipped the team to
+						navigate similar situations in the future with greater confidence
+						and effectiveness.
+					</p>
+					<Switcher>
 						<PullQuote>
 							Top-down commitment and advocacy would have been crucial.
 						</PullQuote>
-					</WithSidebar>
-					<Stack>
-						<p>
-							Looking ahead, we identified potential improvements, such as
-							applying the tokens to a library like Ariakit or ShadCN UI to
-							accelerate the maintenance of accessible coded components even
-							further. This approach would enhance efficiency and scalability,
-							allowing our design and development partner teams to focus even
-							more on driving innovation with the Compassion Design System.
-						</p>
-					</Stack>
+
+						<Stack>
+							<p>
+								Looking ahead, we identified potential improvements, such as
+								applying the tokens to a library like Ariakit or ShadCN UI to
+								accelerate the maintenance of accessible coded components even
+								further. This approach would enhance efficiency and scalability,
+								allowing our design and development partner teams to focus even
+								more on driving innovation with the Compassion Design System.
+							</p>
+						</Stack>
+					</Switcher>
 				</Stack>
 			</section>
 		</main>

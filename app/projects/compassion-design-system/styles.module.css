@@ -19,16 +19,17 @@
 	max-inline-size: 60ch;
 }
 
+.research__quote {
+	flex-basis: 520px;
+	text-align: right;
+}
+
 .dwc {
 	justify-content: center;
 
 	.device--mobile {
 		text-align: center;
 	}
-}
-
-.tokens-image {
-	max-width: clamp(15rem, 14rem + 5vi, 20rem);
 }
 
 .figma-embed {

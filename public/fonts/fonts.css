@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'FYI Body';
+  font-family: 'fyi Body';
   src: 
     url('InterVariable.woff2') 
     format('woff2 supports variations'),
@@ -13,7 +13,7 @@
 }
 
 @font-face {
-  font-family: 'FYI Body';
+  font-family: 'fyi Body';
   src: 
     url('InterVariable-Italic.woff2') 
     format('woff2 supports variations'),
@@ -24,4 +24,26 @@
   font-weight: 100 900;
   font-style: italic;
   font-variation-settings:"slnt" -10 0;
+}
+
+@font-face {
+  font-family: 'fyi Display';
+  /* src: 
+    url('Neue Regrade Variable.woff2') 
+    format('woff2 supports variations'),
+    url('Neue Regrade Variable.woff2') 
+    format('woff2-variations'); */
+    
+  src: 
+    url('SpaceGrotesk[wght].woff2') 
+    format('woff2 supports variations'),
+    url('SpaceGrotesk[wght].woff2') 
+    format('woff2-variations');
+
+  font-display: swap;
+  font-optical-sizing: auto;
+  /* font-weight: 300 800; */
+  font-weight: 300 700;
+  font-style: normal;
+  /* font-variation-settings:"slnt" 0 12; */
 }

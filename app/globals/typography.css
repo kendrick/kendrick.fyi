@@ -3,14 +3,16 @@
 :root {
 	--k-type-emoji: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
 		'Noto Color Emoji';
-	--k-type-body: 'FYI Body', Inter, Roboto, 'Helvetica Neue', 'Arial Nova',
+	--k-type-body: 'fyi Body', Inter, Roboto, 'Helvetica Neue', 'Arial Nova',
 		'Nimbus Sans', Arial, var(--k-type-emoji), sans-serif;
-	--k-type-heading: var(--k-type-body);
+
+	--k-type-heading: 'fyi Display', var(--k-type-body);
+	--k-type-display: var(--k-type-heading);
+
 	--k-type-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo,
 		Consolas, 'DejaVu Sans Mono', var(--k-type-emoji), monospace;
 	--k-type-serif: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052,
 		var(--k-type-emoji), serif;
-	--k-type-display: var(--k-type-body);
 }
 
 .k-type-no-wrap {
@@ -35,28 +37,35 @@ h1 {
 
 h2 {
 	margin-block-start: var(--k-space-md-2xl);
+
+	font-family: var(--k-type-display);
 	font-size: var(--k-type-size-plus3);
+	font-weight: 400;
 	line-height: var(--k-type-line-height-plus1);
 }
 
 h3 {
+	font-family: var(--k-type-display);
 	font-size: var(--k-type-size-plus2);
 	line-height: var(--k-type-line-height-plus1);
 }
 
 h4 {
+	font-family: var(--k-type-display);
 	font-size: var(--k-type-size-plus1);
 	line-height: var(--k-type-line-height-plus2);
 }
 
 h5,
 h6,
-p {
+p,
+ul {
 	font-size: var(--k-type-size-base);
 	line-height: var(--k-type-line-height-plus3);
 }
 
-p {
+p,
+ul {
 	font-weight: 300;
 }
 

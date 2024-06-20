@@ -1,5 +1,9 @@
 .project {
 	padding: var(--k-space-sm-2xl);
+
+	h1 {
+		font-weight: 100;
+	}
 }
 
 .project__section {
