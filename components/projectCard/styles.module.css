@@ -1,12 +1,27 @@
 .project-card {
-	padding: var(--k-space-xs-sm);
-	border: 1px solid;
-
-	h3 {
+	.project-title {
+		grid-area: title;
 		font-size: var(--k-type-size-base);
 	}
 
 	p {
 		font-size: var(--k-type-size-minus1);
+	}
+
+	&:hover .project-title {
+		text-decoration: underline;
+	}
+}
+
+.project-card__inner-wrap {
+	display: grid;
+	grid-template-areas:
+		'image'
+		'title'
+		'description';
+	gap: var(--k-space-xs-sm);
+
+	img {
+		width: 100%;
 	}
 }

@@ -1,17 +1,26 @@
 .projects {
-	display: grid;
-	place-items: center;
+	min-height: calc(
+		100vh - (2 * var(--k-space-xs-lg) + var(--k-type-size-minus1))
+	);
+	padding: var(--k-space-sm-xl);
 }
 
 .projects {
 	gap: var(--k-grid-gutter);
 	align-content: center;
-	min-height: 100vh;
 	padding: var(--k-global-padding);
 }
 
 .projects-cluster {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+	grid-template-columns: repeat(
+		auto-fit,
+		minmax(calc(320px - 2 * var(--k-global-padding)), 1fr)
+	);
 	gap: var(--k-grid-gutter);
+
+	li {
+		/* Need this to hide li::marker in this specific context. */
+		font-size: 0;
+	}
 }

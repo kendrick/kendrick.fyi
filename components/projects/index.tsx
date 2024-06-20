@@ -14,13 +14,15 @@ export default function Projects() {
 		<section ref={ref} id="projects" className={styles.projects}>
 			<h2>Projects</h2>
 			<Cluster className={styles['projects-cluster']}>
-				{projectsData.map((project, index) => (
-					<ProjectCard
-						{...project}
-						key={index}
-						className={styles['projects__card']}
-					/>
-				))}
+				{projectsData.map((project, index) => {
+					return (
+						<ProjectCard
+							{...project}
+							key={index}
+							className={styles['projects__card']}
+						/>
+					);
+				})}
 			</Cluster>
 		</section>
 	);
