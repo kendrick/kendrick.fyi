@@ -1,5 +1,5 @@
 .theme-switch {
 	position: fixed;
-	right: var(--k-space-xs-lg);
-	bottom: var(--k-space-xs-lg);
+	right: var(--k-global-padding);
+	bottom: var(--k-global-padding);
 }

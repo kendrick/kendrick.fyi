@@ -1,8 +1,12 @@
 :root {
-	--foo: 'bar';
+	--k-global-color: #1b1924;
+	--k-global-background: #eeeeef;
+
+	color: var(--k-global-color);
+	background: var(--k-global-background);
 }
 
 :root.k-dark {
-	color: #eeeeef;
-	background: #1b1924;
+	--k-global-color: #eeeeef;
+	--k-global-background: #1b1924;
 }

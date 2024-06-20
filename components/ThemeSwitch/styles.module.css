@@ -7,9 +7,10 @@
 	padding: var(--k-space-3xs);
 
 	font-size: 2em;
+	color: var(--k-global-color);
 	color: inherit;
 
-	background: transparent;
+	background: var(--k-global-background);
 	border: 1px solid gray;
 	border-radius: 999px;
 

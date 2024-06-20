@@ -5,7 +5,7 @@
 
 	text-align: center;
 
-	background: white;
+	background: var(--k-global-background);
 }
 
 /* Need the extra selector to out-specify the `plain-list` helper 
