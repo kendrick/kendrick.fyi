@@ -22,9 +22,9 @@ export default function Home() {
 			<Intro />
 			<div className={styles.main__subhero}>
 				<About />
+				<KindWords />
 				<Projects />
 				<Skills />
-				<KindWords />
 				<Contact />
 			</div>
 		</main>

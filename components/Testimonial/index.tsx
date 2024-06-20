@@ -1,66 +1,18 @@
-import customPropertiesFromVars from '@/lib/customPropertiesFromVars';
-import clsx from 'clsx';
-import React, { CSSProperties, ReactNode } from 'react';
-import styles from './styles.module.css';
+// components/Testimonial.tsx
+import React from 'react';
 
-interface Props {
-	children: ReactNode;
-	citationURL: URL;
-	className?: string | CSSModuleClasses;
-	style?: CSSProperties;
-	space?: string;
+interface TestimonialProps {
+	recUrl: string;
+	quote: React.ReactNode;
+	attribution: React.ReactNode;
 }
 
-interface CustomProps extends React.HTMLAttributes<HTMLDivElement> {
-	'data-type': 'content' | 'description';
-}
-
-interface TestimonialChildProps {
-	type: 'testimonial' | 'attribution';
-	children: React.ReactNode;
-}
-
-const Testimonial = ({
-	children,
-	citationURL,
-	className,
-	style,
-	space,
-}: Props) => {
-	const inlineStyle = customPropertiesFromVars('k-testimonial', style, {
-		space,
-	});
-
-	const kids = React.Children.toArray(children).filter((kid) =>
-		React.isValidElement<TestimonialChildProps | TestimonialChildProps>(kid),
-	);
-
-	const testimonialElements = kids.filter((child) => {
-		if (React.isValidElement<TestimonialChildProps>(child)) {
-			return child.props.type === 'testimonial';
-		}
-
-		return false;
-	});
-
-	const attributionElements = kids.filter((child) => {
-		if (React.isValidElement<TestimonialChildProps>(child)) {
-			return child.props.type === 'attribution';
-		}
-
-		return false;
-	});
-
+const Testimonial = ({ recUrl, quote, attribution }: TestimonialProps) => {
 	return (
-		<figure
-			style={inlineStyle}
-			className={clsx([styles.testimonial, className])}
-		>
-			<blockquote cite={citationURL.toString()}>
-				{testimonialElements}
-			</blockquote>
+		<figure>
+			<blockquote cite={recUrl}>{quote}</blockquote>
 			<figcaption>
-				<a href={citationURL.toString()}>{attributionElements}</a>
+				<a href={recUrl}>{attribution}</a>
 			</figcaption>
 		</figure>
 	);
