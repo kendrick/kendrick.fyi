@@ -1,7 +1,6 @@
 'use client';
 
 import About from '@/components/about';
-import Contact from '@/components/contact';
 import Intro from '@/components/intro';
 import KindWords from '@/components/kindWords';
 import Projects from '@/components/projects';
@@ -25,7 +24,6 @@ export default function Home() {
 				<KindWords />
 				<Projects />
 				<Skills />
-				<Contact />
 			</div>
 		</main>
 	);

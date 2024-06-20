@@ -1,17 +1,45 @@
+.testimonial {
+	display: grid;
+	grid-template-columns: 1fr auto;
+}
+
 .wrapper {
+	--k-cluster-space: var(--k-space-xs-lg);
+
 	display: grid;
 	grid-template-columns: repeat(
 		auto-fit,
 		minmax(calc(320px - 2 * var(--k-global-padding)), 1fr)
 	);
-	gap: var(--k-grid-gutter);
 	place-items: start;
-
 	font-size: var(--k-type-size-base);
 }
 
+.attribution {
+	writing-mode: vertical-rl;
+	text-orientation: mixed;
+}
+
+.attribution__inner {
+	display: flex;
+	gap: var(--k-space-xs);
+	align-items: center;
+
+	margin-left: 0.33em;
+	padding-left: 0.33em;
+
+	border-left: 1px dotted;
+}
+
+.author-title {
+	font-family: var(--k-type-display);
+	font-size: var(--k-type-size-minus1);
+	text-transform: uppercase;
+}
+
 .av {
-	width: 2em;
-	height: 2em;
+	transform: rotate(90deg);
+	width: var(--k-space-md);
+	height: var(--k-space-md);
 	border-radius: 999px;
 }

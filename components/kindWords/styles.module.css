@@ -1,9 +1,15 @@
 .kind-words {
 	display: grid;
-	gap: var(--k-grid-gutter);
 	align-content: center;
 }
 
-.kind-words blockquote {
-	max-width: 66ch;
+.list {
+	display: grid;
+	gap: var(--k-space-lg-xl);
+}
+
+.author-title {
+	font-family: var(--k-type-display);
+	font-size: var(--k-type-size-minus1);
+	text-transform: uppercase;
 }

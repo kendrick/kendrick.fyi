@@ -11,6 +11,7 @@ import ImgJeff from '@/assets/images/jeff.jpg';
 import ImgLaura from '@/assets/images/laura.jpg';
 import ImgSteven from '@/assets/images/steven.jpg';
 import ImgSydney from '@/assets/images/sydney.jpg';
+import clsx from 'clsx';
 
 export default function KindWords() {
 	const { ref } = useSectionInView('Kind Words');
@@ -33,7 +34,9 @@ export default function KindWords() {
 			attribution: {
 				text: (
 					<>
-						Amy H.<span className="visually-hidden"> on LinkedIn</span>
+						Amy H.<span className="visually-hidden">, </span>
+						<span className={styles['author-title']}>Stakeholder</span>
+						<span className="visually-hidden"> on LinkedIn</span>
 					</>
 				),
 				image: ImgAmy,
@@ -56,7 +59,9 @@ export default function KindWords() {
 			attribution: {
 				text: (
 					<>
-						Sydney M.<span className="visually-hidden"> on LinkedIn</span>
+						Sydney M.<span className="visually-hidden">, </span>
+						<span className={styles['author-title']}>Stakeholder</span>
+						<span className="visually-hidden"> on LinkedIn</span>
 					</>
 				),
 				image: ImgSydney,
@@ -77,7 +82,9 @@ export default function KindWords() {
 			attribution: {
 				text: (
 					<>
-						Steven A.<span className="visually-hidden"> on LinkedIn</span>
+						Steven A.<span className="visually-hidden">, </span>
+						<span className={styles['author-title']}>UX Designer</span>
+						<span className="visually-hidden"> on LinkedIn</span>
 					</>
 				),
 				image: ImgSteven,
@@ -99,7 +106,9 @@ export default function KindWords() {
 			attribution: {
 				text: (
 					<>
-						Laura L.<span className="visually-hidden"> on LinkedIn</span>
+						Laura L.<span className="visually-hidden">, </span>
+						<span className={styles['author-title']}>UX Designer</span>
+						<span className="visually-hidden"> on LinkedIn</span>
 					</>
 				),
 				image: ImgLaura,
@@ -125,7 +134,9 @@ export default function KindWords() {
 			attribution: {
 				text: (
 					<>
-						Jeff H.<span className="visually-hidden"> on LinkedIn</span>
+						Jeff H.<span className="visually-hidden">, </span>
+						<span className={styles['author-title']}>E-Commerce VP</span>
+						<span className="visually-hidden"> on LinkedIn</span>
 					</>
 				),
 				image: ImgJeff,
@@ -136,7 +147,7 @@ export default function KindWords() {
 	return (
 		<section id="kind-words" ref={ref} className={styles['kind-words']}>
 			<h2>Kind Words</h2>
-			<ul className="plain-list">
+			<ul className={clsx(styles.list, 'plain-list')}>
 				{Object.entries(recAuthors).map(([key, { quotes, attribution }]) => {
 					return (
 						<li key={key}>

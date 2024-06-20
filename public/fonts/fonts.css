@@ -28,12 +28,6 @@
 
 @font-face {
   font-family: 'fyi Display';
-  /* src: 
-    url('Neue Regrade Variable.woff2') 
-    format('woff2 supports variations'),
-    url('Neue Regrade Variable.woff2') 
-    format('woff2-variations'); */
-    
   src: 
     url('SpaceGrotesk[wght].woff2') 
     format('woff2 supports variations'),
@@ -42,8 +36,34 @@
 
   font-display: swap;
   font-optical-sizing: auto;
-  /* font-weight: 300 800; */
   font-weight: 300 700;
   font-style: normal;
-  /* font-variation-settings:"slnt" 0 12; */
+}
+
+@font-face {
+  font-family: 'fyi Serif';
+  src:
+    url('Fraunces-VariableFont_SOFT,WONK,opsz,wght.woff2')
+    format('woff2 supports variations'),
+    url('Fraunces-VariableFont_SOFT,WONK,opsz,wght.woff2') 
+    format('woff2-variations');
+  
+  font-display: swap;
+  font-optical-sizing: auto;
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'fyi Serif';
+  src:
+    url('Fraunces-Italic-VariableFont_SOFT,WONK,opsz,wght.woff2')
+    format('woff2 supports variations'),
+    url('Fraunces-Italic-VariableFont_SOFT,WONK,opsz,wght.woff2') 
+    format('woff2-variations');
+  
+  font-display: swap;
+  font-optical-sizing: auto;
+  font-weight: 100 900;
+  font-style: italic;
 }

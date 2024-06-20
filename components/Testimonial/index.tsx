@@ -19,7 +19,7 @@ const Testimonial = ({ recUrl, quote, attribution }: TestimonialProps) => {
 		isArray ? { className: styles.wrapper } : {};
 
 	return (
-		<figure>
+		<figure className={styles.testimonial}>
 			<Wrapper {...wrapperProps}>
 				{isArray ?
 					quote.map((q, index) => {
@@ -31,8 +31,8 @@ const Testimonial = ({ recUrl, quote, attribution }: TestimonialProps) => {
 					})
 				:	<blockquote cite={recUrl}>{quote}</blockquote>}
 			</Wrapper>
-			<figcaption>
-				<a href={recUrl}>
+			<figcaption className={styles.attribution}>
+				<a href={recUrl} className={styles['attribution__inner']}>
 					{attribution.image && (
 						<Image
 							src={attribution.image}

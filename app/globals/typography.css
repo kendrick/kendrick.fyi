@@ -11,8 +11,8 @@
 
 	--k-type-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo,
 		Consolas, 'DejaVu Sans Mono', var(--k-type-emoji), monospace;
-	--k-type-serif: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052,
-		var(--k-type-emoji), serif;
+	--k-type-serif: 'fyi Serif', 'Iowan Old Style', 'Palatino Linotype',
+		'URW Palladio L', P052, var(--k-type-emoji), serif;
 
 	font-size: var(--k-type-size-base);
 	line-height: var(--k-type-line-height-plus3);

@@ -29,8 +29,9 @@ export default function Intro() {
 					</h1>
 					<p className={styles['hero__copy']}>
 						I’m a passionate UX leader and front-end expert who thrives on
-						building innovative, user-obsessed digital solutions and nurturing
-						vibrant, high-performing teams.
+						building innovative,{' '}
+						<span className="k-type-emph">user-obsessed digital solutions</span>{' '}
+						and nurturing vibrant, high-performing teams.
 					</p>
 					<Cluster
 						space="var(--k-space-xs-sm)"
