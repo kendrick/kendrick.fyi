@@ -1,4 +1,4 @@
-.about {
+.info {
 	display: grid;
 	gap: var(--k-grid-gutter);
 	place-items: center;

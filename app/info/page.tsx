@@ -8,8 +8,8 @@ import Prose from '@/lib/layout/Stack';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 
-export default function About() {
-	const { ref } = useSectionInView('About');
+export default function Info() {
+	const { ref } = useSectionInView('Info');
 	const logoHeight = 36;
 
 	return (
@@ -18,10 +18,10 @@ export default function About() {
 			initial={{ opacity: 0, y: 100 }}
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ delay: 0.175 }}
-			id="about"
+			id="info"
 			className={clsx(styles.about)}
 		>
-			<section>
+			<section className="k-global-container">
 				<Prose>
 					<h2>About</h2>
 					<p>

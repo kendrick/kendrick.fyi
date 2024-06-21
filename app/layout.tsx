@@ -85,7 +85,9 @@ export default function RootLayout({
 					<ThemeContextProvider>
 						<ActiveSectionContextProvider>
 							<Header />
-							{children}
+							<section className={styles['body__inner-wrap']}>
+								{children}
+							</section>
 							<Footer />
 							<ThemeSwitch className={styles['theme-switch']} />
 							<Toaster position="top-right" />

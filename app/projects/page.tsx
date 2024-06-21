@@ -1,7 +1,11 @@
 import ProjectsComponent from '@/components/projects';
 
 const Projects = () => {
-	return <ProjectsComponent />;
+	return (
+		<section className="k-global-container">
+			<ProjectsComponent />
+		</section>
+	);
 };
 
 export default Projects;

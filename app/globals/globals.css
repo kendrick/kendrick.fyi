@@ -13,12 +13,21 @@
 }
 
 body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 	padding: var(--k-space-minus2-minus1);
 }
 
 .global__section {
 	max-width: 1440px;
 	margin: auto;
+}
+
+.k-global-container {
+	max-width: var(--k-global-max-width);
+	margin: auto;
+	padding: var(--k-global-padding);
 }
 
 .k-type-emph {

@@ -1,6 +1,6 @@
 'use client';
 
-import About from '@/components/about';
+import Info from '@/components/info';
 import Intro from '@/components/intro';
 import KindWords from '@/components/kindWords';
 import Projects from '@/components/projects';
@@ -20,7 +20,7 @@ export default function Home() {
 		<main className={styles.main}>
 			<Intro />
 			<div className={styles.main__subhero}>
-				<About />
+				<Info />
 				<KindWords />
 				<Projects />
 				<Skills />

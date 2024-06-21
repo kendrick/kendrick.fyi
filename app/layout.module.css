@@ -3,3 +3,7 @@
 	right: var(--k-global-padding);
 	bottom: var(--k-global-padding);
 }
+
+.body__inner-wrap {
+	flex: 1;
+}

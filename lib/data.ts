@@ -8,8 +8,8 @@ export const pageLinks = [
 		href: '/',
 	},
 	{
-		name: 'About',
-		href: '/about',
+		name: 'Info',
+		href: '/info',
 	},
 	{
 		name: 'Projects',
@@ -18,10 +18,6 @@ export const pageLinks = [
 	{
 		name: 'Kind Words',
 		href: '/kind-words',
-	},
-	{
-		name: 'Contact',
-		href: '/contact',
 	},
 	{
 		name: 'Résumé',
@@ -94,23 +90,15 @@ export const links = [
 		hash: '#home',
 	},
 	{
-		name: 'About',
-		hash: '#about',
+		name: 'Info',
+		hash: '#info',
 	},
 	{
 		name: 'Projects',
 		hash: '#projects',
 	},
 	{
-		name: 'Skills',
-		hash: '#skills',
-	},
-	{
 		name: 'Kind Words',
 		hash: '#kind-words',
-	},
-	{
-		name: 'Contact',
-		hash: '#contact',
 	},
 ] as const;

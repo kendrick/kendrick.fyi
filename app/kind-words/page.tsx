@@ -1,7 +1,11 @@
 import KindWordsComponent from '@/components/kindWords';
 
 const KindWords = () => {
-	return <KindWordsComponent />;
+	return (
+		<section className="k-global-container">
+			<KindWordsComponent />
+		</section>
+	);
 };
 
 export default KindWords;

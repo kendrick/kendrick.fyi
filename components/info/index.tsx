@@ -7,12 +7,12 @@ import Prose from '@/lib/layout/Stack';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 
-export default function About() {
-	const { ref } = useSectionInView('About');
+export default function Info() {
+	const { ref } = useSectionInView('Info');
 	const logoHeight = 36;
 
 	return (
-		<section ref={ref} id="about" className={clsx(styles.about)}>
+		<section ref={ref} id="info" className={clsx(styles.info)}>
 			<section className={'global__section'}>
 				<Prose>
 					<h2>About</h2>

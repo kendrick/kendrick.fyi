@@ -134,7 +134,7 @@ export default function KindWords() {
 	};
 
 	return (
-		<section id="kind-words" ref={ref} className={styles['kind-words']}>
+		<section id="kind-words" ref={ref} className={clsx(styles['kind-words'])}>
 			<h2>Kind Words</h2>
 			<ul className={clsx(styles.list, 'plain-list')}>
 				{Object.entries(recAuthors).map(([key, { quotes, attribution }]) => {
