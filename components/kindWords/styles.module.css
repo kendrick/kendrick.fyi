@@ -5,7 +5,7 @@
 
 .list {
 	display: grid;
-	gap: var(--k-space-lg-xl);
+	gap: var(--k-space-lg-2xl);
 }
 
 .author-title {

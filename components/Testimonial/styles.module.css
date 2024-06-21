@@ -1,10 +1,10 @@
 .testimonial {
 	display: grid;
-	grid-template-columns: 1fr auto;
+	grid-template-rows: auto auto;
 }
 
 .wrapper {
-	--k-cluster-space: var(--k-space-xs-lg);
+	--k-cluster-space: var(--k-space-sm-2xl);
 
 	display: grid;
 	grid-template-columns: repeat(
@@ -12,23 +12,21 @@
 		minmax(calc(320px - 2 * var(--k-global-padding)), 1fr)
 	);
 	place-items: start;
+
+	padding-bottom: 1em;
+
 	font-size: var(--k-type-size-base);
 }
 
 .attribution {
-	writing-mode: vertical-rl;
-	text-orientation: mixed;
+	padding-top: 1em;
+	border-top: 1px dotted;
 }
 
 .attribution__inner {
-	display: flex;
+	display: inline-flex;
 	gap: var(--k-space-xs);
 	align-items: center;
-
-	margin-left: 0.33em;
-	padding-left: 0.33em;
-
-	border-left: 1px dotted;
 }
 
 .author-title {
@@ -38,7 +36,6 @@
 }
 
 .av {
-	transform: rotate(90deg);
 	width: var(--k-space-md);
 	height: var(--k-space-md);
 	border-radius: 999px;

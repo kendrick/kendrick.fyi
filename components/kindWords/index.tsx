@@ -2,8 +2,8 @@
 
 import { useSectionInView } from '@/lib/hooks';
 
-// import Testimonial from '@/components/Testimonial';
-import Testimonial from '../Testimonial';
+import Testimonial from '@/components/Testimonial';
+
 import styles from './styles.module.css';
 
 import ImgAmy from '@/assets/images/amy.jpg';
@@ -17,12 +17,14 @@ export default function KindWords() {
 	const { ref } = useSectionInView('Kind Words');
 
 	const recUrl = `https://www.linkedin.com/in/kendrickarnett/details/recommendations/`;
+	const sourceInfo = <span className="visually-hidden"> on LinkedIn</span>;
 
 	const recAuthors = {
 		amy: {
 			quotes: [
 				<>
-					Working with Kendrick and his team was a dream from start to finish.
+					Working with Kendrick and his team was{' '}
+					<span className="k-type-emph">a dream from start to finish</span>.
 				</>,
 				<>
 					In my conversations with Kendrick, he listened as I described the
@@ -32,13 +34,9 @@ export default function KindWords() {
 				</>,
 			],
 			attribution: {
-				text: (
-					<>
-						Amy H.<span className="visually-hidden">, </span>
-						<span className={styles['author-title']}>Product Owner</span>
-						<span className="visually-hidden"> on LinkedIn</span>
-					</>
-				),
+				name: 'Amy H.',
+				title: 'Product Owner',
+				sourceInfo,
 				image: ImgAmy,
 			},
 		},
@@ -52,18 +50,17 @@ export default function KindWords() {
 				</>,
 				<>
 					Kendrick embodies this informed, approachable and collaborative style
-					in his work and leadership. Through this style and his care for both
-					stakeholders and users, he is a delight to work with.
+					in his work and leadership. Through this style and his{' '}
+					<span className="k-type-emph">
+						care for both stakeholders and users
+					</span>
+					, he is a delight to work with.
 				</>,
 			],
 			attribution: {
-				text: (
-					<>
-						Sydney M.<span className="visually-hidden">, </span>
-						<span className={styles['author-title']}>Product Owner</span>
-						<span className="visually-hidden"> on LinkedIn</span>
-					</>
-				),
+				name: 'Sydney M.',
+				title: 'Product Owner',
+				sourceInfo,
 				image: ImgSydney,
 			},
 		},
@@ -75,18 +72,15 @@ export default function KindWords() {
 					willing to give his expertise and hands on effort when we needed it.
 				</>,
 				<>
-					I can’t stress enough how effective and genuine of a leader he is, and
-					how much of a gift you’ll have in him.
+					I can’t stress enough how{' '}
+					<span className="k-type-emph">effective and genuine</span> of a leader
+					he is, and how much of a gift you’ll have in him.
 				</>,
 			],
 			attribution: {
-				text: (
-					<>
-						Steven A.<span className="visually-hidden">, </span>
-						<span className={styles['author-title']}>UX Designer</span>
-						<span className="visually-hidden"> on LinkedIn</span>
-					</>
-				),
+				name: 'Steven A.',
+				title: 'UX Designer',
+				sourceInfo,
 				image: ImgSteven,
 			},
 		},
@@ -98,19 +92,18 @@ export default function KindWords() {
 					the tools I needed to thrive.
 				</>,
 				<>
-					If you’re looking for a leader who creates teams that are close-knit,
-					supportive and can get anything done that needs done because they do
-					it together… you’re looking for Kendrick.
+					If you’re looking for a leader who creates teams that are{' '}
+					<span className="k-type-emph">
+						close-knit, supportive and can get anything done
+					</span>{' '}
+					that needs done because they do it together… you’re looking for
+					Kendrick.
 				</>,
 			],
 			attribution: {
-				text: (
-					<>
-						Laura L.<span className="visually-hidden">, </span>
-						<span className={styles['author-title']}>UX Designer</span>
-						<span className="visually-hidden"> on LinkedIn</span>
-					</>
-				),
+				name: 'Laura L.',
+				title: 'UX Designer',
+				sourceInfo,
 				image: ImgLaura,
 			},
 		},
@@ -126,19 +119,15 @@ export default function KindWords() {
 					possible given the target customer.
 				</>,
 				<>
-					Kendrick’s approach to business is collaborative. His desire to work
-					cross-functionally in an effort to understand each business unit’s
-					needs is tenacious.
+					Kendrick’s approach to business is collaborative. His{' '}
+					<span className="k-type-emph">desire to work cross-functionally</span>{' '}
+					in an effort to understand each business unit’s needs is tenacious.
 				</>,
 			],
 			attribution: {
-				text: (
-					<>
-						Jeff H.<span className="visually-hidden">, </span>
-						<span className={styles['author-title']}>E-Commerce VP</span>
-						<span className="visually-hidden"> on LinkedIn</span>
-					</>
-				),
+				name: 'Jeff H.',
+				title: 'E-Commerce VP',
+				sourceInfo,
 				image: ImgJeff,
 			},
 		},

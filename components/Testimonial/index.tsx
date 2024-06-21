@@ -1,14 +1,19 @@
 // components/Testimonial.tsx
 import Cluster from '@/lib/layout/Cluster';
 import Image, { StaticImageData } from 'next/image';
-import React, { HTMLAttributes } from 'react';
+import React, { HTMLAttributes, ReactNode } from 'react';
 
 import styles from './styles.module.css';
 
 interface TestimonialProps {
 	recUrl: string;
 	quote: React.ReactNode | React.ReactNode[];
-	attribution: { text: React.ReactNode; image?: StaticImageData };
+	attribution: {
+		name: string;
+		title: string;
+		sourceInfo: ReactNode;
+		image?: StaticImageData;
+	};
 }
 
 const Testimonial = ({ recUrl, quote, attribution }: TestimonialProps) => {
@@ -41,7 +46,7 @@ const Testimonial = ({ recUrl, quote, attribution }: TestimonialProps) => {
 							className={styles.av}
 						/>
 					)}
-					{attribution.text}
+					{attribution.name}, {attribution.title} {attribution.sourceInfo}
 				</a>
 			</figcaption>
 		</figure>
