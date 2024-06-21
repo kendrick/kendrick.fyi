@@ -28,7 +28,6 @@ export default function ProjectCard({
 			className={clsx([styles['project-card']])}
 		>
 			<Stack className={clsx([styles['project-card__inner-wrap']])}>
-				<h3 className={styles['project-title']}>{title}</h3>
 				{image && (
 					<Image
 						src={image}
@@ -38,7 +37,10 @@ export default function ProjectCard({
 						sizes={imageSizes}
 					/>
 				)}
-				<p>{description}</p>
+				<p>
+					<h3 className={styles['project-title']}>{title}</h3>
+					{description}
+				</p>
 			</Stack>
 		</a>
 	);

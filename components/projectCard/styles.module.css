@@ -1,6 +1,6 @@
 .project-card {
 	.project-title {
-		grid-area: title;
+		/* grid-area: title; */
 		font-size: var(--k-type-size-base);
 	}
 
@@ -14,11 +14,11 @@
 }
 
 .project-card__inner-wrap {
-	display: grid;
+	/* display: grid;
 	grid-template-areas:
 		'image'
 		'title'
-		'description';
+		'description'; */
 	gap: var(--k-space-xs-sm);
 
 	img {
