@@ -35,7 +35,7 @@ export default function KindWords() {
 				text: (
 					<>
 						Amy H.<span className="visually-hidden">, </span>
-						<span className={styles['author-title']}>Stakeholder</span>
+						<span className={styles['author-title']}>Product Owner</span>
 						<span className="visually-hidden"> on LinkedIn</span>
 					</>
 				),
@@ -60,7 +60,7 @@ export default function KindWords() {
 				text: (
 					<>
 						Sydney M.<span className="visually-hidden">, </span>
-						<span className={styles['author-title']}>Stakeholder</span>
+						<span className={styles['author-title']}>Product Owner</span>
 						<span className="visually-hidden"> on LinkedIn</span>
 					</>
 				),
