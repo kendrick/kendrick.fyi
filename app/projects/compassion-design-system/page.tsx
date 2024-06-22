@@ -55,7 +55,7 @@ export default function DesignSystem() {
 						Scaling a unified brand identity was a significant challenge at
 						Compassion International, a global organization with 13 independent
 						fundraising offices. As the Senior Manager of UX, I envisioned and
-						architected a token-based, multi-brand design system. We built the
+						architected a token-based, themeable design system. We built the
 						Compassion Design System to accelerate the design and development
 						process and address fragmentation across Compassion’s diverse global
 						offices.
@@ -115,7 +115,7 @@ export default function DesignSystem() {
 							We followed this with a global component and technology audit,
 							which further underscored the extent of the existing
 							fragmentation. Some partners used React, others were on WordPress,
-							and one was on .NET. Many had plans to migrate to NextJS or to
+							and one was on .NET. Many had plans to migrate to Next.js or to
 							introduce a mobile app. The component audit revealed extensive
 							fragmentation brought about by the siloed nature of the
 							organization. Notably, Compassion was using 109 types of Buttons
@@ -289,7 +289,7 @@ export default function DesignSystem() {
 					<Stack>
 						<p>
 							The design system had significant positive outcomes, and teams
-							across the organization are in various stages of adoption,
+							across the organization were in various stages of adoption,
 							including:
 						</p>
 
