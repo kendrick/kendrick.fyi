@@ -19,6 +19,7 @@ export default function Header() {
 		<header className={styles.header}>
 			<Cluster className={clsx(styles['header__inner-wrap'], styles.nav__wrap)}>
 				<Link href="/">
+					<span className="visually-hidden">Navigate home</span>
 					<Lettermark className={styles.lettermark} />
 				</Link>
 
