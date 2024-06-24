@@ -87,9 +87,10 @@ export default function KindWords() {
 		laura: {
 			quotes: [
 				<>
-					As my manager there wasn’t a moment he wasn’t my biggest cheerleader,
-					trusting me with projects that were stretch experiences and giving me
-					the tools I needed to thrive.
+					As my manager there wasn’t a moment he wasn’t{' '}
+					<span className="k-type-emph">my biggest cheerleader</span>, trusting
+					me with projects that were stretch experiences and giving me the tools
+					I needed to thrive.
 				</>,
 				<>
 					If you’re looking for a leader who creates teams that are{' '}
@@ -110,8 +111,11 @@ export default function KindWords() {
 		jeff: {
 			quotes: [
 				<>
-					His skillset is unique in that he is both customer centric and
-					technical.{' '}
+					His skillset is unique in that he is{' '}
+					<span className="k-type-emph">
+						both customer centric and technical
+					</span>
+					.{' '}
 					<span className="k-type-deemph" aria-hidden="true">
 						[…]
 					</span>{' '}

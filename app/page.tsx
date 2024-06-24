@@ -18,8 +18,8 @@ export default function Home() {
 
 	return (
 		<main className={styles.main}>
-			<Intro />
 			<div className={styles.main__subhero}>
+				<Intro />
 				<Info />
 				<KindWords />
 				<Projects />

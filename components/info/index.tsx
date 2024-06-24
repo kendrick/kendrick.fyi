@@ -27,10 +27,9 @@ export default function Info() {
 						</span>{' '}
 						through innovative, accessible, and inclusive approaches. My
 						experience spans delivering impactful solutions for organizations
-						such as
-						<span className="k-type-no-wrap">
-							Compassion International
-						</span>, <span className="k-type-no-wrap">Pier 1 Imports</span>,{' '}
+						such as{' '}
+						<span className="k-type-no-wrap">Compassion International</span>,{' '}
+						<span className="k-type-no-wrap">Pier 1 Imports</span>,{' '}
 						<span className="k-type-no-wrap">Slalom Consulting</span>, and{' '}
 						<span className="k-type-no-wrap">Thomson Reuters</span>.
 					</p>

@@ -2,8 +2,11 @@
 	/* position: sticky; */
 	z-index: var(--k-z-index-max);
 	top: 0;
+
 	text-align: center;
+
 	background: var(--k-global-background);
+	border-bottom: 1px dotted gray;
 }
 
 /* Need the extra selector to out-specify the `plain-list` helper 
@@ -13,9 +16,7 @@
 
 	max-width: var(--k-header-max-width);
 	margin: auto;
-	padding-top: var(--k-global-padding-minus1);
-	padding-right: var(--k-global-padding);
-	padding-left: var(--k-global-padding);
+	padding: var(--k-global-padding-minus1) var(--k-global-padding);
 
 	> li:first-of-type {
 		display: flex;

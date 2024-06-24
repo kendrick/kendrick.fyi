@@ -55,10 +55,13 @@ export default function DesignSystem() {
 						Scaling a unified brand identity was a significant challenge at
 						Compassion International, a global organization with 13 independent
 						fundraising offices. As the Senior Manager of UX, I envisioned and
-						architected a token-based, themeable design system. We built the
-						Compassion Design System to accelerate the design and development
-						process and address fragmentation across Compassion’s diverse global
-						offices.
+						architected a token-based, themeable design system that{' '}
+						<span className="k-type-emph">
+							bridged the gap between design and dev
+						</span>
+						. We built the Compassion Design System to accelerate the design and
+						development process and address fragmentation across Compassion’s
+						diverse global offices.
 					</p>
 				</Stack>
 			</section>
@@ -74,12 +77,16 @@ export default function DesignSystem() {
 						among offices challenging. While it allows each office to adapt to
 						its local conditions nimbly, it also leaves each office individually
 						responsible for interpreting and implementing Compassion’s brand.
-						Over time, this isolation resulted in a fragmented brand and visual
+						Over time, this isolation resulted in a{' '}
+						<span className="k-type-emph">fragmented brand</span> and visual
 						identity that left Compassion as a whole less capable of leveraging
-						its internal design and development expertise because teams
-						constantly reinvented the wheel. Compassion’s ongoing multi-year
-						brand overhaul compounded this issue, which called for a unified
-						global voice to solidify its brand identity.
+						its internal design and development expertise because{' '}
+						<span className="k-type-emph">
+							teams constantly reinvented the wheel
+						</span>
+						. Compassion’s ongoing multi-year brand overhaul compounded this
+						issue, which called for a unified global voice to solidify its brand
+						identity.
 					</p>
 					<FYIGrid
 						images={images.fragmentationImages}
@@ -112,14 +119,17 @@ export default function DesignSystem() {
 					</WithSidebar>
 					<Stack>
 						<p>
-							We followed this with a global component and technology audit,
-							which further underscored the extent of the existing
+							We followed this with a{' '}
+							<span className="k-type-emph">
+								global component and technology audit
+							</span>
+							, which further underscored the extent of the existing
 							fragmentation. Some partners used React, others were on WordPress,
 							and one was on .NET. Many had plans to migrate to Next.js or to
 							introduce a mobile app. The component audit revealed extensive
 							fragmentation brought about by the siloed nature of the
-							organization. Notably, Compassion was using 109 types of Buttons
-							and 23 different Card components.
+							organization. For instance, Compassion was using 109 types of
+							Buttons and 23 different Card components.
 						</p>
 						<WithSidebar sidebarOnRight sidebarWidth="32.5rem">
 							<p>
@@ -160,15 +170,17 @@ export default function DesignSystem() {
 				</span>
 				<Stack>
 					<p>
-						Our strategy was clear: we aimed to create a design system with vast
-						flexibility and adaptability. This system was architected to empower
-						marketers’ creativity across Compassion’s global network while
-						setting a clear vision for unification. Given the ongoing brand
-						overhaul, the system needed to be adaptable, allowing for effortless
-						flow from design to development as the brand evolved. Design tokens
-						emerged as a critical enabler of our solution, ensuring the system
-						was genuinely future-proof and enabling flexibility where designers
-						needed it.
+						Our strategy was clear: we aimed to create{' '}
+						<span className="k-type-emph">
+							a design system with vast flexibility and adaptability
+						</span>
+						. This system was architected to empower marketers’ creativity
+						across Compassion’s global network while setting a clear vision for
+						unification. Given the ongoing brand overhaul, the system needed to
+						be adaptable, allowing for effortless flow from design to
+						development as the brand evolved. Design tokens emerged as a
+						critical enabler of our solution, ensuring the system was genuinely
+						future-proof and enabling flexibility where designers needed it.
 					</p>
 					<Switcher>
 						<PullQuote>
@@ -228,16 +240,22 @@ export default function DesignSystem() {
 				<span className={clsx('k-type-subhead')}>Understanding Our Users</span>
 				<Stack>
 					<p>
-						In the implementation phase, we built a comprehensive library of
-						Figma components and distributed them across the organization as a
-						shared library. We created a lighthearted onboarding Figma file to
-						introduce the system to designers worldwide. Working closely with
-						stakeholder development teams, we built robust coded components for
-						React and HTML/SCSS. We then gathered and incorporated feedback from
-						additional development teams to inform the creation of React Native
-						components. The team implemented automated visual regression testing
-						to maintain consistency and quality across frameworks, ensuring our
-						design system performed reliably across all platforms.
+						In the implementation phase, we built a{' '}
+						<span className="k-type-emph">
+							comprehensive library of Figma components
+						</span>{' '}
+						and distributed them across the organization as a shared library. We
+						created a lighthearted onboarding Figma file to introduce the system
+						to designers worldwide. Working closely with stakeholder development
+						teams,{' '}
+						<span className="k-type-emph">
+							we built robust coded components
+						</span>{' '}
+						for React and HTML/SCSS. We then gathered and incorporated feedback
+						from additional development teams to inform the creation of React
+						Native components. The team implemented automated visual regression
+						testing to maintain consistency and quality across frameworks,
+						ensuring our design system performed reliably across all platforms.
 					</p>
 					<div className={styles['figma-embed__wrap']}>
 						<EmbedFacade
@@ -304,18 +322,22 @@ export default function DesignSystem() {
 
 						<p>
 							Notably, the Compassion Design System accelerated the Field
-							Strategies app, a crucial tool in a $1.4 billion multi-year
-							fundraising effort, and many global campaign sites and marketing
-							landing pages.
+							Strategies app, a crucial tool in a{' '}
+							<span className="k-type-emph">
+								$1.4 billion multi-year fundraising effort
+							</span>
+							, and many global campaign sites and marketing landing pages.
 						</p>
 						<p>
 							The Compassion Design System’s qualitative benefits were
-							substantial. The system improved design consistency, reduced
-							development cycles, and enhanced collaboration between design and
-							development teams. While formal metrics were unavailable, the
-							positive feedback from adopting teams and the visible improvements
-							in design efficiency and consistency demonstrated the system’s
-							value.
+							substantial. The system{' '}
+							<span className="k-type-emph">
+								improved design consistency, reduced development cycles, and
+								enhanced collaboration between design and development teams
+							</span>
+							. While formal metrics were unavailable, the positive feedback
+							from adopting teams and the visible improvements in design
+							efficiency and consistency demonstrated the system’s value.
 						</p>
 						<div className={styles['on-the-cds__grid']}>
 							<DeviceFrame

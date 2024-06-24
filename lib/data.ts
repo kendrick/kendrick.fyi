@@ -62,6 +62,7 @@ export const skillsData = [
 	'Design Thinking',
 	'Google Design Sprints',
 	'Design Systems',
+	'Human-Centered Design',
 	'UX Research',
 	'Usability Testing',
 	'Accessibility',
