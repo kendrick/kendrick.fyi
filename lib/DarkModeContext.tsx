@@ -14,9 +14,9 @@ const DarkModeProvider = ({ children }: { children: ReactNode }) => {
 
 	useEffect(() => {
 		if (darkMode.isDarkMode) {
-			document.documentElement.classList.add('k-dark');
+			document.documentElement.classList.add('dark');
 		} else {
-			document.documentElement.classList.remove('k-dark');
+			document.documentElement.classList.remove('dark');
 		}
 	}, [darkMode.isDarkMode]);
 

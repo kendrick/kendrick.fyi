@@ -1,12 +1,6 @@
+@import '../../tokens/css/color.css';
+
 :root {
-	--k-global-color: #1b1924;
-	--k-global-background: #eeeeef;
-
-	color: var(--k-global-color);
-	background: var(--k-global-background);
-}
-
-:root.k-dark {
-	--k-global-color: #eeeeef;
-	--k-global-background: #1b1924;
+	color: var(--k-theme-color-on-surface);
+	background: var(--k-theme-color-surface-bright);
 }

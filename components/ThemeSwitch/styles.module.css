@@ -11,7 +11,7 @@
 	color: inherit;
 
 	background: var(--k-global-background);
-	border: 1px solid gray;
+	border: 1px solid var(--k-theme-color-outline);
 	border-radius: 999px;
 
 	fill: currentColor;

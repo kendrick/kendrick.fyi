@@ -6,7 +6,7 @@
 	text-align: center;
 
 	background: var(--k-global-background);
-	border-bottom: 1px dotted gray;
+	border-bottom: 1px dotted var(--k-theme-color-outline);
 }
 
 /* Need the extra selector to out-specify the `plain-list` helper 
