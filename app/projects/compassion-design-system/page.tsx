@@ -315,7 +315,7 @@ export default function DesignSystem() {
 							<li>Compassion’s Global Marketing team</li>
 							<li>Compassion Canada</li>
 							<li>
-								Compassion Ventures Group (Compassion's innovation department)
+								Compassion Ventures Group (Compassion’s innovation department)
 							</li>
 						</ul>
 

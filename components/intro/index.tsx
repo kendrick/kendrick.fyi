@@ -41,12 +41,12 @@ export default function Intro() {
 							href="https://linkedin.com/in/kendrickarnett"
 							target="_blank"
 							rel="noopener"
-							title="Kendrick Arnett's profile on LinkedIn"
+							title="Kendrick Arnett’s profile on LinkedIn"
 							className={styles['with-icon']}
 						>
 							<IconLinkedIn className={clsx(styles.intro__icon, styles.icon)} />
 							<span className="visually-hidden">
-								Kendrick Arnett's profile on LinkedIn
+								Kendrick Arnett’s profile on LinkedIn
 							</span>
 						</a>
 						<a
@@ -57,7 +57,7 @@ export default function Intro() {
 						>
 							<IconGitHub className={clsx(styles.intro__icon, styles.icon)} />
 							<span className="visually-hidden">
-								Kendrick Arnett's profile on GitHub
+								Kendrick Arnett’s profile on GitHub
 							</span>
 						</a>
 					</Cluster>
