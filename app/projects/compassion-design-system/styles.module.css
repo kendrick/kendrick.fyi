@@ -8,8 +8,6 @@
 	position: relative;
 	overflow: hidden;
 
-	/* border-radius: 16px; */
-
 	> h1 {
 		position: absolute;
 		bottom: 0;
