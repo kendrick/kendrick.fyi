@@ -12,7 +12,7 @@ export default function About() {
 	const logoHeight = 36;
 
 	return (
-		<section ref={ref} id="about" className={clsx(styles.info)}>
+		<section ref={ref} id="about" className={clsx(styles.about)}>
 			<section className={'global__section'}>
 				<Prose>
 					<h2>About</h2>
