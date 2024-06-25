@@ -7,6 +7,7 @@ import { useDebounceCallback, useResizeObserver } from 'usehooks-ts';
 
 import IconDownload from '@/assets/svg/download-document.svg';
 import Stack from '@/lib/layout/Stack';
+import clsx from 'clsx';
 import Link from 'next/link';
 import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
@@ -74,16 +75,20 @@ const Contact = () => {
 	return (
 		<section ref={ref} style={{ margin: 'var(--k-space-xs-xl)' }}>
 			<Stack className={styles.stack}>
-				<Link
-					href="/kendrick-arnett-resume.pdf"
-					target="_blank"
-					rel="noopener"
-					className={styles.download}
-				>
-					Download my résumé <IconDownload className={styles.icon} />
-					<span className="visually-hidden">(Opens in new window)</span>
-				</Link>
-
+				<div className={styles.heading__wrap}>
+					<h1>Résumé</h1>
+					<Link
+						href="/kendrick-arnett-resume.pdf"
+						target="_blank"
+						rel="noopener"
+						className={clsx('as-button', styles.download)}
+					>
+						Download <IconDownload className={styles.icon} />
+						<span className="visually-hidden">
+							my résumé (Opens in new window)
+						</span>
+					</Link>
+				</div>
 				<Document
 					file="/kendrick-arnett-resume.pdf"
 					onLoadSuccess={onDocumentLoadSuccess}

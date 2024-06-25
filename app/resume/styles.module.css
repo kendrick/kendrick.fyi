@@ -2,13 +2,17 @@
 	gap: var(--k-space-sm-xl);
 }
 
-.download {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
+.heading__wrap {
+	display: flex;
+	justify-content: space-between;
 
-	font-size: var(--k-type-size-plus1);
-	font-weight: 300;
+	h1 {
+		display: inline-block;
+	}
+}
+
+.download {
+	font-size: var(--k-type-size-base);
 }
 
 .icon {

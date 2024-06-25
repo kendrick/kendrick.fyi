@@ -23,6 +23,32 @@ body {
 	padding: var(--k-space-minus2-minus1);
 }
 
+a.as-button {
+	display: inline-flex;
+	align-items: center;
+	align-self: center;
+	justify-content: center;
+
+	padding: var(--k-space-3xs) var(--k-space-xs);
+
+	font-weight: 500;
+	color: var(--k-theme-color-on-primary);
+
+	background: var(--k-theme-color-primary);
+	border-radius: 8px;
+	box-shadow: none;
+
+	transition: box-shadow 100ms linear;
+
+	&:hover {
+		box-shadow:
+			0 1.1px 2.9px rgba(0, 0, 0, 0.014),
+			0 3px 8px rgba(0, 0, 0, 0.02),
+			0 7.2px 19.3px rgba(0, 0, 0, 0.026),
+			0 24px 64px rgba(0, 0, 0, 0.04);
+	}
+}
+
 .global__section {
 	max-width: 1440px;
 	margin: auto;
