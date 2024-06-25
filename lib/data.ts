@@ -51,6 +51,7 @@ export const email = `kendrick@kendrick.fyi`;
 
 export const year = new Date().getFullYear();
 
+import ComingSoonImage from '@/app/projects/coming-soon.jpg';
 import CdsHeroImage from '@/app/projects/compassion-design-system/images/hero-450h.png';
 export const projectsData = [
 	{
@@ -59,6 +60,21 @@ export const projectsData = [
 		description:
 			'Compassion International revolutionized its global brand identity with a cutting-edge, token-based multi-brand design system, dramatically enhancing design consistency, slashing development times, and fostering seamless collaboration across 13 independent fundraising offices.',
 		projectPage: 'compassion-design-system',
+	},
+	{
+		title: 'Field Strategies',
+		description: 'Coming Soon.',
+		image: ComingSoonImage,
+	},
+	{
+		title: 'Optimizing Search',
+		description: 'Coming Soon.',
+		image: ComingSoonImage,
+	},
+	{
+		title: 'Design-Driven Innovation',
+		description: 'Coming Soon.',
+		image: ComingSoonImage,
 	},
 ] as const;
 

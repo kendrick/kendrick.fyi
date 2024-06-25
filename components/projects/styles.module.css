@@ -11,6 +11,7 @@
 		minmax(calc(320px - 2 * var(--k-global-padding)), 1fr)
 	);
 	gap: var(--k-grid-gutter);
+	align-items: flex-start;
 
 	li {
 		/* Need this to hide li::marker in this specific context. */

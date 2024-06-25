@@ -5,14 +5,15 @@ import clsx from 'clsx';
 import Image, { StaticImageData } from 'next/image';
 
 import { imageSizes } from '@/lib/utils';
+import { ReactNode } from 'react';
 import styles from './styles.module.css';
 
 interface Props {
 	className?: string | CSSModuleClasses;
 	image?: StaticImageData;
 	title: string;
-	description: string;
-	projectPage: string;
+	description: ReactNode;
+	projectPage?: string;
 }
 
 export default function ProjectCard({
@@ -24,7 +25,7 @@ export default function ProjectCard({
 }: Props) {
 	return (
 		<a
-			href={`/projects/${projectPage}`}
+			href={`/projects/${projectPage ? projectPage : ''}`}
 			className={clsx([styles['project-card']])}
 		>
 			<Stack className={clsx([styles['project-card__inner-wrap']])}>
