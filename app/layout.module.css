@@ -1,5 +1,6 @@
 .theme-switch {
 	position: fixed;
+	z-index: var(--k-z-index-max);
 	right: var(--k-global-padding);
 	bottom: var(--k-global-padding);
 }

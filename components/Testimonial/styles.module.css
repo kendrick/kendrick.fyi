@@ -1,21 +1,41 @@
 .testimonial {
 	display: grid;
 	grid-template-rows: auto auto;
+
+	blockquote {
+		position: relative;
+
+		&::before {
+			content: '“';
+
+			position: absolute;
+			z-index: -1;
+			left: -0.125em;
+
+			font-family: var(--k-type-serif);
+			font-size: 6em;
+			font-variation-settings:
+				'opsz' 20,
+				'SOFT' 55,
+				'WONK' 0;
+			font-weight: 900;
+			font-style: italic;
+			line-height: 1;
+			color: var(--k-theme-color-surface-dim);
+		}
+	}
 }
 
 .wrapper {
-	--k-cluster-space: var(--k-space-sm-2xl);
+	--k-cluster-space: var(--k-space-sm-md);
 
 	display: grid;
 	grid-template-columns: repeat(
 		auto-fit,
-		minmax(calc(320px - 2 * var(--k-global-padding)), 1fr)
+		minmax(calc(360px - 2 * var(--k-global-padding)), 1fr)
 	);
 	place-items: start;
-
 	padding-bottom: 1em;
-
-	font-size: var(--k-type-size-base);
 }
 
 .attribution {
