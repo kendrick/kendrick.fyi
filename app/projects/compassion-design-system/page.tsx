@@ -192,12 +192,12 @@ export default function DesignSystem() {
 							</h3>
 							<p>
 								Design tokens are the tiniest pieces of a design system that
-								store design-related information. Think of them as variables
-								that define and store the values for design elements, such as
-								colors, typography, spacing, and more. They help bridge design
-								and development, ensuring the same design decisions are
-								implemented consistently across different tools, platforms, and
-								devices.
+								manage design-related information as data. Think of them as
+								variables that define and store the values for design elements,
+								such as colors, typography, spacing, and more. By virtue of
+								being stored as data, design tokens bridge design and
+								development, ensuring the same design decisions are implemented
+								consistently across different tools, platforms, and devices.
 							</p>
 						</aside>
 					</Switcher>
