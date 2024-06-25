@@ -12,7 +12,7 @@ interface Props {
 	className?: string | CSSModuleClasses;
 	image?: StaticImageData;
 	title: string;
-	description: ReactNode;
+	description: ReactNode | string;
 	projectPage?: string;
 }
 

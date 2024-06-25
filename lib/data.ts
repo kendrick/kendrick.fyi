@@ -51,9 +51,18 @@ export const email = `kendrick@kendrick.fyi`;
 
 export const year = new Date().getFullYear();
 
+interface ProjectData {
+	image?: StaticImageData;
+	title: string;
+	description: ReactNode | string;
+	projectPage?: string;
+}
+
 import ComingSoonImage from '@/app/projects/coming-soon.jpg';
 import CdsHeroImage from '@/app/projects/compassion-design-system/images/hero-450h.png';
-export const projectsData = [
+import { StaticImageData } from 'next/image';
+import { ReactNode } from 'react';
+export const projectsData: ProjectData[] = [
 	{
 		title: 'Compassion Design System',
 		image: CdsHeroImage,
