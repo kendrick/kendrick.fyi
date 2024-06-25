@@ -19,7 +19,9 @@
 
 		padding: var(--k-space-xs-sm);
 
-		background: #fcfcfc;
+		color: var(--k-theme-color-on-secondary-container);
+
+		background: var(--k-theme-color-secondary-container);
 	}
 }
 

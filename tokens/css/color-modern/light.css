@@ -48,16 +48,16 @@
 	--k-theme-color-surface-container: rgb(237 237 244);
 	--k-theme-color-surface-container-high: rgb(231 232 238);
 	--k-theme-color-surface-container-highest: rgb(226 226 233);
-	--md-extended-color-alpha-color: rgb(142 73 88);
-	--md-extended-color-alpha-on-color: rgb(255 255 255);
-	--md-extended-color-alpha-color-container: rgb(255 217 222);
-	--md-extended-color-alpha-on-color-container: rgb(58 7 23);
-	--md-extended-color-beta-color: rgb(121 89 12);
-	--md-extended-color-beta-on-color: rgb(255 255 255);
-	--md-extended-color-beta-color-container: rgb(255 222 162);
-	--md-extended-color-beta-on-color-container: rgb(38 25 0);
-	--md-extended-color-gamma-color: rgb(7 103 127);
-	--md-extended-color-gamma-on-color: rgb(255 255 255);
-	--md-extended-color-gamma-color-container: rgb(183 234 255);
-	--md-extended-color-gamma-on-color-container: rgb(0 31 40);
+	--k-theme-color-alpha-color: rgb(142 73 88);
+	--k-theme-color-alpha-on-color: rgb(255 255 255);
+	--k-theme-color-alpha-color-container: rgb(255 217 222);
+	--k-theme-color-alpha-on-color-container: rgb(58 7 23);
+	--k-theme-color-beta-color: rgb(121 89 12);
+	--k-theme-color-beta-on-color: rgb(255 255 255);
+	--k-theme-color-beta-color-container: rgb(255 222 162);
+	--k-theme-color-beta-on-color-container: rgb(38 25 0);
+	--k-theme-color-gamma-color: rgb(7 103 127);
+	--k-theme-color-gamma-on-color: rgb(255 255 255);
+	--k-theme-color-gamma-color-container: rgb(183 234 255);
+	--k-theme-color-gamma-on-color-container: rgb(0 31 40);
 }

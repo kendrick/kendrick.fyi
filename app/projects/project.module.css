@@ -11,8 +11,15 @@
 	margin: auto;
 }
 
+.aside {
+	padding: var(--k-space-xs);
+	background: var(--k-theme-color-secondary-container);
+	border-radius: 4px;
+}
+
 .aside__heading {
 	font-size: var(--k-type-size-base);
+	color: var(--k-theme-color-on-secondary-container);
 }
 
 .aside p {

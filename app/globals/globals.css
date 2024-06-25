@@ -12,6 +12,10 @@
 	--k-z-index-max: 2147483647;
 }
 
+::selection {
+	background: var(--k-theme-color-primary-container);
+}
+
 body {
 	display: flex;
 	flex-direction: column;
@@ -40,6 +44,9 @@ body {
 	font-weight: 400;
 	font-style: italic;
 	font-stretch: normal;
+	color: var(--k-theme-color-beta-on-color-container);
+
+	/* background: var(--k-theme-color-beta-color-container); */
 }
 
 .k-type-deemph {
