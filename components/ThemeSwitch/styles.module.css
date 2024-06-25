@@ -7,10 +7,10 @@
 	padding: var(--k-space-3xs);
 
 	font-size: 2em;
-	color: var(--k-global-color);
 	color: inherit;
+	color: var(--k-theme-color-on-surface);
 
-	background: var(--k-global-background);
+	background: var(--k-theme-color-surface-container-low);
 	border: 1px solid var(--k-theme-color-outline);
 	border-radius: 999px;
 
