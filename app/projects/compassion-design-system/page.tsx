@@ -8,7 +8,7 @@ import 'yet-another-react-lightbox/styles.css';
 import styles from './styles.module.css';
 
 import DeviceFrame from '@/lib/DeviceFrame';
-import EmbedFacade from '@/lib/EmbedFacade';
+// import EmbedFacade from '@/lib/EmbedFacade';
 import FYIGrid from '@/lib/FYIGrid';
 import Reel from '@/lib/layout/Reel';
 import Stack from '@/lib/layout/Stack';
@@ -18,8 +18,7 @@ import WithSidebar from '@/lib/layout/WithSidebar';
 import { imageSizes } from '@/lib/utils';
 import images from './images';
 import HeroImage from './images/hero-450h.png';
-
-import FigmaLogo from '@/lib/LogoFigma';
+// import FigmaLogo from '@/lib/LogoFigma';
 
 import useIsTouchCapable from '@/lib/hooks/useIsTouchCapable';
 
@@ -257,7 +256,7 @@ export default function DesignSystem() {
 						testing to maintain consistency and quality across frameworks,
 						ensuring our design system performed reliably across all platforms.
 					</p>
-					<div className={styles['figma-embed__wrap']}>
+					{/* <div className={styles['figma-embed__wrap']}>
 						<EmbedFacade
 							width="100%"
 							aspectRatio="16 / 10"
@@ -282,7 +281,7 @@ export default function DesignSystem() {
 								allowFullScreen
 							></iframe>
 						</EmbedFacade>
-					</div>
+					</div> */}
 					<WithSidebar className={styles.dwc} sidebarWidth="400px">
 						<DeviceFrame
 							src={images.visionToLife.visionToLife01}
