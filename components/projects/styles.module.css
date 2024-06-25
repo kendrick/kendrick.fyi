@@ -8,13 +8,8 @@
 	display: grid;
 	grid-template-columns: repeat(
 		auto-fit,
-		minmax(calc(320px - 2 * var(--k-global-padding)), 1fr)
+		minmax(calc(400px - 2 * var(--k-global-padding)), 1fr)
 	);
-	gap: var(--k-grid-gutter);
+	gap: var(--k-space-xs-xl);
 	align-items: flex-start;
-
-	li {
-		/* Need this to hide li::marker in this specific context. */
-		font-size: 0;
-	}
 }

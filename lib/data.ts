@@ -58,7 +58,7 @@ export const projectsData = [
 		title: 'Compassion Design System',
 		image: CdsHeroImage,
 		description:
-			'Compassion International revolutionized its global brand identity with a cutting-edge, token-based multi-brand design system, dramatically enhancing design consistency, slashing development times, and fostering seamless collaboration across 13 independent fundraising offices.',
+			'Enhancing design consistency, slashing development time, and fostering seamless collaboration with a cutting edge token-driven design system.',
 		projectPage: 'compassion-design-system',
 	},
 	{
