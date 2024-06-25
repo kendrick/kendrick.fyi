@@ -37,10 +37,10 @@
 	> * {
 		max-width: var(--k-pdf-max-width);
 		max-height: calc(var(--k-pdf-max-width) * 1.259);
-
 		object-fit: contain;
-		border: 1px solid #efefef88;
+
+		/* border: 1px solid #efefef88;
 		border-radius: 8px;
-		box-shadow: 0 0 8px 0 #10101004;
+		box-shadow: 0 0 8px 0 #10101004; */
 	}
 }

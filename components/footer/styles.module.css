@@ -18,9 +18,12 @@
 	justify-content: space-between;
 
 	font-family: var(--k-type-display);
-	font-size: var(--k-type-size-minus1);
+	font-size: var(--k-type-size-minus2);
+	line-height: 1;
 }
 
 .copyright {
+	font-size: var(--k-type-size-minus2);
+	color: var(--k-theme-color-secondary);
 	text-align: left;
 }

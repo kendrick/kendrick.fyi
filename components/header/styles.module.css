@@ -25,7 +25,13 @@
 }
 
 .header .nav__wrap {
-	justify-content: space-between;
+	justify-content: center;
+}
+
+@media (width >= 768px) {
+	.header .nav__wrap {
+		justify-content: space-between;
+	}
 }
 
 .nav__list {
