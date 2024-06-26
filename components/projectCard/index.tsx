@@ -25,7 +25,7 @@ export default function ProjectCard({
 }: Props) {
 	return (
 		<a
-			href={`/projects/${projectPage ? projectPage : ''}`}
+			href={`/projects${projectPage ? '/' + projectPage : ''}`}
 			className={clsx([styles['project-card']])}
 		>
 			<Stack className={clsx([styles['project-card__inner-wrap']])}>
