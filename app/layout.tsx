@@ -15,10 +15,16 @@ import { DarkModeProvider } from '@/lib/DarkModeContext';
 
 import styles from './layout.module.css';
 
+const m = {
+	title: 'Kendrick Arnett | Portfolio',
+	description: 'Creative UX pro. Team builder. Digital maker.',
+	url: 'https://kendrick.fyi',
+	name: 'Kendrick Arnett',
+};
+
 export const metadata = {
-	title: 'Kendrick Arnett',
-	description:
-		'Kendrick Arnett’s online portfolio. Creative UX pro. Team builder. Digital maker.',
+	title: m.title,
+	description: m.description,
 	icons: {
 		icon: [
 			{
@@ -34,6 +40,31 @@ export const metadata = {
 				media: '(prefers-color-scheme: dark)',
 			},
 		],
+	},
+	keywords: ['UX leadership', 'UX design'],
+	authors: [{ name: m.name, url: m.url }],
+	creator: m.name,
+	openGraph: {
+		title: m.title,
+		description: m.description,
+		url: m.url,
+		siteName: 'kendrick.fyi',
+		images: [
+			{
+				url: 'https://kendrick.fyi/og/root.png',
+				width: 1200,
+				height: 675,
+			},
+		],
+		locale: 'en_US',
+		type: 'website',
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: m.title,
+		description: m.description,
+		creator: '@kendrick',
+		images: ['https://kendrick.fyi/og/root.png'],
 	},
 };
 
@@ -84,6 +115,63 @@ export default function RootLayout({
 				<DarkModeProvider>
 					<ThemeContextProvider>
 						<ActiveSectionContextProvider>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								version="1.1"
+								viewBox="0 0 700 700"
+								width="700"
+								height="700"
+							>
+								<defs>
+									<filter
+										id="nnnoise-filter"
+										x="-20%"
+										y="-20%"
+										width="140%"
+										height="140%"
+										filterUnits="objectBoundingBox"
+										primitiveUnits="userSpaceOnUse"
+										color-interpolation-filters="linearRGB"
+									>
+										<feTurbulence
+											type="fractalNoise"
+											baseFrequency="0.08"
+											numOctaves="4"
+											seed="15"
+											stitchTiles="stitch"
+											x="0%"
+											y="0%"
+											width="100%"
+											height="100%"
+											result="turbulence"
+										></feTurbulence>
+										<feSpecularLighting
+											surfaceScale="17"
+											specularConstant="1.2"
+											specularExponent="20"
+											lighting-color="var(--k-theme-color-surface-dim)"
+											x="0%"
+											y="0%"
+											width="100%"
+											height="100%"
+											in="turbulence"
+											result="specularLighting"
+										>
+											<feDistantLight
+												azimuth="3"
+												elevation="105"
+											></feDistantLight>
+										</feSpecularLighting>
+									</filter>
+								</defs>
+								<rect width="700" height="700" fill="transparent"></rect>
+								<rect
+									width="700"
+									height="700"
+									fill="var(--k-theme-color-surface-dim)"
+									filter="url(#nnnoise-filter)"
+								></rect>
+							</svg>
 							<Header />
 							<section className={styles['body__inner-wrap']}>
 								{children}
