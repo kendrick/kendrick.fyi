@@ -85,3 +85,7 @@ h3 {
 		margin-block-start: var(--k-space-xs);
 	}
 }
+
+a[href].with-decoration {
+	text-decoration: underline;
+}

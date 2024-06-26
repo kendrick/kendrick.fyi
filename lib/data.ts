@@ -19,10 +19,10 @@ export const pageLinks = [
 		name: 'About',
 		href: '/about',
 	},
-	// {
-	// 	name: 'Contact',
-	// 	href: '#info',
-	// },
+	{
+		name: 'Contact',
+		href: '/contact',
+	},
 	{
 		name: 'Résumé',
 		href: '/resume',

@@ -1,5 +1,9 @@
 .contact {
-	display: grid;
-	gap: var(--k-grid-gutter);
-	align-content: center;
+	max-width: var(--k-global-max-width);
+	padding: var(--k-global-padding);
+}
+
+.calendly {
+	min-width: 320px;
+	height: 700px;
 }
