@@ -4,6 +4,7 @@ import Image, { StaticImageData } from 'next/image';
 import styles from './styles.module.css';
 
 import customPropertiesFromVars from '@/lib/customPropertiesFromVars';
+import { imageSizes } from '@/lib/utils';
 
 interface DeviceFrameProps {
 	src: StaticImageData;
@@ -61,6 +62,7 @@ export default function DeviceFrame({
 						src={src}
 						alt={alt}
 						placeholder="blur"
+						sizes={imageSizes}
 					/>
 				</div>
 			</div>
@@ -78,7 +80,7 @@ export default function DeviceFrame({
 				data-title={title}
 			>
 				<div style={{ padding: 0 }}>
-					<Image src={src} alt={alt} placeholder="blur" />
+					<Image src={src} alt={alt} placeholder="blur" sizes={imageSizes} />
 				</div>
 			</div>;
 }
