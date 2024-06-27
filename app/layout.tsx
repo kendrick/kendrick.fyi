@@ -15,59 +15,6 @@ import { DarkModeProvider } from '@/lib/DarkModeContext';
 
 import styles from './layout.module.css';
 
-const m = {
-	title: 'Kendrick Arnett | Portfolio',
-	description: 'Creative UX pro. Team builder. Digital maker.',
-	url: 'https://kendrick.fyi',
-	name: 'Kendrick Arnett',
-};
-
-export const metadata = {
-	title: m.title,
-	description: m.description,
-	icons: {
-		icon: [
-			{
-				rel: 'icon',
-				type: 'image/png',
-				url: '/favicon/favicon-light.png',
-				media: '(prefers-color-scheme: light)',
-			},
-			{
-				rel: 'icon',
-				type: 'image/png',
-				url: '/favicon/favicon-dark.png',
-				media: '(prefers-color-scheme: dark)',
-			},
-		],
-	},
-	keywords: ['UX leadership', 'UX design'],
-	authors: [{ name: m.name, url: m.url }],
-	creator: m.name,
-	openGraph: {
-		title: m.title,
-		description: m.description,
-		url: m.url,
-		siteName: 'kendrick.fyi',
-		images: [
-			{
-				url: 'https://kendrick.fyi/og/root.png',
-				width: 1200,
-				height: 675,
-			},
-		],
-		locale: 'en_US',
-		type: 'website',
-	},
-	twitter: {
-		card: 'summary_large_image',
-		title: m.title,
-		description: m.description,
-		creator: '@kendrick',
-		images: ['https://kendrick.fyi/og/root.png'],
-	},
-};
-
 export default function RootLayout({
 	children,
 }: {
