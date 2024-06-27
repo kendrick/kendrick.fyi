@@ -39,7 +39,7 @@ function getElementOuterWidth(element: HTMLElement): number {
 	return totalWidth;
 }
 
-const Contact = () => {
+const Resume = () => {
 	type Size = {
 		width?: number;
 		height?: number;
@@ -76,7 +76,9 @@ const Contact = () => {
 		<section ref={ref} style={{ margin: 'var(--k-space-xs-xl)' }}>
 			<Stack className={styles.stack}>
 				<div className={styles.heading__wrap}>
-					<h1>Résumé</h1>
+					<h1>
+						<span className="visually-hidden">Kendrick Arnett’s</span> Résumé
+					</h1>
 					<Link
 						href="/kendrick-arnett-resume.pdf"
 						target="_blank"
@@ -89,6 +91,7 @@ const Contact = () => {
 						</span>
 					</Link>
 				</div>
+
 				<Document
 					file="/kendrick-arnett-resume.pdf"
 					onLoadSuccess={onDocumentLoadSuccess}
@@ -118,4 +121,4 @@ const Contact = () => {
 	);
 };
 
-export default Contact;
+export default Resume;
