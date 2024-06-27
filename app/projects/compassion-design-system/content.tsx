@@ -297,6 +297,7 @@ export default function DesignSystem() {
 								src={images.visionToLife.visionToLife01}
 								alt=""
 								imageVerticalMargin="1rem"
+								background={'#ffffff'}
 							/>
 							<DeviceFrame
 								src={images.visionToLife.visionToLife02}
