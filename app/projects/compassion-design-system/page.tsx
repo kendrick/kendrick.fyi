@@ -25,6 +25,45 @@ import useIsTouchCapable from '@/lib/hooks/useIsTouchCapable';
 import PullQuote from '@/components/PullQuote';
 import { useDarkModeContext } from '@/lib/DarkModeContext';
 
+const m = {
+	title: 'Kendrick Arnett | Compassion Design System',
+	description:
+		'Enhancing design consistency, slashing development time, and fostering seamless collaboration with a cutting edge, token-driven design system.',
+	url: 'https://kendrick.fyi',
+	name: 'Kendrick Arnett',
+	imagePath: '/og/projects/compassion-design-system.jpg',
+};
+
+export const metadata = {
+	title: m.title,
+	description: m.description,
+	keywords: ['Design systems', 'Design ops', 'UX leadership', 'UX design'],
+	authors: [{ name: m.name, url: m.url }],
+	creator: m.name,
+	openGraph: {
+		title: m.title,
+		description: m.description,
+		url: m.url + '/projects/compassion-design-system',
+		siteName: 'kendrick.fyi',
+		images: [
+			{
+				url: `${m.url}${m.imagePath}`,
+				width: 1200,
+				height: 675,
+			},
+		],
+		locale: 'en_US',
+		type: 'website',
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: m.title,
+		description: m.description,
+		creator: '@kendrick',
+		images: [`${m.url}${m.imagePath}`],
+	},
+};
+
 export default function DesignSystem() {
 	const isTouchCapable = useIsTouchCapable();
 	const zoomRef = React.useRef(null);

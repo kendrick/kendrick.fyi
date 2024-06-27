@@ -67,7 +67,7 @@ export const projectsData: ProjectData[] = [
 		title: 'Compassion Design System',
 		image: CdsHeroImage,
 		description:
-			'Enhancing design consistency, slashing development time, and fostering seamless collaboration with a cutting edge token-driven design system.',
+			'Enhancing design consistency, slashing development time, and fostering seamless collaboration with a cutting edge, token-driven design system.',
 		projectPage: 'compassion-design-system',
 	},
 	{
