@@ -39,9 +39,16 @@ export default function Contact() {
 
 		const c = computedStyle.color;
 
-		setBackground(rgbStringToHex(bg).replace('#', ''));
-		setColor(rgbStringToHex(c).replace('#', ''));
-		setPrimaryColor(rgbStringToHex(p).replace('#', ''));
+		const bgHex = (bg.startsWith('#') ? bg : rgbStringToHex(bg)).replace(
+			'#',
+			'',
+		);
+		const cHex = (c.startsWith('#') ? c : rgbStringToHex(c)).replace('#', '');
+		const pHex = (c.startsWith('#') ? p : rgbStringToHex(p)).replace('#', '');
+
+		setBackground(bgHex);
+		setColor(cHex);
+		setPrimaryColor(pHex);
 	}, []);
 
 	return (
@@ -62,16 +69,19 @@ export default function Contact() {
 							Let's connect and nerd out together!
 						</span>
 					</div>
-					<div
-						className={clsx('calendly-inline-widget', styles.calendly)}
-						data-url={`https://calendly.com/heykendrick/30-mins?hide_event_type_details=1&hide_gdpr_banner=1&background_color=${background}&text_color=${color}&primary_color=${primaryColor}`}
-					></div>
+
 					{background && color && primaryColor ?
-						<Script
-							type="text/javascript"
-							src="https://assets.calendly.com/assets/external/widget.js"
-							async
-						></Script>
+						<>
+							<div
+								className={clsx('calendly-inline-widget', styles.calendly)}
+								data-url={`https://calendly.com/heykendrick/30-mins?hide_event_type_details=1&hide_gdpr_banner=1&background_color=${background}&text_color=${color}&primary_color=${primaryColor}`}
+							></div>
+							<Script
+								type="text/javascript"
+								src="https://assets.calendly.com/assets/external/widget.js"
+								async
+							></Script>
+						</>
 					:	null}
 				</Switcher>
 			</Stack>
