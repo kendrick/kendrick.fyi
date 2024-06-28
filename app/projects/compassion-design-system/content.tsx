@@ -137,7 +137,11 @@ export default function DesignSystem() {
 									This diversity underscored the need for a flexible and
 									adaptable design system.
 								</p>
-								<PullQuote hidden={false} className={styles['research__quote']}>
+								<PullQuote
+									hidden={false}
+									borderSide="right"
+									className={styles['research__quote']}
+								>
 									109 Button types <br />
 									<span className="k-type-deemph"> and </span>
 									<br />
@@ -547,7 +551,7 @@ export default function DesignSystem() {
 							with greater confidence and effectiveness.
 						</p>
 						<Switcher>
-							<PullQuote>
+							<PullQuote borderSide="right">
 								Top-down commitment and advocacy would have been crucial.
 							</PullQuote>
 

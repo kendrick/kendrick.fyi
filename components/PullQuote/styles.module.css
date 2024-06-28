@@ -1,8 +1,32 @@
 .pullquote {
-	font-family: var(--k-type-display);
-	font-size: var(--k-type-size-plus3);
+	--border-value: 4px solid var(--k-theme-color-primary);
+	--padding-value: var(--k-space-xs-sm);
 
-	/* font-variation-settings: 'ital' 12; */
-	font-weight: 300;
+	font-family: var(--k-type-serif);
+	font-size: var(--k-type-size-plus3);
+	font-variation-settings: 'opsz' 25;
+	font-weight: 100;
+	font-style: italic;
 	line-height: 1;
+	color: var(--k-theme-color-on-surface-variant);
+
+	&.border-left {
+		padding-left: var(--padding-value);
+		border-left: var(--border-value);
+	}
+
+	&.border-right {
+		padding-right: var(--padding-value);
+		border-right: var(--border-value);
+	}
+
+	&.border-top {
+		padding-top: var(--padding-value);
+		border-top: var(--border-value);
+	}
+
+	&.border-bottom {
+		padding-bottom: var(--padding-value);
+		border-bottom: var(--border-value);
+	}
 }

@@ -9,20 +9,33 @@ interface Props {
 	className?: string;
 	style?: React.CSSProperties;
 	hidden?: boolean;
+	borderSide?: 'top' | 'right' | 'bottom' | 'left';
 	children: ReactNode;
 }
 
-const PullQuote = ({ className, style, hidden = true, children }: Props) => {
+const PullQuote = ({
+	className,
+	style,
+	hidden = true,
+	borderSide = 'left',
+	children,
+}: Props) => {
 	const a11yProps: HTMLAttributes<HTMLDivElement> =
 		hidden ? { role: 'presentation', 'aria-hidden': 'true' } : {};
 
 	return (
-		<div
-			style={style}
-			className={clsx(styles.pullquote, className)}
-			{...a11yProps}
-		>
-			{children}
+		<div>
+			<div
+				style={styles}
+				className={clsx(
+					styles.pullquote,
+					styles[`border-${borderSide}`],
+					className,
+				)}
+				{...a11yProps}
+			>
+				{children}
+			</div>
 		</div>
 	);
 };
