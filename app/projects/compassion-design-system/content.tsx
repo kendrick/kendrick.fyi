@@ -175,7 +175,7 @@ export default function DesignSystem() {
 							<span className="k-type-emph">
 								a design system with vast flexibility and adaptability
 							</span>
-							. This system was architected to empower marketers’ creativity
+							. This system was architected to empower desginers’ creativity
 							across Compassion’s global network while setting a clear vision
 							for unification. Given the ongoing brand overhaul, the system
 							needed to be adaptable, allowing for effortless flow from design
