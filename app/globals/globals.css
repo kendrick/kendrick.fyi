@@ -6,7 +6,7 @@
 @import './color.css';
 
 :root {
-	--k-global-padding: var(--k-space-xs-xl);
+	--k-global-padding: var(--k-space-xs-lg);
 	--k-global-padding-minus1: var(--k-space-xs-lg);
 	--k-global-max-width: calc(1440px - 2 * var(--k-global-padding));
 	--k-z-index-max: 2147483647;
@@ -20,7 +20,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	padding: var(--k-space-minus2-minus1);
 }
 
 a.as-button {
