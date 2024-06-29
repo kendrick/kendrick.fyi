@@ -41,8 +41,10 @@
 	line-height: 1;
 }
 
-.nav__list__item {
-	display: inline;
+.nav__link {
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 .lettermark {

@@ -26,7 +26,11 @@ export default function Header() {
 				<nav className={styles['nav']}>
 					<Cluster className={styles['nav__list']}>
 						{pageLinks.map((link, index) => (
-							<Link href={link.href} key={index}>
+							<Link
+								href={link.href}
+								key={index}
+								className={styles['nav__link']}
+							>
 								{link.name}
 							</Link>
 						))}
