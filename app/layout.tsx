@@ -13,6 +13,7 @@ import { Toaster } from 'react-hot-toast';
 import ThemeSwitch from '@/components/ThemeSwitch';
 import { DarkModeProvider } from '@/lib/DarkModeContext';
 
+import Background from '@/components/background';
 import styles from './layout.module.css';
 
 const m = {
@@ -115,6 +116,7 @@ export default function RootLayout({
 				<DarkModeProvider>
 					<ThemeContextProvider>
 						<ActiveSectionContextProvider>
+							<Background />
 							<Header />
 							<section className={styles['body__inner-wrap']}>
 								{children}

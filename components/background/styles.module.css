@@ -1,0 +1,84 @@
+.background {
+	--k-bg-opacity: 0.3;
+	--k-anim-unit: 1em;
+
+	position: fixed;
+	z-index: -1;
+	inset: 0;
+
+	&.dark {
+		--k-bg-opacity: 1;
+	}
+
+	.background__one {
+		animation: one 30s cubic-bezier(0.37, 0, 0.63, 1) infinite alternate;
+	}
+
+	.background__two {
+		animation: two 25s cubic-bezier(0.37, 0, 0.63, 1) infinite alternate;
+	}
+
+	.background__three {
+		animation: three 15s cubic-bezier(0.37, 0, 0.63, 1) infinite normal forwards;
+	}
+}
+
+.lights {
+	width: 100%;
+	height: 100%;
+}
+
+@keyframes one {
+	0% {
+		transform-origin: 0% 100%;
+		transform: scale(0.4);
+		opacity: 1;
+	}
+
+	100% {
+		transform-origin: 0% 100%;
+		transform: scale(1);
+		opacity: 0.8;
+	}
+}
+
+@keyframes two {
+	0% {
+		transform: scale(0.8) translateX(calc(-1 * var(--k-anim-unit)))
+			translateY(0);
+	}
+
+	100% {
+		transform: scale(1.1) translateX(calc(2 * var(--k-anim-unit)))
+			translateY(var(--k-anim-unit));
+	}
+}
+
+@keyframes three {
+	0% {
+		transform: translate(0);
+	}
+
+	20% {
+		transform: translate(calc(-1 * var(--k-anim-unit)), var(--k-anim-unit));
+	}
+
+	40% {
+		transform: translate(
+			calc(-1 * var(--k-anim-unit)),
+			calc(-1 * var(--k-anim-unit))
+		);
+	}
+
+	60% {
+		transform: translate(var(--k-anim-unit), var(--k-anim-unit));
+	}
+
+	80% {
+		transform: translate(var(--k-anim-unit), calc(-1 * var(--k-anim-unit)));
+	}
+
+	100% {
+		transform: translate(0);
+	}
+}
